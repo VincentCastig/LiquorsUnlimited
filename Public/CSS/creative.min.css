@@ -62,6 +62,20 @@
  .sidebar {
     display: none;
   }
+  @media (min-width: 200px) {
+    .jumbotron h1{
+      font-size:38px; 
+      line-height: 0.8;
+      text-decoration-line: underline
+    }
+  }
+  @media (min-width: 400px) {
+    .jumbotron h1{
+      font-size:55px; 
+      line-height: 0.8;
+      text-decoration-line: underline
+    }
+  }
   @media (min-width: 768px) {
     .sidebar {
       position: absolute;
@@ -75,6 +89,19 @@
       overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
       background-color: #f5f5f5;
       border-right: 1px solid #eee;
+    }
+  }
+  @media (min-width: 800px) {
+    .jumbotron h1{
+      font-size:60px; 
+      line-height: 0.8;
+      text-decoration-line: none;
+    }
+    
+    .unlimited{
+      font-size:60px; 
+      line-height: 0.8;
+      text-decoration-line: none;
     }
   }
   header,header .header-content{
@@ -94,7 +121,11 @@
   header .header-content .header-content-inner hr{margin:30px auto}
   header .header-content .header-content-inner p{font-weight:300;color:rgba(255,255,255,.7);
     font-size:16px;margin-bottom:50px}
-    @media (min-width:768px) {
+    @media (min-width:1200px) {
+      .jumbotron h1{
+        font-size:78px; 
+        line-height: 0.8;
+      }
       .profile-image {
         background: radial-gradient(#40404b, #111118); 
         width: 56px;
@@ -112,6 +143,7 @@
         max-width:1000px;margin-left:auto;
         margin-right:auto}
       header .header-content .header-content-inner h1{font-size:50px}
+      
       }
   /* Sidebar navigation */
   .nav-sidebar {
@@ -138,7 +170,7 @@
     position: relative;
    }
    
- .slide1 {
+ /* .slide1 {
   animation:fade 8s infinite;
   -webkit-animation:fade 8s infinite;
   z-index: 0;
@@ -154,8 +186,8 @@
   animation:fade3 8s infinite;
   -webkit-animation:fade3 8s infinite;
   z-index: 0;
- }
- @keyframes fade
+ } */
+ /* @keyframes fade
  {
    0%   {opacity:1}
    33.333% { opacity: 0}
@@ -175,7 +207,7 @@
    33.333% { opacity: 0}
    66.666% { opacity: 1}
    100% { opacity: 0}
- }
+ } */
  .profile-image {
   background: radial-gradient(#6a6761,#5a564f);
    width: 37%;
@@ -204,7 +236,28 @@
 a {
   font-family: 'NexaRustScriptL-0-Free'
 }
-.jumbotron h1{
+.slide1 {
+  min-height:auto;
+  width: 100%;
+  height: 80%;
+  background: url(../img/DSC_0390.JPG) no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  -o-background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+  position: absolute;
+}
+/* .slide2 {
+  width: 100%;
+  background-image: url("../img/DSC_0391.JPG")
+}
+.slide3 {
+  width: 100%;
+  background-image: url("../img/DSC_0392.JPG")
+} */
+/* .jumbotron h1{
   font-size:78px; 
   line-height: 0.8;
-}}
+}} */
