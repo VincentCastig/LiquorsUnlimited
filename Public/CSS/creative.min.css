@@ -201,3 +201,10 @@
   background-image:url(../img/DSC_0391.JPG);
   color:#fff
 }
+a {
+  font-family: 'NexaRustScriptL-0-Free'
+}
+.jumbotron h1{
+  font-size:78px; 
+  line-height: 0.8;
+}}
