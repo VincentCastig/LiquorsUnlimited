@@ -249,6 +249,23 @@ a {
   background-attachment: fixed;
   position: absolute;
 }
+.jumbotron .inner{height: 240px; 
+  background:url(../../../img/backdrop.png) center bottom no-repeat; 
+  display:flex; 
+  text-shadow: #28288d;
+  justify-content: 
+  center; align-items:center; 
+  flex-direction: row; 
+  
+}
+.jumbotron .inner img{
+  width: 70%;
+  margin-top: 55px; 
+  -webkit-filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+  filter: drop-shadow(1px 1px 0.3px rgb(0, 0, 0));
+  
+}
+
 /* .slide2 {
   width: 100%;
   background-image: url("../img/DSC_0391.JPG")
