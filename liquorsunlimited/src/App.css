@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.jumbotron{ margin-top: 8px; 
+  overflow: hidden; 
+  color:inherit;
+  background-color:#e0d09b; 
+  background-attachment: 
+  fixed; min-height:auto;-webkit-background-size:cover; 
+  -moz-background-size:cover; background-size:cover;
+}
+.jumbotron .inner{height: 240px; 
+  background:url(./img/backdropBench.png) center bottom no-repeat; 
+  display:flex; 
+  text-shadow: #28288d;
+  justify-content: 
+  center; align-items:center; 
+  flex-direction: row; 
+}
+/* .jumbotron .inner img{
+  position: absolute;
+  width: 70%;
+  margin-top: 40px; 
+  -webkit-filter: drop-shadow(2px 54px 0.9px rgba(0, 0, 0, 0.02));
+  filter: drop-shadow(2px 54px 0.9px rgba(0, 0, 0, 0.02));
+} */
+.jumbotron .inner img{
+  position: absolute;
+  width: 70%;
+  margin-top: -140px; 
+  color: transparent;
+  -webkit-filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
+  filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
+}
+.jumbotron .inner  h2{
+  font-family: cursive;
+  font-size: 26px;
+  font-weight: 100;
+  text-rendering: geometricPrecision;
+  text-decoration-style: double;
+  text-underline-position: below;
+  text-decoration: overline;
+  margin-top: 172px;
+  bottom: 0%;
+  -webkit-filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+  filter: drop-shadow(2px 24px 1px rgba(0, 0, 0, 0.062));
+
+}
+
+nav {
+  background: radial-gradient(#376b5e, #386b57, #1d554c);
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+}
+.navbar-right {
+  border-color: rgba(255,255,255,.3);
+}
+.navbar-nav > li {
+  border-right-color: rgba(9, 29, 8, 0.226);
+  border-right-style: solid;
+  hover {
+    background: '#eee'
+  }
+}
+.navbar-nav > li:hover{
+  background-color: antiquewhite;
+}
+NavItem :hover{ 
+  background-color: blue;
+}
+.navbar-default .navbar-nav > li > a {
+  color: beige;
+}
+.navbar-default .navbar-nav > li > a :hover{
+  color: rgb(231, 81, 64);
+  background-color: blue;
+}
+.navbar-default .navbar-brand {
+  color: beige;
+}
