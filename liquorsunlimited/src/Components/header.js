@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
     <div>
-    <Navbar collapseOnSelect>
+    <Navbar collapseOnSelect navbar-fixed-top>
     <Navbar.Header>
         <Navbar.Brand>
             Liquors Unlimited
@@ -40,11 +40,9 @@ const Header = () => {
 </Navbar>
     <div className="jumbotron">
                 <div className="inner">
-                    <h1 className="liquors" >Liquors</h1>
-                    <h1 className="unlimited" >Unlimited</h1> 
-                    <img src="../img/LUTitleFirstCopy.png">
-                        
-                    </img>
+                    {/* <h1 className="liquors" >Liquors</h1>
+                    <h1 className="unlimited" >Unlimited</h1>  */}
+                    <img src={require("../img/LUTitleFirstCopy.png")} />
                     <h2>Fine Wine and Spirits</h2>
                     
         
