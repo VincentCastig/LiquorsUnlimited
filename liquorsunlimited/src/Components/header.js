@@ -16,9 +16,7 @@ const Header = () => {
         
         <Nav pullRight>
   
-            <NavItem eventKey={2} href="#">
-    {/* <Link to="/">Home</Link> */}
-            </NavItem>
+            
             {/* <NavDropdown eventKey={3} title="Categories" id="basic-nav-dropdown">
          <MenuItem>Programming</MenuItem>
          <MenuItem>Fitness</MenuItem>
@@ -26,7 +24,7 @@ const Header = () => {
          <MenuItem>Book Reviews</MenuItem>
                 
             </NavDropdown> */}
-            <NavItem eventKey={1} href="#">
+            <NavItem className="nav-home-link"eventKey={1} href="#">
                 <Link to="Home">Home</Link>
             </NavItem>
             <NavItem eventKey={2} href="#">

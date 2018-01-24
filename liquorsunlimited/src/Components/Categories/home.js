@@ -20,7 +20,7 @@ class Home extends Component {
             </div>
             <div className="home-wine-container">
                 <Row>
-                    <Col xs={12} md={6}>
+                    <Col xs={6} md={6}>
                         <img className="home-main-image" src={(require('../../img/DSC_0393.JPG'))}/>
                     </Col>
                     <Col xs={6} md={6}>
@@ -35,7 +35,7 @@ class Home extends Component {
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
                     </Col>
-                    <Col xs={12} md={6}>
+                    <Col xs={6} md={6}>
                         <img className="home-main-image" src={(require('../../img/painting.JPG'))} />
                     </Col>
                 </Row>

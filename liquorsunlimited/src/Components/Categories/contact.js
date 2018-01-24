@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 const Contact = () => {
+
+    
+
     return (
         <div className="container-home">
             <div className="image-container">
@@ -19,23 +22,23 @@ const Contact = () => {
             </div>
             <div className="home-wine-container">
                 <Row>
-                    <Col xs={12} md={6}>
-                        <img src={(require('../../img/fridgeBottles.JPG'))} />
+                    <Col xs={6} md={6}>
+                        <img className="home-main-image" src={(require('../../img/fridgeBottles.JPG'))} />
                     </Col>
                     <Col xs={6} md={6}>
-                        <h3 className="red-header">Relax with a glass of wine</h3>
+                        <h3 className="red-header">Directions</h3>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum.</p>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum.</p>
+                        
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={6} md={6}>
-                        <h3 className="red-header">Try our bourbon</h3>
+                        <h3 className="red-header">Opening Times</h3>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
+                        
                     </Col>
-                    <Col xs={12} md={6}>
-                        <img src={(require('../../img/fridgeBottles.JPG'))} />
+                    <Col xs={6} md={6}>
+                        <img className="home-main-image" src={(require('../../img/fridgeBottles.JPG'))} />
                     </Col>
                 </Row>
             </div>

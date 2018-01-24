@@ -1,0 +1,11 @@
+{
+  "name": "LiquorsUnlimited",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/VincentCastig/LiquorsUnlimited.git",
+  "author": "VincentCastig <vincent.castig@gmail.com>",
+  "license": "MIT",
+"scripts": {
+  "heroku-postbuild": "cd Liquorsunlimited && yarn --production=false && yarn run build"
+}
+}
