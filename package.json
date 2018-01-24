@@ -5,7 +5,14 @@
   "repository": "https://github.com/VincentCastig/LiquorsUnlimited.git",
   "author": "VincentCastig <vincent.castig@gmail.com>",
   "license": "MIT",
-"scripts": {
-  "heroku-postbuild": "cd Liquorsunlimited && yarn --production=false && yarn run build"
-}
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
 }
