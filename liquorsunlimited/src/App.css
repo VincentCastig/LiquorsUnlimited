@@ -30,11 +30,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+col img {
+  margin: 5px;
+}
 .container-home {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1px;
+  padding-left: 1px;
+  min-height: 750px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #dbc69bf9;
+  background-image: url(../src/img/backdropCopy.png);
+}
+.container-home h2 {
+  background-color: #266d61;
+  color: beige;
+  margin-top: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (min-width: 768px){
   .container-home {
@@ -48,7 +61,7 @@
 }
 @media (min-width: 1200px) {
 .container-home {
-    width: 1170px;
+    width: 920px;
 }
 }
 
@@ -58,32 +71,41 @@
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  padding-left: 110px;
-  padding-right: 110px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin-top: -30px;
 }
 .home-main-image {
   width: 100%;
 }
+.home-paragraph h3 {
+  color: rgb(99, 49, 49);
+}
+.red-header {
+  color: rgb(99, 49, 49);
+}
+.home-wine-container {
+  padding: 20px;
+}
 .ok {
-  position: fixed;
+  position: absolute;
   /* left: 0;
   right: 0; */
   z-index: -1;
 
   display: flex;
   margin-top: -30px;
-  background: url(../src/img/vineyards.jpg) center;
+  background: url(../src/img/Barrels.JPG) center;
   background-attachment: fixed;
   background-blend-mode: color-burn;
   width: 100%;
-  height: stretch;
+  height: 1500px;
 
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
-  filter: blur(10px);
+  filter: blur(5px);
 }
 
 
@@ -236,7 +258,7 @@ nav {
   }
 }
 .navbar-nav > li:hover{
-  background-color: antiquewhite;
+  background-color: rgb(167, 58, 58);
 }
 NavItem :hover{ 
   background-color: blue;
@@ -244,9 +266,13 @@ NavItem :hover{
 .navbar-default .navbar-nav > li > a {
   color: beige;
 }
+.navbar-default .navbar-nav > li > a > a {
+  color: beige;
+}
+
 .navbar-default .navbar-nav > li > a :hover{
-  color: rgb(231, 81, 64);
-  background-color: blue;
+  /* color: rgb(231, 81, 64); */
+  background-color: none;
 }
 .navbar-default .navbar-brand {
   color: beige;
