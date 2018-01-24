@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 .App-logo {
@@ -26,6 +30,62 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.container-home {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px){
+  .container-home {
+      width: 750px;
+  }
+  }
+@media (min-width: 992px) {
+  .container-home {
+      width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+.container-home {
+    width: 1170px;
+}
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 110px;
+  padding-right: 110px;
+  margin-top: -30px;
+}
+.home-main-image {
+  width: 100%;
+}
+.ok {
+  position: fixed;
+  /* left: 0;
+  right: 0; */
+  z-index: -1;
+
+  display: flex;
+  margin-top: -30px;
+  background: url(../src/img/vineyards.jpg) center;
+  background-attachment: fixed;
+  background-blend-mode: color-burn;
+  width: 100%;
+  height: stretch;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(10px);
+}
+
 
   .jumbotron .h1,.jumbotron h1{color:inherit}
   .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
@@ -172,7 +232,7 @@ nav {
   border-right-color: rgba(9, 29, 8, 0.226);
   border-right-style: solid;
   hover {
-    background: '#eee'
+    background: '#eee';
   }
 }
 .navbar-nav > li:hover{

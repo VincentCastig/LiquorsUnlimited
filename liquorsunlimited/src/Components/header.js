@@ -26,14 +26,14 @@ const Header = () => {
          <MenuItem>Book Reviews</MenuItem>
                 
             </NavDropdown> */}
-            <NavItem eventKey={1} key={1} href="#">
-                Wine
+            <NavItem eventKey={1} href="#">
+                <Link to="Home">Home</Link>
             </NavItem>
             <NavItem eventKey={2} href="#">
-                About
+                <Link to="Wine">Wine</Link>
             </NavItem>
             <NavItem eventKey={3} href="#">
-                Contact
+                <Link to="Contact">Contact</Link>
             </NavItem>
         </Nav>
     </Navbar.Collapse>
@@ -44,7 +44,6 @@ const Header = () => {
                     <h1 className="unlimited" >Unlimited</h1>  */}
                     <img src={require("../img/LUTitleFirstCopy.png")} />
                     <h2>Fine Wine and Spirits</h2>
-                    
         
                 </div>
             </div>
