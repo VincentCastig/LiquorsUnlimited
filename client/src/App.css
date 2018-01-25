@@ -5,6 +5,15 @@
   right: 0;
   z-index: 9999;
 }
+.map {
+  height: 300px;
+}
+
+@media screen and (min-width: 1024px){
+    .map {
+        height: 500px;
+    }
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -56,7 +65,7 @@ col img {
   }
 @media (min-width: 992px) {
   .container-home {
-      width: 970px;
+      width: 840px;
   }
 }
 @media (min-width: 1200px) {
@@ -68,6 +77,15 @@ col img {
 .image-container {
   width: 100%;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: -30px;
+}
+.image-container-contact {
+  width: 100%;
   justify-content: center;
   flex-direction: row;
   align-items: center;
@@ -253,21 +271,37 @@ nav {
 .navbar-nav > li {
   border-left-color: rgba(9, 29, 8, 0.226);
   border-left-style: solid;
-  hover {
+  /* hover {
     background: '#eee';
-  }
+  } */
 }
 .navbar-nav > li:hover{
   background-color: rgb(167, 58, 58);
 }
-NavItem :hover{ 
+/* NavItem :hover{ 
   background-color: blue;
-}
+} */
 .navbar-default .navbar-nav > li > a {
   color: beige;
+  
 }
-.navbar-default .navbar-nav > li > a > a {
+.navbar-nav>li>a>a {
   color: beige;
+  padding: 10px 15px;
+}
+/* @media (min-width: 768px) {
+  .navbar-nav>li>a {
+      height: 50px;
+      min-width: 50px;
+  }
+  } */
+@media (min-width: 768px) {
+.navbar-nav >li>a>a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+    height: 100%;
+    width: 100%;
+}
 }
 /* .nav-home-link {
   border-left-color: rgba(9, 29, 8, 0.226);
@@ -278,5 +312,8 @@ NavItem :hover{
   background-color: none;
 }
 .navbar-default .navbar-brand {
-  color: beige;
+  color: beige !important;
+}
+div .navbar-default .navbar-brand:focus, div .navbar-default .navbar-brand:hover {
+  color: #d5d5d5;
 }

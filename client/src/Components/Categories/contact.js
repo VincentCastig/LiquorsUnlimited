@@ -2,6 +2,7 @@ import React from 'react';
 import { NavDropdown, MenuItem, Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
+import Map from './map';
 
 const Contact = () => {
 
@@ -9,8 +10,9 @@ const Contact = () => {
 
     return (
         <div className="container-home">
-            <div className="image-container">
-                <img className="home-main-image" src={(require('../../img/DSC_0393.JPG'))}/>
+            <div className="image-container-contact">
+                {/* <img className="home-main-image" src={(require('../../img/DSC_0393.JPG'))}/> */}
+                <Map />
             </div>
             <h2>Liquors Unlimited has the greatest selection of wine in Pascagoula.</h2>
             <div className="home-paragraph">
