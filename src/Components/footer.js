@@ -5,14 +5,15 @@ import React, { Component } from 'react';
 
 const Footer = () => {
     return (
-        <div className="container-home">
-            <a className="image-container">
+        <div id="footer" className="container-home">
+            {/* <hr /> */}
+            <a className="">
                 Privacy Policy
             </a>
-            <a className="image-container">
+            <a className="">
                 Terms & Conditions
             </a>
-            © 2018. 
+            <p>Copyright © 2018.</p> 
         </div>
     )
 }
