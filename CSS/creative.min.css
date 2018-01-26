@@ -264,14 +264,7 @@ a {
   -webkit-filter: drop-shadow(2px 54px 0.9px rgba(0, 0, 0, 0.02));
   filter: drop-shadow(2px 54px 0.9px rgba(0, 0, 0, 0.02));
 } */
-.jumbotron .inner img{
-  position: absolute;
-  width: 70%;
-  margin-top: -140px; 
-  color: transparent;
-  -webkit-filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
-  filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
-}
+
 .jumbotron .inner  h2{
   font-family: cursive;
   font-size: 26px;

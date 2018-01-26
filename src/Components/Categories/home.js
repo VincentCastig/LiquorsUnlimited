@@ -19,26 +19,26 @@ class Home extends Component {
                 Our liquor store proudly stocks over 4,000 different items and we can special order many more.</p>
             </div>
             <div className="home-wine-container">
-                <Row>
-                    <Col xs={6} md={6}>
+                <div className="content-row">
+                    <div >
                         <img className="home-main-image" src={(require('../../img/DSC_0393.JPG'))}/>
-                    </Col>
-                    <Col xs={6} md={6}>
+                    </div>
+                    <div >
                         <h3 className="red-header">Open 6 days a week</h3>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum.</p>
                         
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={6} md={6}>
+                    </div>
+                </div>
+                <div id="content-row2"className="content-row">
+                    <div >
                         <h3 className="red-header">Try our bourbon</h3>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
-                    </Col>
-                    <Col xs={6} md={6}>
+                    </div>
+                    <div>
                         <img className="home-main-image" src={(require('../../img/painting.JPG'))} />
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </div>
         </div>
     )

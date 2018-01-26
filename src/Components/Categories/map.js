@@ -19,7 +19,7 @@ const MyMapComponent = compose(
     defaultCenter={{ lat: 30.364101, lng: -88.548219 }}
   >
     <Marker 
-      position={{ lat: 30.364101, lng: -88.548214 }} 
+      position={{ lat: 30.364141, lng: -88.548214 }} 
       onClick={props.onMarkerClick} 
       
     />
