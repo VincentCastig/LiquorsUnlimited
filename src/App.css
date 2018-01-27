@@ -189,7 +189,8 @@ col img {
     background-color:#fff;
     border:1px solid #ddd;
     border-radius:4px;
-    -webkit-transition:border .2s ease-in-out;-o-transition:border .2s ease-in-out;transition:border .2s ease-in-out
+    -webkit-transition:border .2s ease-in-out;
+    -o-transition:border .2s ease-in-out;transition:border .2s ease-in-out
   }
 .jumbotron{ 
   margin-top: 8px; 
@@ -197,8 +198,10 @@ col img {
   color:inherit;
   background-color:#e0d09b; 
   background-attachment: 
-  fixed; min-height:auto;-webkit-background-size:cover; 
-  -moz-background-size:cover; background-size:cover;
+  fixed; min-height:auto;
+  -webkit-background-size:cover; 
+  -moz-background-size:cover; 
+  background-size:cover;
   padding: 0px;
   border-bottom: #111118;
   border-bottom-style: groove;
@@ -208,7 +211,7 @@ col img {
   height: 200px; 
   background:url(./img/backdropBench.png) center bottom no-repeat; 
   display:flex; 
-  text-shadow: #28288d;
+  /* text-shadow: #28288d; */
   justify-content: center; 
   align-items:center; 
   flex-direction: column; 
@@ -232,17 +235,17 @@ col img {
 }
 .jumbotron .inner  h2{
   font-family: cursive;
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 100;
   text-rendering: geometricPrecision;
-  text-decoration-style: double;
-  text-underline-position: below;
+  /* text-decoration-style: double; */
+  /* text-underline-position: below; */
   text-decoration: overline;
   margin-top: 140px;
   justify-self: flex-end;
   bottom: 0;
-  -webkit-filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
-  filter: drop-shadow(2px 24px 1px rgba(0, 0, 0, 0.062));
+  /* -webkit-filter: drop-shadow(1px 1px 1px rgb(0, 0, 0)); */
+  /* filter: drop-shadow(2px 24px 1px rgba(0, 0, 0, 0.062)); */
 }
 @media (min-width: 200px) {
   .jumbotron h1{
@@ -305,18 +308,28 @@ col img {
     filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
     }
   }
-  @media screen and (max-width: 800px) { 
-    .jumbotron .inner{ background: 0 !important; 
-      flex-direction: column !important;
-      
+  
+  
+  @media screen and (max-width: 1200px){ 
+    .jumbotron .inner{ 
+      background-size: 1180px 169px !important; 
+      height: 200px;
     }
   }
   @media screen and (max-width: 980px) { 
-    .inner { background-size: 1100px 157px !important;
+    .inner { background-size: 1100px 157px;
     }
   }
-  @media screen and (max-width: 1200px){ 
-    .jumbotron .inner{ background-size: 1180px 169px !important; height: 200px !important;
+  @media screen and (max-width: 800px) { 
+    .jumbotron .inner{ background: 0 !important; 
+      height: 200px ;
+      
+    }
+  }
+  @media screen and (max-width: 450px) { 
+    .jumbotron .inner{ background: 0 !important; 
+      height: 160px ;
+      
     }
   }
   .navbar-default {
