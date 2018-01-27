@@ -7,7 +7,7 @@ const Wine = () => {
     return (
         <div className="container-home">
             <div className="image-container">
-                <img className="home-main-image" src={(require('../../img/fridgeBottles.JPG'))}/>
+                <img className="home-main-image" src={(require('../../img/wineRoom.jpeg'))}/>
             </div>
             <h2>Liquors Unlimited has the greatest selection of wine in Pascagoula.</h2>
             <div className="home-paragraph">
@@ -35,7 +35,7 @@ const Wine = () => {
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p>
                     </Col>
                     <Col xs={6} md={6}>
-                        <img className="home-main-image" src={(require('../../img/wineAndLiquor.JPG'))} />
+                        <img className="home-main-image" src={(require('../../img/wineFront.jpg'))} />
                     </Col>
                 </div>
             </div>
