@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Header from './Components/header';
 import Footer from './Components/footer';
@@ -16,7 +16,7 @@ class App extends Component {
       <div className="app">
       
         <Header />
-        <div className="ok"></div>
+        {/* <div className="ok"></div> */}
         { Routes }
         <Footer />
       </div>

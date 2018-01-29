@@ -8,6 +8,26 @@
 .map {
   height: 300px;
 }
+body {
+  
+  /* left: 0;
+  right: 0; */
+  /* z-index: -1;
+  width: 100%;
+  height: auto;
+  /* -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); */
+}
+#root {
+  background: url(../src/img/Barrels.JPG)  no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -22;
+  
+}
 
 @media screen and (min-width: 1024px){
     .map {
@@ -15,30 +35,30 @@
     }
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
-}
+} */
 
-.App-title {
+/* .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
 col img {
   margin: 5px;
 }
@@ -82,25 +102,24 @@ col img {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .ok {
-  position: absolute;
+  /* position: absolute; */
   /* left: 0;
   right: 0; */
-  z-index: -1;
-
+  /* z-index: -1;
+  width: 100%;
+  height: auto;
   display: flex;
   margin-top: -30px;
   background: url(../src/img/Barrels.JPG) center;
   background-attachment: fixed;
-  background-blend-mode: color-burn;
-  width: 100%;
-  height: auto;
 
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
-  filter: blur(5px);
+  filter: blur(5px); */
 }
 @media (min-width: 768px){
   .container-home {
@@ -137,11 +156,17 @@ col img {
 }
 #footer{
   min-height: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
+  background: radial-gradient(#376b5e, #386b57, #1d554c);
+  /* background-image: none; */
+  color: beige;
+  /* position: absolute; */
+  bottom: 0;
 }
 
 .image-container {
@@ -246,6 +271,10 @@ col img {
   bottom: 0;
   /* -webkit-filter: drop-shadow(1px 1px 1px rgb(0, 0, 0)); */
   /* filter: drop-shadow(2px 24px 1px rgba(0, 0, 0, 0.062)); */
+}
+#planning {
+  height: 200px;
+  min-height: 200px;
 }
 @media (min-width: 200px) {
   .jumbotron h1{

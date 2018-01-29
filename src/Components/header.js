@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavDropdown, MenuItem, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -30,6 +30,9 @@ const Header = () => {
             <NavItem eventKey={2} href="#">
                 <Link to="Wine">Wine & Liquor</Link>
             </NavItem>
+            {/* <NavItem eventKey={3} href="#">
+                <Link to="Planning">Planning</Link>
+            </NavItem> */}
             <NavItem eventKey={3} href="#">
                 <Link to="Contact">Contact</Link>
             </NavItem>
@@ -40,7 +43,7 @@ const Header = () => {
                 <div className="inner">
                     {/* <h1 className="liquors" >Liquors</h1>
                     <h1 className="unlimited" >Unlimited</h1>  */}
-                    <img src={require("../img/LUTitleFirstCopy.png")} />
+                    <img src={require("../img/LUTitleFirstCopy.png")} alt="Liquors Unlimited Caligraphy by Lillian Castigliola"/>
                     <h2>Fine Wine and Spirits</h2>
         
                 </div>
