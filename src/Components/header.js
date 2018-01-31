@@ -30,9 +30,9 @@ const Header = () => {
             <NavItem eventKey={2} href="#">
                 <Link to="Wine">Wine & Liquor</Link>
             </NavItem>
-            {/* <NavItem eventKey={3} href="#">
+            <NavItem eventKey={3} href="#">
                 <Link to="Planning">Planning</Link>
-            </NavItem> */}
+            </NavItem>
             <NavItem eventKey={3} href="#">
                 <Link to="Contact">Contact</Link>
             </NavItem>

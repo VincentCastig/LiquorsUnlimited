@@ -273,7 +273,7 @@ col img {
   /* filter: drop-shadow(2px 24px 1px rgba(0, 0, 0, 0.062)); */
 }
 #planning {
-  height: 200px;
+  height: 800px;
   min-height: 200px;
 }
 @media (min-width: 200px) {
