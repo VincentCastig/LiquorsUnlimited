@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import { Col, Table, FormGroup, FormControl } from 'react-bootstrap';
 import TopTable from './PlanningTables/top-table';
+import BottomTable from './PlanningTables/bottom-table';
 
 
 class Planning extends Component {
@@ -11,9 +12,10 @@ class Planning extends Component {
         this.handleChangeValue = this.handleChangeValue.bind(this);
         // this.handleChangeDrink = this.handleChangeDrink.bind(this);
         this.state = {
-            value: 1,
+            value: '',
             people: '',
-            drinks: ''
+            drinks: '',
+            percentage: ''
         }
     }
 
@@ -27,33 +29,6 @@ class Planning extends Component {
         console.log(typeof prop)
         
     }
-        
-        renderPlanningTable() {
-            const data = ['Beer', 'Red', 'White', 'Bourbon', 'Scotch', 'Gin', 'Vodka', 'Rum'];
-            return data.map(val => {
-                return (
-                            <tr>
-                                <td>
-                                    {val}
-                                </td>
-                                <td>
-                                    <form>
-                                        <FormGroup>
-                                            <FormControl
-                                            type="number"
-                                            value={this.state.drinks}
-                                            placeholder="Enter Amount of Drinks"
-                                            onChange={this.handleChange}
-                                            />
-                                        </FormGroup>
-                                    </form>
-                                </td>
-                                <td>Value</td>
-                                <td>Value</td>
-                            </tr>
-                )
-            })
-        }
     
 
     render() {
@@ -69,19 +44,7 @@ class Planning extends Component {
                     handleChangeValue={this.handleChangeValue}
                     />
 
-                    <Table>
-                        <thead>
-                            <tr>
-                                <th>Type of Drink</th>
-                                <th>Percentage</th>
-                                <th>Drinks</th>
-                                <th>Drinks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.renderPlanningTable()}
-                        </tbody>
-                    </Table>
+                    <BottomTable />
                 </div>
             </div>
         )

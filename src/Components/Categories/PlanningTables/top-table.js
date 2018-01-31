@@ -26,6 +26,7 @@ class TopTable extends Component {
                             <tr>
                                 <th>People</th>
                                 <th>Drinks Per Person</th>
+                                <th>Drinks Total</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -54,6 +55,7 @@ class TopTable extends Component {
                                         </FormGroup>
                                     </form>
                                 </td>
+                                <td>{this.state.people * this.state.drinks}</td>
                             </tr>
                         </tbody>
                     </Table>
