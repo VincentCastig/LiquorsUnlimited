@@ -12,7 +12,7 @@ class TopTable extends Component {
     }
     getValidateState() {
         const drinks = this.state.drinks
-        if (drinks > 9) return 'warning';
+        if (drinks > 10) return 'warning';
         return null;
     }
     updatePeople(val) {
@@ -22,9 +22,9 @@ class TopTable extends Component {
         }
     }
     updateDrinks(val) {
-        this.props.handleChangeValue('drinks', val)
         if (val.length <= 3 && val < 25 ) {
-        this.setState({ drinks: val })
+            this.props.handleChangeValue('drinks', val)
+            this.setState({ drinks: val })
         }
         else {
             console.log(`Do you really expect to have ${val} drinks per person?`)
