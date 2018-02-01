@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Table, FormGroup, FormControl } from 'react-bootstrap';
+import { Table, FormGroup, FormControl } from 'react-bootstrap';
 
 class TopTable extends Component {
     constructor(props) {
@@ -10,16 +10,30 @@ class TopTable extends Component {
             drinks: ''
         }
     }
+    getValidateState() {
+        const drinks = this.state.drinks
+        if (drinks > 9) return 'warning';
+        return null;
+    }
     updatePeople(val) {
-        this.props.handleChangeValue('people', val)
-        this.setState({ people: val })
+        if (val <= 10000 & val % 1 === 0) {
+            this.props.handleChangeValue('people', val)
+            this.setState({ people: val })
+        }
     }
     updateDrinks(val) {
         this.props.handleChangeValue('drinks', val)
+        if (val.length <= 3 && val < 25 ) {
         this.setState({ drinks: val })
+        }
+        else {
+            console.log(`Do you really expect to have ${val} drinks per person?`)
+        }
     }
 
     render() {
+        const drinksTotal = Math.round(100 * this.state.people * this.state.drinks) / 100;
+
         return (
             <Table>
                         <thead>
@@ -33,10 +47,13 @@ class TopTable extends Component {
                             <tr>
                                 <td>
                                     <form>
-                                        <FormGroup>
+                                        <FormGroup
+                                        >
                                             <FormControl
                                             type="number"
                                             value={this.state.people}
+                                            min='1'
+                                            max='10000'
                                             placeholder="Enter Amount of People"
                                             onChange={ event => this.updatePeople(event.target.value) }
                                             />
@@ -45,17 +62,21 @@ class TopTable extends Component {
                                 </td>
                                 <td>
                                     <form>
-                                        <FormGroup>
+                                        <FormGroup
+                                            validationState={this.getValidateState()}
+                                        >
                                             <FormControl
                                             type="number"
                                             value={this.state.drinks}
+                                            min='1'
+                                            max='25'
                                             placeholder="Enter Amount of Drinks Per Person"
                                             onChange={event => this.updateDrinks(event.target.value)}
                                             />
                                         </FormGroup>
                                     </form>
                                 </td>
-                                <td>{this.state.people * this.state.drinks}</td>
+                                <td>{drinksTotal}</td>
                             </tr>
                         </tbody>
                     </Table>

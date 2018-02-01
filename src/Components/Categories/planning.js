@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-import { Col, Table, FormGroup, FormControl } from 'react-bootstrap';
+// import { FormGroup, FormControl } from 'react-bootstrap';
 import TopTable from './PlanningTables/top-table';
 import BottomTable from './PlanningTables/bottom-table';
 
@@ -26,13 +26,15 @@ class Planning extends Component {
         else if (prop === 'drinks') {
             this.setState({ drinks: val });
         }
-        console.log(typeof prop)
+        else {
+            this.setState({ value: val })
+        }
         
     }
     
 
     render() {
-
+        const drinksTotal = this.state.drinks * this.state.people
         return (
             <div id="planning" className="container-home">
                 
@@ -44,7 +46,11 @@ class Planning extends Component {
                     handleChangeValue={this.handleChangeValue}
                     />
 
-                    <BottomTable />
+                    <BottomTable 
+                    key={2}
+                    handleChangeValue={this.handleChangeValue}
+                    drinksTotal={drinksTotal}
+                    />
                 </div>
             </div>
         )
