@@ -31,7 +31,7 @@ const Header = () => {
                 <Link to="Wine">Wine & Liquor</Link>
             </NavItem>
             <NavItem eventKey={3} href="#">
-                <Link to="Planning">Planning</Link>
+                <Link to="Planning">Party Planning</Link>
             </NavItem>
             <NavItem eventKey={3} href="#">
                 <Link to="Contact">Contact</Link>

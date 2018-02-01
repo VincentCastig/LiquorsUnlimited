@@ -99,8 +99,8 @@ col img {
   background-color: #266d61;
   color: beige;
   margin-top: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 5px 20px;
+  font-family: serif;
 }
 
 .ok {

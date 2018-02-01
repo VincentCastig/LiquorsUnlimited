@@ -24,7 +24,7 @@ const Contact = () => {
             <div className="home-wine-container">
                 <div className="content-row">
                     <Col xs={6} md={6}>
-                        <img className="home-main-image" src={(require('../../img/painting.JPG'))} alt="Wine bottles in fridge"/>
+                        <img className="home-main-image" src={(require('../../img/painting.JPG'))} alt="Side view of Liquors Unlimited Store"/>
                     </Col>
                     <Col xs={6} md={6}>
                         <h3 className="red-header">Liquors Unlimited</h3>
