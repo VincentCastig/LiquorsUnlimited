@@ -24,7 +24,7 @@ class Home extends Component {
                     </Col>
                     <Col xs={6} md={6}>
                     <h3 className="red-header">37 years of service</h3>
-                        <p>Opening in 1981, The Liquors Unlimited Store is enjoying many years of serving Pascagoula, MS and its surrounding areas. Our liquor store proudly stocks over 4,000 different items and we can special order many more.</p>
+                        <p>Opening in 1981, The Liquors Unlimited Store is enjoying many years of serving Pascagoula, MS and its surrounding areas. Our liquor store proudly stocks over 2,100 different items and we can special order many more.</p>
                     </Col>
                 </div>
                 <div id="content-row2" className="content-row">
