@@ -420,6 +420,11 @@ nav {
   padding: 15px 25px;
 }
 }
+@media (max-width: 468px) {
+ .table>tbody>tr>td {
+    padding: 5px;
+ }
+}
 /* .nav-home-link {
   border-left-color: rgba(9, 29, 8, 0.226);
   border-left-style: solid;

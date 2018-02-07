@@ -71,7 +71,7 @@ class BottomTable extends Component {
                                 
                                 {`${this.state[val][0]}%`}
                             </td>
-                            <td>{drinks}</td>
+                            {/* <td>{drinks}</td> */}
                             {this.state[val][1] && 
                                 <td>{fifth}</td>
                             }
@@ -89,10 +89,10 @@ class BottomTable extends Component {
                         <thead>
                             <tr>
                                 <th>Type of Drink</th>
-                                <th>Percentage</th>
-                                <th>Drinks</th>
-                                <th>0.75 Liter Bottles</th>
-                                <th>Liters</th>
+                                <th>Drink Amount (%)</th>
+                                {/* <th>Number of Drinks</th> */}
+                                <th>0.75 Liters</th>
+                                <th>1.0 Liters</th>
                             </tr>
                         </thead>
                         <tbody>
