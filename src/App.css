@@ -282,11 +282,13 @@ col img {
 button {
   padding-top: 4px;
   padding-bottom: 4px;
+  border-radius: 5px;
 }
+
 .icon-bar {
   width: 22px;
   height: 2px;
-  background-color: black;
+  background-color: rgb(61, 8, 10) !important;
   display: block;
   line-height: inherit;
   margin: 4px;
@@ -320,6 +322,9 @@ button {
   display: none;
   position: relative;
 }
+.navNarrow :hover{
+  background-color: beige;
+}
 @media (min-width: 200px) {
   .jumbotron h1{
     font-size:38px; 
@@ -329,15 +334,14 @@ button {
 }
 @media (max-width:350px){
   .navbar-header>.navbar-brand{
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .jumbotron h2{
+    font-size: 20px;
   }
 }
 @media (min-width: 400px) {
-  .jumbotron h1{
-    font-size:55px; 
-    line-height: 0.8;
-    text-decoration-line: underline
-  }
+  
 }
 
 @media (min-width: 800px) {
@@ -399,13 +403,15 @@ button {
     }
   }
   @media screen and (max-width: 800px) { 
-    .jumbotron .inner{ background: 0 !important; 
+    .jumbotron .inner{ 
+      /* background: 0 !important;  */
       height: 200px ;
       
     }
   }
   @media screen and (max-width: 450px) { 
-    .jumbotron .inner{ background: 0 !important; 
+    .jumbotron .inner{ 
+      /* background: 0 !important;  */
       height: 160px ;
       
     }
@@ -493,4 +499,15 @@ nav {
 }
 div .navbar-default .navbar-brand:focus, div .navbar-default .navbar-brand:hover {
   color: #d5d5d5;
+}
+@media (max-width:350px){
+  .navbar-header>.navbar-brand{
+    font-size: 18px;
+  }
+  .jumbotron .inner img {
+    width: 100%;
+  }
+  .jumbotron .inner h2{
+    font-size: 20px;
+  }
 }
