@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+class Header extends Component {
+    constructor(props) {
+        super(props)
+        this.navToggle = this.navToggle.bind(this)
+    }
+    navToggle = () => { 
+        console.log('clicked')
+        let linksEl = document.querySelector('.collapse') 
+        if (linksEl.style.display === 'block') {
+          linksEl.style.display = 'none';
+        } else {
+          linksEl.style.display = 'block';
+        }
+      };
+    render() {
     return (
     <div>
     <Navbar collapseOnSelect navbar-fixed-top>
@@ -11,38 +25,36 @@ const Header = () => {
             Liquors Unlimited
         </Navbar.Brand>
         <Navbar.Toggle />
+        <div className="navNarrow">
+        <button type='button' className="" onClick={this.navToggle}>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+        </button>
+    </div>
     </Navbar.Header>
     <Navbar.Collapse>
         
         <Nav pullRight>
   
-            
-            {/* <NavDropdown eventKey={3} title="Categories" id="basic-nav-dropdown">
-         <MenuItem>Programming</MenuItem>
-         <MenuItem>Fitness</MenuItem>
-         <MenuItem>Cooking</MenuItem>
-         <MenuItem>Book Reviews</MenuItem>
-                
-            </NavDropdown> */}
             <NavItem className="nav-home-link"eventKey={1} href="#">
-                <Link to="Home">Home</Link>
+                <Link to="Home" onClick={this.navToggle}>Home</Link>
             </NavItem>
             <NavItem eventKey={2} href="#">
-                <Link to="Wine">Wine & Liquor</Link>
+                <Link to="Wine" onClick={this.navToggle}>Wine & Liquor</Link>
             </NavItem>
             <NavItem eventKey={3} href="#">
-                <Link to="Planning">Party Planning</Link>
+                <Link to="Planning" onClick={this.navToggle}>Party Planning</Link>
             </NavItem>
             <NavItem eventKey={3} href="#">
-                <Link to="Contact">Contact</Link>
+                <Link to="Contact" onClick={this.navToggle}>Contact</Link>
             </NavItem>
         </Nav>
     </Navbar.Collapse>
+    
 </Navbar>
     <div className="jumbotron">
                 <div className="inner">
-                    {/* <h1 className="liquors" >Liquors</h1>
-                    <h1 className="unlimited" >Unlimited</h1>  */}
                     <img src={require("../img/LUTitleFirstCopy.png")} alt="Liquors Unlimited Caligraphy by Lillian Castigliola"/>
                     <h2>Fine Wine and Spirits</h2>
         
@@ -51,6 +63,7 @@ const Header = () => {
             </div>
         
     )
+}
 }
 
 export default Header;
