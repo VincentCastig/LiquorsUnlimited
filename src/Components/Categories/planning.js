@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// import { FormGroup, FormControl } from 'react-bootstrap';
 import TopTable from './PlanningTables/top-table';
 import BottomTable from './PlanningTables/bottom-table';
 
