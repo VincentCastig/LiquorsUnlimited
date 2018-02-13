@@ -51,7 +51,21 @@ class Header extends Component {
             </NavItem>
         </Nav>
     </Navbar.Collapse>
-    
+     <Nav pullRight className="webNavRight">
+  
+            <NavItem className="nav-home-link"eventKey={1} href="#">
+                <Link to="Home" onClick={this.navToggle}>Home</Link>
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+                <Link to="Wine" onClick={this.navToggle}>Wine & Liquor</Link>
+            </NavItem>
+            <NavItem eventKey={3} href="#">
+                <Link to="Planning" onClick={this.navToggle}>Party Planning</Link>
+            </NavItem>
+            <NavItem eventKey={3} href="#">
+                <Link to="Contact" onClick={this.navToggle}>Contact</Link>
+            </NavItem>
+        </Nav>
 </Navbar>
     <div className="jumbotron">
                 <div className="inner">
