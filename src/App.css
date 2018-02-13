@@ -124,6 +124,14 @@ col img {
   -ms-filter: blur(5px);
   filter: blur(5px); */
 }
+@media (min-width: 769px){
+  
+  .container{
+    min-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  }
 @media (min-width: 768px){
   .container-home {
       width: 750px;
@@ -132,11 +140,11 @@ col img {
     width: 100%;
     padding: 0px;
   }
-  .container{
+  /* .container{
     min-width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+    margin-left: 15px;
+    margin-right: 15px;
+  } */
   .webNavRight {
     display: flex;
     flex-direction: row;
@@ -529,9 +537,9 @@ nav {
     width: 100%;
   }
 } 
-.navbar-default {
+/* .navbar-default {
   height:53px;
-}
+} */
 @media (min-width: 768px) {
   .navbar-default {
     height:53px;
