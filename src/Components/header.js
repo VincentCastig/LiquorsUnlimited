@@ -69,7 +69,7 @@ class Header extends Component {
 </Navbar>
     <div className="jumbotron">
                 <div className="inner">
-                    <img src={require("../img/LUTitleFirstCopy.png")} alt="Liquors Unlimited Caligraphy by Lillian Castigliola"/>
+                    <img src={require("../img/LUTitleFirstCopy2.png")} alt="Liquors Unlimited Caligraphy by Lillian Castigliola"/>
                     <h2>Fine Wine and Spirits</h2>
         
                 </div>
