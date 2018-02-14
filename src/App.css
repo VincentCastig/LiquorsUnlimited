@@ -106,6 +106,9 @@ col img {
 .webNavRight {
   display: none;
 }
+.navbar-default{
+  padding: 0px;
+}
 .ok {
   /* position: absolute; */
   /* left: 0;
@@ -140,11 +143,7 @@ col img {
     width: 100%;
     padding: 0px;
   }
-  /* .container{
-    min-width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-  } */
+ 
   .webNavRight {
     display: flex;
     flex-direction: row;
@@ -297,7 +296,7 @@ col img {
 .jumbotron .inner img{
   position: absolute;
   width: 95%;
-  margin-top: 23px; 
+  margin-top: 35px; 
   margin-left: 2px;
   /* color: transparent;
   -webkit-filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
@@ -323,6 +322,9 @@ col img {
 }
 .navbar-toggle {
   display: none;
+}
+.navbar>.container{
+  min-width: 95%;
 }
 button {
   padding-top: 4px;
@@ -401,7 +403,7 @@ button {
     text-decoration-line: none;
   }
   .jumbotron .inner img{
-    margin-top: 33px;
+    margin-top: 40px;
     position: absolute;
     width: 700px;
     /* margin-top: -160px; 
@@ -453,6 +455,17 @@ button {
       /* background: 0 !important;  */
       height: 200px ;
       
+    }
+  }
+  @media screen and (max-width: 768px) { 
+    .jumbotron .inner{ 
+      /* background: 0 !important;  */
+      height: 180px ;
+      
+    }
+    .jumbotron .inner img{ 
+      /* background: 0 !important;  */
+      width: 110%;
     }
   }
   @media screen and (max-width: 450px) { 
@@ -508,6 +521,9 @@ nav {
 .navbar-header>.navbar-brand{
   width: 200px;
 }
+.navbar-header{
+  width: 160px;
+}
  @media (max-width: 768px) {
   .navNarrow {
     display: block;
@@ -536,7 +552,7 @@ nav {
     .navNarrow {
       display: block;
       margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
   }
 } 
 /* .navbar-default {
@@ -586,9 +602,7 @@ div .navbar-default .navbar-brand:focus, div .navbar-default .navbar-brand:hover
     font-size: 18px;
     width: 50%;
   }
-  .jumbotron .inner img {
-    width: 100%;
-  }
+  
   .jumbotron .inner h2{
     font-size: 20px;
   }
