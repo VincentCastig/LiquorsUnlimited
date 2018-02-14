@@ -280,7 +280,7 @@ col img {
   background:url(./img/backdropBench.png) center bottom no-repeat; 
   display:flex; 
   /* text-shadow: #28288d; */
-  justify-content: space-around; 
+  /* justify-content: space-around;  */
   align-items:center; 
   flex-direction: column; 
   
@@ -403,8 +403,9 @@ button {
     text-decoration-line: none;
   }
   .jumbotron .inner img{
-    margin-top: 30px;
+    margin-top: 35px;
     position: absolute;
+    padding-bottom: 20px;
     width: 700px;
     /* margin-top: -160px; 
     color: transparent;
@@ -432,7 +433,7 @@ button {
   .jumbotron .inner img{
     position: absolute;
     width: 860px;
-    margin-top: 36px; 
+    margin-top: 30px; 
     /* color: transparent; 
     -webkit-filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10));
     filter: drop-shadow(0px 183px 0.0px rgb(61, 8, 10)); */
@@ -461,12 +462,19 @@ button {
     .jumbotron .inner{ 
       /* background: 0 !important;  */
       height: 180px ;
+      justify-content: space-around;
       
     }
     .jumbotron .inner img{ 
       /* background: 0 !important;  */
       margin-top: 25px;
       width: 110%;
+    }
+  }
+  @media screen and (max-width: 550px) { 
+    .jumbotron .inner img{ 
+      /* background: 0 !important;  */
+      /* margin-top: 37px; */
     }
   }
   @media screen and (max-width: 450px) { 
