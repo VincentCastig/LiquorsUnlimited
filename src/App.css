@@ -372,6 +372,10 @@ button {
 .navNarrow :hover{
   background-color: beige;
 }
+.style1{
+  background-color: rgba(61, 8, 10, 0.043);
+}
+
 @media (min-width: 200px) {
   .jumbotron h1{
     font-size:38px; 

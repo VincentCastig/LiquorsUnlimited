@@ -68,8 +68,10 @@ class BottomTable extends Component {
             let drinks = Math.round(100 * (this.state[val][1] * drinksTotal / 100)) / 100;
             let fifth = Math.round(10 * drinks / this.state[val][2]) / 10;
             let liter = Math.round(10 * fifth / 1.33) / 10;
+            let rowStyle = `style${i % 2}`;
+            console.log(rowStyle);
             return (
-                        <tr key={i}>
+                        <tr key={i} className={rowStyle}>
                             <td>
                                 {this.state[val][0]}
                             </td>
