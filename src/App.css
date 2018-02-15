@@ -474,7 +474,7 @@ button {
   @media screen and (max-width: 550px) { 
     .jumbotron .inner img{ 
       /* background: 0 !important;  */
-      /* margin-top: 37px; */
+      margin-top: 37px;
     }
   }
   @media screen and (max-width: 450px) { 

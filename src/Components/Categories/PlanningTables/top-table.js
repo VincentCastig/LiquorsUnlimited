@@ -38,7 +38,7 @@ class TopTable extends Component {
             <Table>
                         <thead>
                             <tr>
-                                <th>People</th>
+                                <th>Number of People</th>
                                 <th>Drinks Per Person</th>
                                 <th>Drinks Total</th>
                             </tr>

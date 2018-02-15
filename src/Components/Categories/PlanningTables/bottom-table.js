@@ -7,6 +7,7 @@ class BottomTable extends Component {
 
         this.state = {
             value: '',
+            size: "0.75",
             Beer: [ 20, '' ],
             Red: [ 12, 5 ],
             White: [ 28, 5 ],
@@ -16,11 +17,16 @@ class BottomTable extends Component {
             Vodka: [ 16, 17 ],
             Rum: [ 2, 17 ]
         }
+        this.handleChange = this.handleChange.bind(this);
     }
 
     getValidateState() {
         const drinks = this.state.value
         if (drinks > 25) return 'warning'
+    }
+    handleChange(event){
+        this.setState({size:event.target.value})
+        console.log(this.state.size);
     }
     updatePercentage(drink, value) {
         this.props.handleChangeValue('people', value)
@@ -72,10 +78,10 @@ class BottomTable extends Component {
                                 {`${this.state[val][0]}%`}
                             </td>
                             {/* <td>{drinks}</td> */}
-                            {this.state[val][1] && 
+                            {this.state.size === '0.75' && this.state[val][1] &&
                                 <td>{fifth}</td>
                             }
-                            {this.state[val][1] && 
+                            {this.state.size === '1' && this.state[val][1] &&
                             <td>{liter}</td>
                             }
                         </tr>
@@ -91,8 +97,13 @@ class BottomTable extends Component {
                                 <th>Type of Drink</th>
                                 <th>Drink Amount (%)</th>
                                 {/* <th>Number of Drinks</th> */}
-                                <th>0.75 Liters</th>
-                                <th>1.0 Liters</th>
+                                <th>
+                                    <select value={this.state.size} onChange={this.handleChange}>
+                                        <option value={0.75}>0.75 Liter Bottles</option>
+                                        <option value={1}>1 Liter Bottles</option>
+                                    </select>
+                                </th>
+                                {/* <th>1.0 Liters</th> */}
                             </tr>
                         </thead>
                         <tbody>
