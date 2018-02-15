@@ -8,14 +8,14 @@ class BottomTable extends Component {
         this.state = {
             value: '',
             size: "0.75",
-            Beer: [ 20, '' ],
-            Red: [ 12, 5 ],
-            White: [ 28, 5 ],
-            Bourbon: [ 11, 17 ],
-            Scotch: [ 7, 17 ],
-            Gin: [ 4, 17 ],
-            Vodka: [ 16, 17 ],
-            Rum: [ 2, 17 ]
+            Beer: [ 'Beer', 20, '' ],
+            Red: [ 'Red Wine', 12, 5 ],
+            White: [ 'White Wine', 28, 5 ],
+            Bourbon: [ 'Bourbon', 11, 17 ],
+            Scotch: [ 'Scotch',7, 17 ],
+            Gin: [ 'Gin',4, 17 ],
+            Vodka: [ 'Vodka',16, 17 ],
+            Rum: [ 'Rum',2, 17 ]
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -65,23 +65,23 @@ class BottomTable extends Component {
         const drinksTotal = Math.round(100 * this.props.drinksTotal) / 100;
 
         return data.map((val, i) => {
-            let drinks = Math.round(100 * (this.state[val][0] * drinksTotal / 100)) / 100;
-            let fifth = Math.round(10 * drinks / this.state[val][1]) / 10;
+            let drinks = Math.round(100 * (this.state[val][1] * drinksTotal / 100)) / 100;
+            let fifth = Math.round(10 * drinks / this.state[val][2]) / 10;
             let liter = Math.round(10 * fifth / 1.33) / 10;
             return (
                         <tr key={i}>
                             <td>
-                                {val}
+                                {this.state[val][0]}
                             </td>
                             <td>
                                 
-                                {`${this.state[val][0]}%`}
+                                {`${this.state[val][1]}%`}
                             </td>
                             {/* <td>{drinks}</td> */}
-                            {this.state.size === '0.75' && this.state[val][1] &&
+                            {this.state.size === '0.75' && this.state[val][2] &&
                                 <td>{fifth}</td>
                             }
-                            {this.state.size === '1' && this.state[val][1] &&
+                            {this.state.size === '1' && this.state[val][2] &&
                             <td>{liter}</td>
                             }
                         </tr>
