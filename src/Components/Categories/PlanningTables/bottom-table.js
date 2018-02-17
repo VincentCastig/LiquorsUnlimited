@@ -30,10 +30,11 @@ class BottomTable extends Component {
         this.setState({size:event.target.value})
     }
     updatePercentage(drink, value, totalPercentage) {
-        console.log('here is our totalPercentage in updatePercentage', value);
-        //convert string value to integer
-        // console.log(value > 30);
-        
+       
+        if (value > 100) {
+            return;
+        }
+    
         if (drink === "Beer") {
             this.setState({ Beer: ['Beer', value, ''] })
         }
