@@ -18,11 +18,15 @@ class Planning extends Component {
     }
 
     handleChangeValue(prop, val) {
+        console.log('prop in planning.js',val)
         if (prop === 'people') {
             this.setState({ people: val });
         }
         else if (prop === 'drinks') {
             this.setState({ drinks: val });
+        }
+        else if (prop === 'percentage') {
+            this.setState({ percentage: val });
         }
         else {
             this.setState({ value: val })
@@ -48,6 +52,7 @@ class Planning extends Component {
                     key={2}
                     handleChangeValue={this.handleChangeValue}
                     drinksTotal={drinksTotal}
+                    totalPercentage={this.state.percentage}
                     />
                 </div>
             </div>

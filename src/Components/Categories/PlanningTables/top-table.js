@@ -46,10 +46,12 @@ class TopTable extends Component {
                         <tbody>
                             <tr>
                                 <td>
+                            
                                     <form>
                                         <FormGroup
                                         >
                                             <FormControl
+                                            //Formcontrol for amount of people who will be drinking
                                             type="number"
                                             value={this.state.people}
                                             min='1'
@@ -66,6 +68,7 @@ class TopTable extends Component {
                                             validationState={this.getValidateState()}
                                         >
                                             <FormControl
+                                            //Formcontrol for amount of drinks expected per person
                                             type="number"
                                             value={this.state.drinks}
                                             min='1'
