@@ -24,68 +24,47 @@ class BottomTable extends Component {
     getValidateState() {
         // const drinks = this.state.value
         // if (drinks > 25) return 'warning'
-        // console.log('value in validateState', this.state.value)
         return null;
     }
     handleChange(event){
         this.setState({size:event.target.value})
-        console.log('this.state.totalPercentage in handleChange',this.state.totalPercentage);
     }
     updatePercentage(drink, value, totalPercentage) {
-        console.log('here is our totalPercentage in updatePercentage', totalPercentage);
+        console.log('here is our totalPercentage in updatePercentage', value);
         //convert string value to integer
         // console.log(value > 30);
-        let numValue = value;
-
-        if (value <= 100 || value >= 0 ) {
-            const numValue = parseInt(value);
-            console.log('here is our value', numValue);
-        }
-        else {
-            const numValue = '';
-        }
-            
-    
-        // this.props.handleChangeValue('people', numValue)
+        
         if (drink === "Beer") {
-            this.setState({ Beer: ['Beer', numValue, ''] })
+            this.setState({ Beer: ['Beer', value, ''] })
         }
         else if (drink === "Red") {
-            this.setState({ totalPercentage, Red: ['Red Wine', numValue, 5] })
+            this.setState({ totalPercentage, Red: ['Red Wine', value, 5] })
         }
         else if (drink === "White") {
-            this.setState({ White: ['White Wine', numValue, 5] })
+            this.setState({ White: ['White Wine', value, 5] })
         }
         else if (drink === "Bourbon") {
-            this.setState({ Bourbon: ['Bourbon', numValue, 17] })
+            this.setState({ Bourbon: ['Bourbon', value, 17] })
         }
         else if (drink === "Scotch") {
-            this.setState({ Scotch: ['Scotch', numValue, 17] })
+            this.setState({ Scotch: ['Scotch', value, 17] })
         }
         else if (drink === "Gin") {
-            this.setState({ Gin: ['Gin', numValue, 17] })
+            this.setState({ Gin: ['Gin', value, 17] })
         }
         else if (drink === "Vodka") {
-            this.setState({ Vodka: ['Vodka', numValue, 17] })
+            this.setState({ Vodka: ['Vodka', value, 17] })
         }
         else {
-            this.setState({ Rum: ['Rum', numValue, 17] })
-        }
-        let val;
-        for (val in this.state){
-            console.log(this.state[val][1]);
+            this.setState({ Rum: ['Rum', value, 17] })
         }
         this.props.handleChangeValue('percentage', totalPercentage)
-        console.log('drink in percent function',this.state.totalPercentage);
-        
-
     }
 
     renderPlanningTable() {
         const data = ['Beer', 'Red', 'White', 'Bourbon', 'Scotch', 'Gin', 'Vodka', 'Rum'];
         const drinksTotal = Math.round(100 * this.props.drinksTotal) / 100;
         let totalPercentage = 0;
-        console.log('renderPlanningTable', totalPercentage);
 
         return data.map((val, i) => {
             let drinks = Math.round(100 * (this.state[val][1] * drinksTotal / 100)) / 100;
@@ -95,8 +74,8 @@ class BottomTable extends Component {
             //update total percent
             totalPercentage += parseInt(this.state[val][1]);
             // console.log('data.map',this.state[val][1]);
-            console.log('totalPercentage in data.map', totalPercentage);
-            console.log('this.state.totalPercentage in data.map', this.state.totalPercentage);
+            // console.log('totalPercentage in data.map', totalPercentage);
+            // console.log('this.state.totalPercentage in data.map', this.state.totalPercentage);
             // this.setState({totalPercentage});
             return (
                     <tr key={i} className={rowStyle}>
