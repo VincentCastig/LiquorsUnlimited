@@ -10,17 +10,9 @@ const Contact = () => {
     return (
         <div className="container-home">
             <div className="image-container-contact">
-                {/* <img className="home-main-image" src={(require('../../img/DSC_0393.JPG'))}/> */}
                 <Map />
             </div>
             <h2>Contact Liquors Unlimited</h2>
-            {/* <div className="home-paragraph">
-                <h3>Visit for the customer service, return for the savings</h3>
-                <p>Opening in 1981, The Liquors Unlimited Store is enjoying our 40th year serving Pascagoula, MS and surrounding areas.  
- 
-
-                Our liquor store proudly stocks over 4,000 different items and we can special order many more.</p>
-            </div> */}
             <div className="home-wine-container">
                 <div className="content-row">
                     <Col xs={6} md={6}>
