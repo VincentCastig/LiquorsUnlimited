@@ -9,23 +9,16 @@
   height: 300px;
 }
 body {
-  
-  /* left: 0;
-  right: 0; */
-  /* z-index: -1;
-  width: 100%;
-  height: auto;
-  /* -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px); */
-}
-#root {
   background: url(../src/img/Barrels.JPG)  no-repeat;
   background-size: cover;
   background-attachment: fixed;
   z-index: -22;
+}
+#root {
+  /* background: url(../src/img/Barrels.JPG)  no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -22; */
   
 }
 
@@ -35,30 +28,6 @@ body {
     }
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-} */
-
-/* .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-} */
-
-/* .App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */
-
-/* @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
 col img {
   margin: 5px;
 }
@@ -377,6 +346,9 @@ button {
   }
   .jumbotron h2{
     font-size: 20px;
+  }
+  #planning {
+    height: 850px;
   }
 }
 @media (min-width: 400px) {

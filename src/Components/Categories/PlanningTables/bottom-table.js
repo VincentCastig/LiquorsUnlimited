@@ -36,28 +36,28 @@ class BottomTable extends Component {
         }
     
         if (drink === "Beer") {
-            this.setState({ Beer: ['Beer', value, ''] })
+            this.setState({ totalPercentage, Beer: ['Beer', value, ''] })
         }
         else if (drink === "Red") {
             this.setState({ totalPercentage, Red: ['Red Wine', value, 5] })
         }
         else if (drink === "White") {
-            this.setState({ White: ['White Wine', value, 5] })
+            this.setState({ totalPercentage, White: ['White Wine', value, 5] })
         }
         else if (drink === "Bourbon") {
-            this.setState({ Bourbon: ['Bourbon', value, 17] })
+            this.setState({ totalPercentage, Bourbon: ['Bourbon', value, 17] })
         }
         else if (drink === "Scotch") {
-            this.setState({ Scotch: ['Scotch', value, 17] })
+            this.setState({ totalPercentage, Scotch: ['Scotch', value, 17] })
         }
         else if (drink === "Gin") {
-            this.setState({ Gin: ['Gin', value, 17] })
+            this.setState({ totalPercentage, Gin: ['Gin', value, 17] })
         }
         else if (drink === "Vodka") {
-            this.setState({ Vodka: ['Vodka', value, 17] })
+            this.setState({ totalPercentage, Vodka: ['Vodka', value, 17] })
         }
         else {
-            this.setState({ Rum: ['Rum', value, 17] })
+            this.setState({ totalPercentage, Rum: ['Rum', value, 17] })
         }
         this.props.handleChangeValue('percentage', totalPercentage)
     }
@@ -72,12 +72,9 @@ class BottomTable extends Component {
             let fifth = Math.round(10 * drinks / this.state[val][2]) / 10;
             let liter = Math.round(10 * fifth / 1.33) / 10;
             let rowStyle = `style${i % 2}`;
-            //update total percent
+            //Update total percent
             totalPercentage += parseInt(this.state[val][1]);
-            // console.log('data.map',this.state[val][1]);
-            // console.log('totalPercentage in data.map', totalPercentage);
-            // console.log('this.state.totalPercentage in data.map', this.state.totalPercentage);
-            // this.setState({totalPercentage});
+
             return (
                     <tr key={i} className={rowStyle}>
                             <td>
@@ -98,9 +95,7 @@ class BottomTable extends Component {
                                         />
                                     </FormGroup>
                                 </form>
-                                {/* {`${this.state[val][1]}%`} */}
                             </td>
-                            {/* <td>{drinks}</td> */}
                             {this.state.size === '0.75' && this.state[val][2] &&
                                 <td>{fifth}</td>
                             }
@@ -143,7 +138,7 @@ class BottomTable extends Component {
                     <thead>
                             <tr>
                                 <th>Type of Drink</th>
-                                <th>Percentage to be Consumed <span className="totalPercentage">({totalPercentage}%)</span></th>
+                                <th>Percentage Consumed <span className="totalPercentage">({totalPercentage}%)</span></th>
                                 <th>
                                     <select value={this.state.size} onChange={this.handleChange}>
                                         <option value={0.75}>0.75 Liter Bottles</option>
