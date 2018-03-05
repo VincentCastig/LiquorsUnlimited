@@ -43,7 +43,7 @@ col img {
 }
 .content-row div {
   width: 90%;
-  margin: 10px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
