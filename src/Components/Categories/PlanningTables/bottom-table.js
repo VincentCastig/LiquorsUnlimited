@@ -73,7 +73,7 @@ class BottomTable extends Component {
             let liter = Math.round(10 * fifth / 1.33) / 10;
             let rowStyle = `style${i % 2}`;
             //Update total percent
-            totalPercentage += parseInt(this.state[val][1]);
+            totalPercentage += parseInt(this.state[val][1], 10);
 
             return (
                     <tr key={i} className={rowStyle}>
@@ -114,8 +114,8 @@ class BottomTable extends Component {
         let percentage = 0;
         for (val in this.state){
             //If we have a drink property, add value to our total percentage
-            if(parseInt(this.state[val][1])) {
-                percentage += parseInt(this.state[val][1]);
+            if(parseInt(this.state[val][1], 10)) {
+                percentage += parseInt(this.state[val][1], 10);
             }
         }
         const totalPercentage = percentage;

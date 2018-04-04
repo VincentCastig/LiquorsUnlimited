@@ -20,7 +20,7 @@ class Home extends Component {
             <div className="home-wine-container">
                 <div className="content-row">
                     <Col xs={6} md={6}>
-                        <img className="home-main-image" src={(require('../../img/DSC_0393.JPG'))} alt="front view of liquor store"/>
+                        <img className="home-main-image" src={(require('../../img/storeEntrance.JPG'))} alt="front view of liquor store"/>
                     </Col>
                     <Col xs={6} md={6}>
                     <h3 className="red-header">37 years of service</h3>
@@ -36,7 +36,7 @@ class Home extends Component {
                         
                     </Col>
                     <Col xs={6} md={6}>
-                        <img className="home-main-image" src={(require('../../img/wineAndLiquor.JPG'))} alt="side view of liquor store"/>
+                        <img className="home-main-image" src={(require('../../img/wineRoom.jpeg'))} alt="side view of liquor store"/>
                     </Col>
                 </div>
             </div>

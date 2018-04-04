@@ -8,22 +8,14 @@ $secondary_color: beige;
     right: 0;
     z-index: 9999;
   }
-  .map {
-    height: 300px;
-  }
   body {
     background: url(../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     z-index: -22;
+    width: 100%;
+    position: absolute;
   }
-  
-  @media screen and (min-width: 1024px){
-      .map {
-          height: 500px;
-      }
-  }
-  
   col img {
     margin: 5px;
   }
@@ -79,13 +71,12 @@ $secondary_color: beige;
     max-width: 93px;
   }
   @media (min-width: 769px){
-    
     .container{
       min-width: 100%;
       margin-left: 10px;
       margin-right: 10px;
     }
-    }
+  }
   @media (min-width: 768px){
     .container-home {
         width: 750px;
@@ -94,19 +85,17 @@ $secondary_color: beige;
       width: 100%;
       padding: 0px;
     }
-   
     .webNavRight {
       display: flex;
       flex-direction: row;
     }
+  }
+  @media (min-width: 850px){
+    .container{
+      min-width: 95%;
+      margin-left: 10px;
+      margin-right: 10px;
     }
-    @media (min-width: 850px){
-      
-      .container{
-        min-width: 95%;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
       
     .content-row {
       margin-right: -15px;
@@ -120,7 +109,7 @@ $secondary_color: beige;
     .ok {
       height: 1250px;
     }
-    }
+  }
   @media (min-width: 992px) {
     .container-home {
         width: 840px;
@@ -158,7 +147,6 @@ $secondary_color: beige;
     color: $secondary_color;
     bottom: 0;
   }
-  
   .image-container {
     width: 100%;
     display: flex;
@@ -190,7 +178,6 @@ $secondary_color: beige;
   .home-wine-container {
     padding: 20px;
   }
-  
     .jumbotron .h1,.jumbotron h1{color:inherit}
     .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
     .jumbotron>hr{border-top-color:#d5d5d5}
@@ -209,6 +196,7 @@ $secondary_color: beige;
     }
   .jumbotron{ 
     margin-top: 8px; 
+    margin-bottom: 30px; 
     overflow: hidden; 
     color:inherit;
     background-color:#e0d09b; 
@@ -226,13 +214,9 @@ $secondary_color: beige;
     height: 200px; 
     background:url(./img/backdropBench.png) center bottom no-repeat; 
     display:flex; 
-    /* text-shadow: #28288d; */
-    /* justify-content: space-around;  */
     align-items:center; 
     flex-direction: column; 
-    
   }
-  
   .jumbotron .inner img{
     position: absolute;
     width: 95%;
@@ -250,7 +234,6 @@ $secondary_color: beige;
     bottom: 0;
   }
   #planning {
-    /* height: 800px; */
     min-height: 200px;
   }
   .navbar-toggle {
@@ -264,7 +247,6 @@ $secondary_color: beige;
     padding-bottom: 4px;
     border-radius: 5px;
   }
-  
   .icon-bar {
     width: 22px;
     height: 2px;
@@ -413,6 +395,7 @@ $secondary_color: beige;
     }
     .navbar-default {
       position: fixed;
+      width: 100vw;
       top: 0;
       border-width: 0 0 1px;
       left: 0;

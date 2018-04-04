@@ -5,18 +5,14 @@
   right: 0;
   z-index: 9999; }
 
-.map {
-  height: 300px; }
-
 body {
   background: url(../src/img/Barrels.JPG) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  z-index: -22; }
+  z-index: -22;
+  width: 100%;
+  position: absolute; }
 
-@media screen and (min-width: 1024px) {
-  .map {
-    height: 500px; } }
 col img {
   margin: 5px; }
 
@@ -197,6 +193,7 @@ col img {
 
 .jumbotron {
   margin-top: 8px;
+  margin-bottom: 30px;
   overflow: hidden;
   color: inherit;
   background-color: #e0d09b;
@@ -214,8 +211,6 @@ col img {
   height: 200px;
   background: url(./img/backdropBench.png) center bottom no-repeat;
   display: flex;
-  /* text-shadow: #28288d; */
-  /* justify-content: space-around;  */
   align-items: center;
   flex-direction: column; }
 
@@ -236,7 +231,6 @@ col img {
   bottom: 0; }
 
 #planning {
-  /* height: 800px; */
   min-height: 200px; }
 
 .navbar-toggle {
@@ -367,6 +361,7 @@ button {
     height: 160px; } }
 .navbar-default {
   position: fixed;
+  width: 100vw;
   top: 0;
   border-width: 0 0 1px;
   left: 0;
