@@ -1,7 +1,4 @@
 import React from 'react';
-// import { NavDropdown, MenuItem, Navbar, Nav, NavItem } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-// import { Grid, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
     return (

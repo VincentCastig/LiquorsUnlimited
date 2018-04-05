@@ -5,6 +5,9 @@
   right: 0;
   z-index: 9999; }
 
+html, body {
+  overflow-x: hidden; }
+
 body {
   background: url(../src/img/Barrels.JPG) no-repeat;
   background-size: cover;
@@ -129,6 +132,9 @@ col img {
   background: radial-gradient(#376b5e, #386b57, #1d554c);
   color: beige;
   bottom: 0; }
+
+#footer p {
+  margin: 10px; }
 
 .image-container {
   width: 100%;

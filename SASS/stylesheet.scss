@@ -8,6 +8,10 @@ $secondary_color: beige;
     right: 0;
     z-index: 9999;
   }
+  html, body {
+    // max-width: 100%;
+    overflow-x: hidden;
+}
   body {
     background: url(../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
@@ -146,6 +150,9 @@ $secondary_color: beige;
     background: $primary_green;
     color: $secondary_color;
     bottom: 0;
+  }
+  #footer p {
+    margin: 10px;
   }
   .image-container {
     width: 100%;
