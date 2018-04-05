@@ -97,7 +97,7 @@ class BottomTable extends Component {
                                 </form>
                             </td>
                             {this.state.size === '0.75' && this.state[val][2] &&
-                                <td>{fifth}</td>
+                            <td>{fifth}</td>
                             }
                             {this.state.size === '1' && this.state[val][2] &&
                             <td>{liter}</td>
@@ -119,7 +119,6 @@ class BottomTable extends Component {
             }
         }
         const totalPercentage = percentage;
-
         //Color code total percentage
         let linksEl = document.querySelector('.totalPercentage') 
         if (this.state.totalPercentage) {

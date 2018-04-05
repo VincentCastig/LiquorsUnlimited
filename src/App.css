@@ -15,7 +15,7 @@ body {
   background: url(../src/img/Barrels.JPG) no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
+  position: absolute;
   z-index: -22;
   width: 100%; }
 
@@ -306,7 +306,7 @@ button {
     font-size: 20px; }
 
   #planning {
-    height: 850px; } }
+    height: 855px; } }
 @media (min-width: 800px) {
   .jumbotron h1 {
     font-size: 60px;

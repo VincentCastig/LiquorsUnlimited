@@ -8,7 +8,6 @@ class Planning extends Component {
         super(props, context);
 
         this.handleChangeValue = this.handleChangeValue.bind(this);
-        // this.handleChangeDrink = this.handleChangeDrink.bind(this);
         this.state = {
             value: '',
             people: '',
@@ -18,7 +17,6 @@ class Planning extends Component {
     }
 
     handleChangeValue(prop, val) {
-        console.log('prop in planning.js',val)
         if (prop === 'people') {
             this.setState({ people: val });
         }
@@ -30,34 +28,29 @@ class Planning extends Component {
         }
         else {
             this.setState({ value: val })
-        }
-        
+        }   
     }
     
-
     render() {
         const drinksTotal = this.state.drinks * this.state.people
         return (
             <div id="planning" className="container-home">
-                
                 <h2>Party Planning</h2>
-                
                 <div className="home-wine-container">
                     <TopTable 
-                    key={1}
-                    handleChangeValue={this.handleChangeValue}
+                        key={1}
+                        handleChangeValue={this.handleChangeValue}
                     />
-
                     <BottomTable 
-                    key={2}
-                    handleChangeValue={this.handleChangeValue}
-                    drinksTotal={drinksTotal}
-                    totalPercentage={this.state.percentage}
+                        key={2}
+                        handleChangeValue={this.handleChangeValue}
+                        drinksTotal={drinksTotal}
+                        totalPercentage={this.state.percentage}
                     />
                 </div>
             </div>
         )
-}
+    }
 }
 
 export default Planning;

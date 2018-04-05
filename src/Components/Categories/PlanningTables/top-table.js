@@ -33,59 +33,58 @@ class TopTable extends Component {
 
     render() {
         const drinksTotal = Math.round(100 * this.state.people * this.state.drinks) / 100;
-
+        
         return (
             <Table>
-                        <thead>
-                            <tr>
-                                <th>Number of People</th>
-                                <th>Drinks Per Person</th>
-                                <th>Drinks Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                            
-                                    <form>
-                                        <FormGroup
-                                        >
-                                            <FormControl
-                                            //Formcontrol for amount of people who will be drinking
-                                            type="number"
-                                            value={this.state.people}
-                                            min='1'
-                                            max='10000'
-                                            placeholder="Enter Amount of People"
-                                            onChange={ event => this.updatePeople(event.target.value) }
-                                            />
-                                        </FormGroup>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form>
-                                        <FormGroup
-                                            validationState={this.getValidateState()}
-                                        >
-                                            <FormControl
-                                            //Formcontrol for amount of drinks expected per person
-                                            type="number"
-                                            value={this.state.drinks}
-                                            min='1'
-                                            max='25'
-                                            placeholder="Enter Amount of Drinks Per Person"
-                                            onChange={event => this.updateDrinks(event.target.value)}
-                                            />
-                                        </FormGroup>
-                                    </form>
-                                </td>
-                                <td>{drinksTotal}</td>
-                            </tr>
-                        </tbody>
-                    </Table>
+                <thead>
+                    <tr>
+                        <th>Number of People</th>
+                        <th>Drinks Per Person</th>
+                        <th>Drinks Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                    
+                            <form>
+                                <FormGroup
+                                >
+                                    <FormControl
+                                    //Formcontrol for amount of people who will be drinking
+                                        type="number"
+                                        value={this.state.people}
+                                        min='1'
+                                        max='10000'
+                                        placeholder="Enter Amount of People"
+                                        onChange={ event => this.updatePeople(event.target.value) }
+                                    />
+                                </FormGroup>
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <FormGroup
+                                    validationState={this.getValidateState()}
+                                >
+                                    <FormControl
+                                    //Formcontrol for amount of drinks expected per person
+                                        type="number"
+                                        value={this.state.drinks}
+                                        min='1'
+                                        max='25'
+                                        placeholder="Enter Amount of Drinks Per Person"
+                                        onChange={event => this.updateDrinks(event.target.value)}
+                                    />
+                                </FormGroup>
+                            </form>
+                        </td>
+                        <td>{drinksTotal}</td>
+                    </tr>
+                </tbody>
+            </Table>
         )
     }
-    
 }
 
 export default TopTable;
