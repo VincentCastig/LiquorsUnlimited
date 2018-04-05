@@ -14,11 +14,11 @@ $secondary_color: beige;
     height: 100%;
 }
   body {
-    max-width: 100%;
+    width: 100%;
     background: url(../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    position: absolute;
+    position: relative;
     z-index: -22;
     width: 100%;
   }
