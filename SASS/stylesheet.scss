@@ -10,7 +10,7 @@ $secondary_color: beige;
   }
   html,body {
     overflow-x: hidden;
-    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     height: 100%;
 }
   body {
@@ -22,7 +22,6 @@ $secondary_color: beige;
     z-index: -22;
     width: 100%;
   }
-  // #root {}
   col img {
     margin: 5px;
   }
@@ -208,8 +207,8 @@ $secondary_color: beige;
     overflow: hidden; 
     color:inherit;
     background-color:#e0d09b; 
-    background-attachment: 
-    fixed; min-height:auto;
+    background-attachment: fixed; 
+    min-height:auto;
     -webkit-background-size:cover; 
     -moz-background-size:cover; 
     background-size:cover;
@@ -389,7 +388,7 @@ $secondary_color: beige;
       }
     }
     .navbar-default {
-      position: fixed;
+      position: absolute;
       // position: -webkit-sticky;
       width: 100vw;
       top: 0;
