@@ -367,7 +367,7 @@ button {
   .jumbotron .inner {
     height: 160px; } }
 .navbar-default {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   top: 0;
   border-width: 0 0 1px;
