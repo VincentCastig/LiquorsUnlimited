@@ -379,7 +379,7 @@ $secondary_color: beige;
     }
     @media screen and (max-width: 550px) { 
       .jumbotron .inner img{ 
-        margin-top: 37px;
+        // margin-top: 37px;
       }
     }
     @media screen and (max-width: 450px) { 
@@ -391,7 +391,7 @@ $secondary_color: beige;
       }
     }
     .navbar-default {
-      position: absolute;
+      position: fixed;
       // position: -webkit-sticky;
       width: 100vw;
       top: 0;

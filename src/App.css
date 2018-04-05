@@ -358,9 +358,6 @@ button {
   .jumbotron .inner img {
     margin-top: 25px;
     width: 110%; } }
-@media screen and (max-width: 550px) {
-  .jumbotron .inner img {
-    margin-top: 37px; } }
 @media screen and (max-width: 450px) {
   .jumbotron .inner {
     height: 160px; }
@@ -368,7 +365,7 @@ button {
   .table td, .table th {
     padding: 1px; } }
 .navbar-default {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   top: 0;
   border-width: 0 0 1px;
