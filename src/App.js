@@ -11,7 +11,7 @@ import Routes from './Routes/routes';
 class App extends Component {
   render() {
     return (
-      <div className="app">
+      // <div className="app">
       <BrowserRouter>
       <div className="app">
       
@@ -21,7 +21,7 @@ class App extends Component {
         <Footer />
       </div>
       </BrowserRouter>
-      </div>
+      // </div>
     );
   }
 }

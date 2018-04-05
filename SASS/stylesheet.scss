@@ -3,23 +3,19 @@ $secondary_color: beige;
 
 .App {
     text-align: center;
-    // position: fixed;
     left: 0;
     right: 0;
     z-index: 9999;
   }
   html,body {
-    // overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    height: 100%;
 }
   body {
-    width: 100%;
     background: url(../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    // z-index: -22;
+    z-index: -22;
     width: 100%;
   }
   col img {
@@ -374,7 +370,7 @@ $secondary_color: beige;
       }
       .jumbotron .inner img{ 
         margin-top: 25px;
-        width: 110%;
+        width: 100%;
       }
     }
     @media screen and (max-width: 550px) { 
@@ -387,13 +383,11 @@ $secondary_color: beige;
         height: 160px ;
       }
       .table td, .table th{
-        padding: 1px;
+        padding: 5px;
       }
     }
     .navbar-default {
       position: fixed;
-      // position: -webkit-sticky;
-      width: 100vw;
       top: 0;
       border-width: 0 0 1px;
       left: 0;
