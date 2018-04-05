@@ -8,18 +8,21 @@ $secondary_color: beige;
     right: 0;
     z-index: 9999;
   }
-  html, body {
-    // max-width: 100%;
+  html,body {
     overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
 }
   body {
+    max-width: 100%;
     background: url(../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
     z-index: -22;
     width: 100%;
-    position: absolute;
   }
+  // #root {}
   col img {
     margin: 5px;
   }
@@ -39,7 +42,6 @@ $secondary_color: beige;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
   .content-row img {
     align-self: center;
@@ -47,7 +49,6 @@ $secondary_color: beige;
   .content-row h3 {
     text-align: center;
   }
-  
   .container-home {
     min-height: 750px;
     margin-right: auto;
@@ -185,22 +186,22 @@ $secondary_color: beige;
   .home-wine-container {
     padding: 20px;
   }
-    .jumbotron .h1,.jumbotron h1{color:inherit}
-    .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
-    .jumbotron>hr{border-top-color:#d5d5d5}
-    .container .jumbotron,.container-fluid .jumbotron{padding-right:60px;padding-left:60px} 
-    .jumbotron .inner{width: 100%;} 
-    .jumbotron .h1, .thumbnail{
-      display:block;
-      padding:4px;
-      margin-bottom:20px;
-      line-height:1.42857143;
-      background-color:#fff;
-      border:1px solid #ddd;
-      border-radius:4px;
-      -webkit-transition:border .2s ease-in-out;
-      -o-transition:border .2s ease-in-out;transition:border .2s ease-in-out
-    }
+  .jumbotron .h1,.jumbotron h1{color:inherit}
+  .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
+  .jumbotron>hr{border-top-color:#d5d5d5}
+  .container .jumbotron,.container-fluid .jumbotron{padding-right:60px;padding-left:60px} 
+  .jumbotron .inner{width: 100%;} 
+  .jumbotron .h1, .thumbnail{
+    display:block;
+    padding:4px;
+    margin-bottom:20px;
+    line-height:1.42857143;
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-radius:4px;
+    -webkit-transition:border .2s ease-in-out;
+    -o-transition:border .2s ease-in-out;transition:border .2s ease-in-out
+  }
   .jumbotron{ 
     margin-top: 8px; 
     margin-bottom: 30px; 
@@ -276,7 +277,6 @@ $secondary_color: beige;
   }
   .narrowLinks a {
     display: block;
-    
   }
   .navCategories{
     display: none;
@@ -286,7 +286,6 @@ $secondary_color: beige;
   }
   .navNarrow {
     padding: 8px 2px;
-    /* float: right !important;  */
     display: none;
     position: relative;
   }
@@ -296,7 +295,6 @@ $secondary_color: beige;
   .style1{
     background-color: rgba(61, 8, 10, 0.043);
   }
-  
   @media (min-width: 200px) {
     .jumbotron h1{
       font-size:38px; 
@@ -315,10 +313,6 @@ $secondary_color: beige;
       height: 850px;
     }
   }
-  @media (min-width: 400px) {
-    
-  }
-  
   @media (min-width: 800px) {
     .jumbotron h1{
       font-size:60px; 
@@ -341,7 +335,6 @@ $secondary_color: beige;
         margin-top: 148px;
       }
   }
-   
   @media (min-width:1200px) {
     .jumbotron h1{
       font-size:78px; 
@@ -360,8 +353,6 @@ $secondary_color: beige;
       margin-top: 30px; 
       }
     }
-    
-    
     @media screen and (max-width: 1200px){ 
       .jumbotron .inner{ 
         background-size: 1180px 169px !important; 
@@ -375,14 +366,12 @@ $secondary_color: beige;
     @media screen and (max-width: 800px) { 
       .jumbotron .inner{ 
         height: 200px ;
-        
       }
     }
     @media screen and (max-width: 768px) { 
       .jumbotron .inner{ 
         height: 180px ;
         justify-content: space-around;
-        
       }
       .jumbotron .inner img{ 
         margin-top: 25px;
@@ -397,11 +386,11 @@ $secondary_color: beige;
     @media screen and (max-width: 450px) { 
       .jumbotron .inner{ 
         height: 160px ;
-        
       }
     }
     .navbar-default {
       position: fixed;
+      // position: -webkit-sticky;
       width: 100vw;
       top: 0;
       border-width: 0 0 1px;
@@ -421,7 +410,6 @@ $secondary_color: beige;
   .navbar-nav > li {
     border-left-color: rgba(9, 29, 8, 0.226);
     border-left-style: solid;
-    
   }
   .navbar-nav > li:hover{
     background-color: rgb(167, 58, 58);
@@ -463,9 +451,8 @@ $secondary_color: beige;
     }
     .container>.navbar-header{
       width: 100%;
-      /* margin: 0px; */
     }
-    } 
+  } 
     @media (max-width: 528) {
       .navNarrow {
         display: block;
@@ -481,38 +468,32 @@ $secondary_color: beige;
       padding-top: 15px;
       padding-bottom: 15px;
     }
-  .navbar-nav>li>a>a {
-    padding: 15px 25px;
-  }
-  .container>.navbar-collapse {
-    display: none!important;
-  }
+    .navbar-nav>li>a>a {
+      padding: 15px 25px;
+    }
+    .container>.navbar-collapse {
+      display: none!important;
+    }
   }
   @media (max-width: 468px) {
-   .table>tbody>tr>td {
+    .table>tbody>tr>td {
       padding: 5px;
-   }
-   
+    }
   }
   .navbar-default .navbar-nav > li > a :hover{
-    /* color: rgb(231, 81, 64); */
     background-color: none;
   }
   .navbar-default .navbar-brand {
     color: $secondary_color !important;
-    /* float: left; */
-    
   }
   div .navbar-default .navbar-brand:focus, div .navbar-default .navbar-brand:hover {
     color: #d5d5d5;
   }
-  
   @media (max-width:350px){
     .navbar-header>.navbar-brand{
       font-size: 18px;
       width: 50%;
     }
-    
     .jumbotron .inner h2{
       font-size: 20px;
     }
@@ -521,6 +502,5 @@ $secondary_color: beige;
     .navbar-header>.navbar-brand{
       width: 87%;
     }
-    
   }
   

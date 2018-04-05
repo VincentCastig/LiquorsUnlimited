@@ -6,15 +6,18 @@
   z-index: 9999; }
 
 html, body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%; }
 
 body {
+  max-width: 100%;
   background: url(../src/img/Barrels.JPG) no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
   z-index: -22;
-  width: 100%;
-  position: absolute; }
+  width: 100%; }
 
 col img {
   margin: 5px; }
@@ -281,7 +284,6 @@ button {
 
 .navNarrow {
   padding: 8px 2px;
-  /* float: right !important;  */
   display: none;
   position: relative; }
 
@@ -426,8 +428,7 @@ nav {
     align-items: center; }
 
   .container > .navbar-header {
-    width: 100%;
-    /* margin: 0px; */ } }
+    width: 100%; } }
 @media (max-width: 528) {
   .navNarrow {
     display: block;
@@ -450,12 +451,10 @@ nav {
   .table > tbody > tr > td {
     padding: 5px; } }
 .navbar-default .navbar-nav > li > a :hover {
-  /* color: rgb(231, 81, 64); */
   background-color: none; }
 
 .navbar-default .navbar-brand {
-  color: beige !important;
-  /* float: left; */ }
+  color: beige !important; }
 
 div .navbar-default .navbar-brand:focus, div .navbar-default .navbar-brand:hover {
   color: #d5d5d5; }
