@@ -14,7 +14,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  z-index: -22;
   width: 100%; }
 
 col img {
@@ -364,7 +363,10 @@ button {
     margin-top: 37px; } }
 @media screen and (max-width: 450px) {
   .jumbotron .inner {
-    height: 160px; } }
+    height: 160px; }
+
+  .table td, .table th {
+    padding: 1px; } }
 .navbar-default {
   position: absolute;
   width: 100vw;

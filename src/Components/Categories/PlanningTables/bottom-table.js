@@ -140,8 +140,8 @@ class BottomTable extends Component {
                                 <th>Percentage Consumed <span className="totalPercentage">({totalPercentage}%)</span></th>
                                 <th>
                                     <select value={this.state.size} onChange={this.handleChange}>
-                                        <option value={0.75}>0.75 Liter Bottles</option>
-                                        <option value={1}>1 Liter Bottles</option>
+                                        <option value={0.75} className="litersSelect">0.75 Liters</option>
+                                        <option value={1} className="litersSelect">1 Liter</option>
                                     </select>
                                 </th>
                             </tr>
