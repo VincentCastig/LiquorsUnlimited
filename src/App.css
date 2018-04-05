@@ -357,6 +357,9 @@ button {
   .jumbotron .inner img {
     margin-top: 25px;
     width: 100%; } }
+@media screen and (max-width: 400px) {
+  .jumbotron .inner img {
+    margin-top: 30px; } }
 @media screen and (max-width: 450px) {
   .jumbotron .inner {
     height: 160px; }
