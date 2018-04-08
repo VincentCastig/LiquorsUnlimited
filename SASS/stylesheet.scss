@@ -9,6 +9,7 @@ $secondary_color: beige;
   }
   html,body {
     -webkit-overflow-scrolling: touch;
+    overflow: scroll;
 }
   body {
     background: url(../src/img/Barrels.JPG)  no-repeat;
