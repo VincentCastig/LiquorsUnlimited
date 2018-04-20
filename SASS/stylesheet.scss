@@ -9,7 +9,7 @@ $secondary_color: beige;
   }
   html,body {
     -webkit-overflow-scrolling: touch;
-    overflow: scroll;
+    overflow-y: scroll;
 }
   body {
     background: url(../src/img/Barrels.JPG)  no-repeat;
@@ -201,7 +201,6 @@ $secondary_color: beige;
   .jumbotron{ 
     margin-top: 8px; 
     margin-bottom: 30px; 
-    overflow: hidden; 
     color:inherit;
     background-color:#e0d09b; 
     background-attachment: fixed; 

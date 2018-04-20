@@ -32,7 +32,7 @@ const Wine = () => {
                         <p>Make the Liquors Unlimited Store your first stop when planning your next party.  We have all the best brands along with those hard to find liquors.  Our friendly crew is waiting to serve you.</p>
                     </Col>
                     <Col xs={6} md={6}>
-                        <img className="home-main-image" src={(require('../../img/wineAndLiquor.JPG'))} alt="front wine room"/>
+                        <img className="home-main-image" src={(require('../../img/IMG_3883.jpg'))} alt="front wine room"/>
                     </Col>
                 </div>
             </div>
