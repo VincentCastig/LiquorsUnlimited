@@ -8,7 +8,6 @@ class Header extends Component {
         this.navToggle = this.navToggle.bind(this)
     }
     navToggle = () => { 
-        console.log('clicked')
         let linksEl = document.querySelector('.collapse') 
         if (linksEl.style.display === 'block') {
           linksEl.style.display = 'none';
