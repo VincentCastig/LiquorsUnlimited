@@ -21,7 +21,7 @@ class Home extends Component {
                         <img className="home-main-image" src={(require('../../img/storeEntrance.JPG'))} alt="front view of liquor store"/>
                     </Col>
                     <Col xs={6} md={6}>
-                        <h3 className="red-header">39 years of service</h3>
+                        <h3 className="red-header">{(new Date(Date.now()).getFullYear()) - (new Date(1981,5,22).getFullYear())} years of service</h3>
                         <p>The Liquors Unlimited Store has enjoyed serving Pascagoula, MS and its surrounding areas since 1981. Our liquor store proudly stocks over 2,100 different items and we can special order many more.</p>
                     </Col>
                 </div>
