@@ -25,7 +25,7 @@ class Home extends Component {
                         <p>The Liquors Unlimited Store has enjoyed serving Pascagoula, MS and its surrounding areas since 1981. Our liquor store proudly stocks over 2,100 different items and we can special order many more.</p>
                     </Col>
                 </div>
-                <div id="content-row2" className="content-row">
+                <div id="content-row2" className="content-row" >
                     <Col xs={6} md={6}>
                         {/* <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p> */}
                         <h3 className="red-header">Open 6 days a week</h3>
