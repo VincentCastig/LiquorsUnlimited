@@ -1,29 +1,28 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-// import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes as RouterRoutes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/header';
 import Footer from './Components/footer';
-import Routes from './Routes/routes';
-// import Home from './Components/Categories/home';
+import Home from './Components/Categories/home';
+import Wine from './Components/Categories/wine';
+import Planning from './Components/Categories/planning';
+import Contact from './Components/Categories/contact';
 
-
-class App extends Component {
-  render() {
-    return (
-      // <div className="app">
-      <BrowserRouter>
+const App = () => {
+  return (
+    <Router>
       <div className="app">
-      
         <Header />
-        {/* <div className="ok"></div> */}
-        { Routes }
+        <RouterRoutes>
+          <Route path="/" element={<Home />} />
+          <Route path="/wine" element={<Wine />} />
+          <Route path="/planning" element={<Planning />} />
+          <Route path="/contact" element={<Contact />} />
+        </RouterRoutes>
         <Footer />
       </div>
-      </BrowserRouter>
-      // </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

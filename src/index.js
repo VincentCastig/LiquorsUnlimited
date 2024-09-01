@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 // Import service worker registration if you want to enable it
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from './registerServiceWorker';
+
 
 // Create the root of the application
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,4 +17,5 @@ root.render(
 );
 
 // Register the service worker
-serviceWorkerRegistration.register();
+serviceWorkerRegistration.default();
+
