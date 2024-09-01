@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
 
 const Wine = () => {
@@ -22,7 +21,6 @@ const Wine = () => {
                     <Col xs={6} md={6}>
                         <h3 className="red-header">Relax with a glass of wine</h3>
                         <p>At the Liquors Unlimited store, you’ll find the finest types and best brands of wine in Pascagoula, MS. Whether you’re looking to make a memorable meal with an extra special cabernet or just want a smooth merlot while relaxing with a good book, we have the selections you need.  </p>
-                        {/* <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum.</p> */}
                     </Col>
                 </div>
                 <div id="content-row2" className="content-row">

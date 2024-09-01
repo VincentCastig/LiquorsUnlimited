@@ -159,7 +159,9 @@ $secondary_color: beige;
     align-items: center;
     padding-left: 0px;
     padding-right: 0px;
-    margin-top: -30px;
+    // margin-top: -30px;
+    overflow: hidden;
+    height: 400px;
   }
   .image-container-contact {
     width: 100%;
@@ -199,7 +201,6 @@ $secondary_color: beige;
     -o-transition:border .2s ease-in-out;transition:border .2s ease-in-out
   }
   .jumbotron{ 
-    margin-top: 8px; 
     margin-bottom: 30px; 
     color:inherit;
     background-color:#e0d09b; 
@@ -350,14 +351,14 @@ $secondary_color: beige;
     }
     @media screen and (max-width: 1200px){ 
       .jumbotron .inner{ 
-        background-size: 1180px 169px !important; 
-        height: 200px;
+        // background-size: 1180px 169px !important; 
+        // height: 200px;
       }
     }
-    @media screen and (max-width: 980px) { 
-      .inner { background-size: 1100px 157px;
-      }
-    }
+    // @media screen and (max-width: 980px) { 
+    //   .inner { background-size: 1100px 157px;
+    //   }
+    // }
     @media screen and (max-width: 800px) { 
       .jumbotron .inner{ 
         height: 200px ;

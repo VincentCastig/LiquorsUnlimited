@@ -1,0 +1,45 @@
+.header{
+    position: relative;
+    right: 0;
+    width: 100%;
+    z-index: 5000;
+    margin-bottom: 0; 
+    margin-top: 0;
+    border-bottom: 0;
+    height: 180px;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; // Ensure the navbar is above other content
+  }
+
+  .lu-navbar{
+    background: #376b5e !important;
+  }
+
+.nav-link{
+    text-transform: uppercase;
+    color: #fff !important;
+    letter-spacing: 2px;
+    font-size: 1em;
+    padding: 8px 26px;
+    transition: .4s;
+    color: inherit;
+    border: 1px solid transparent;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    padding: 8px 26px;
+    transition: .4s;
+  }
+
+  .navbar-brand{
+color: #fff !important;
+  }
