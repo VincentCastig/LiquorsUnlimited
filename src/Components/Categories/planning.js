@@ -1,56 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import TopTable from './PlanningTables/top-table';
 import BottomTable from './PlanningTables/bottom-table';
 
+const Planning = () => {
+  const [values, setValues] = useState({
+    value: '',
+    people: '',
+    drinks: '',
+    percentage: ''
+  });
 
-class Planning extends Component {
-    constructor(props, context) {
-        super(props, context);
+  const handleChangeValue = (prop, val) => {
+    setValues(prevValues => ({
+      ...prevValues,
+      [prop]: val
+    }));
+  };
 
-        this.handleChangeValue = this.handleChangeValue.bind(this);
-        this.state = {
-            value: '',
-            people: '',
-            drinks: '',
-            percentage: ''
-        }
-    }
+  const drinksTotal = values.drinks * values.people;
 
-    handleChangeValue(prop, val) {
-        if (prop === 'people') {
-            this.setState({ people: val });
-        }
-        else if (prop === 'drinks') {
-            this.setState({ drinks: val });
-        }
-        else if (prop === 'percentage') {
-            this.setState({ percentage: val });
-        }
-        else {
-            this.setState({ value: val })
-        }   
-    }
-    
-    render() {
-        const drinksTotal = this.state.drinks * this.state.people
-        return (
-            <div id="planning" className="container-home">
-                <h2>Party Planning</h2>
-                <div className="home-wine-container">
-                    <TopTable 
-                        key={1}
-                        handleChangeValue={this.handleChangeValue}
-                    />
-                    <BottomTable 
-                        key={2}
-                        handleChangeValue={this.handleChangeValue}
-                        drinksTotal={drinksTotal}
-                        totalPercentage={this.state.percentage}
-                    />
-                </div>
-            </div>
-        )
-    }
-}
+  return (
+    <div id="planning" className="container-home">
+      <h2>Party Planning</h2>
+      <div className="home-wine-container">
+        <TopTable 
+          handleChangeValue={handleChangeValue}
+        />
+        <BottomTable 
+          handleChangeValue={handleChangeValue}
+          drinksTotal={drinksTotal}
+          totalPercentage={values.percentage}
+        />
+      </div>
+    </div>
+  );
+};
 
 export default Planning;

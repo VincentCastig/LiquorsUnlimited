@@ -27,7 +27,6 @@ class Home extends Component {
                 </div>
                 <div id="content-row2" className="content-row">
                     <Col xs={6} md={6}>
-                        {/* <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ... Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum</p> */}
                         <h3 className="red-header">Open 6 days a week</h3>
                         <p>We are conveniantly located on the corner of Market St and Covenant St. Come by to take a look at our large selection of wine, liquor, and liqueurs.</p>
                     </Col>
