@@ -12,7 +12,7 @@ $secondary_color: beige;
     overflow-y: scroll;
 }
   body {
-    background: url(../src/img/Barrels.JPG)  no-repeat;
+    background: url(../../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -46,11 +46,12 @@ $secondary_color: beige;
     text-align: center;
   }
   .container-home {
-    min-height: 750px;
+    // min-height: 750px;
     margin-right: auto;
     margin-left: auto;
     background-color: #dbc69bf9;
-    background-image: url(../src/img/backdropCopy.png);
+    background-image: url(../../src/img/backdropCopy.png);
+    width: 100%;
   }
   .container-home h2 {
     background: $primary_green;
@@ -79,9 +80,6 @@ $secondary_color: beige;
     }
   }
   @media (min-width: 768px){
-    .container-home {
-        width: 750px;
-    }
     .navbar-default{
       width: 100%;
       padding: 0px;
@@ -112,9 +110,6 @@ $secondary_color: beige;
     }
   }
   @media (min-width: 992px) {
-    .container-home {
-        width: 840px;
-    }
     .container{
       min-width: 65%;
       margin-left: 15px;
@@ -126,9 +121,6 @@ $secondary_color: beige;
     }
   }
   @media (min-width: 1200px) {
-  .container-home {
-      width: 920px;
-  }
   .container{
     min-width: 80%;
   }
@@ -161,7 +153,8 @@ $secondary_color: beige;
     padding-right: 0px;
     // margin-top: -30px;
     overflow: hidden;
-    height: 400px;
+    height: auto;
+    max-height: 400px;
   }
   .image-container-contact {
     width: 100%;
@@ -215,8 +208,7 @@ $secondary_color: beige;
     border-bottom-width: 5px;
   }
   .jumbotron .inner{
-    height: 200px; 
-    background:url(./img/backdropBench.png) center bottom no-repeat; 
+    background:url(../img/backdropBench.png) center bottom no-repeat; 
     display:flex; 
     align-items:center; 
     flex-direction: column; 
