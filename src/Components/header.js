@@ -1,77 +1,48 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
-    constructor(props) {
-        super(props)
-        this.navToggle = this.navToggle.bind(this)
-    }
-    navToggle = () => { 
-        let linksEl = document.querySelector('.collapse') 
-        if (linksEl.style.display === 'block') {
-          linksEl.style.display = 'none';
-        } else {
-          linksEl.style.display = 'block';
-        }
-      };
-    render() {
-        return (
-            <div>
-                <Navbar collapseOnSelect navbar-fixed-top>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            Liquors Unlimited
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                        <div className="navNarrow">
-                            <button type='button' onClick={this.navToggle}>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                            </button>
-                        </div>
-                    </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav pullRight>
-                            <NavItem className="nav-home-link"eventKey={1} href="#">
-                                <Link to="Home" onClick={this.navToggle}>Home</Link>
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-                                <Link to="Wine" onClick={this.navToggle}>Wine & Liquor</Link>
-                            </NavItem>
-                            <NavItem eventKey={3} href="#">
-                                <Link to="Planning" onClick={this.navToggle}>Party Planning</Link>
-                            </NavItem>
-                            <NavItem eventKey={3} href="#">
-                                <Link to="Contact" onClick={this.navToggle}>Contact</Link>
-                            </NavItem>
-                        </Nav>
-                    </Navbar.Collapse>
-                    <Nav pullRight className="webNavRight">
-                        <NavItem className="nav-home-link"eventKey={1} href="#">
-                            <Link to="Home" onClick={this.navToggle}>Home</Link>
-                        </NavItem>
-                        <NavItem eventKey={2} href="#">
-                            <Link to="Wine" onClick={this.navToggle}>Wine & Liquor</Link>
-                        </NavItem>
-                        <NavItem eventKey={3} href="#">
-                            <Link to="Planning" onClick={this.navToggle}>Party Planning</Link>
-                        </NavItem>
-                        <NavItem eventKey={3} href="#">
-                            <Link to="Contact" onClick={this.navToggle}>Contact</Link>
-                        </NavItem>
-                    </Nav>
-                </Navbar>
-                <div className="jumbotron">
-                    <div className="inner">
-                        <img src={require("../img/LUTitleFirstCopy2.png")} alt="Liquors Unlimited Caligraphy by Lillian Castigliola"/>
-                        <h2>Fine Wine and Spirits</h2>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
+const Header = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setIsNavExpanded(!isNavExpanded);
+  };
+
+  return (
+    <div>
+      <Navbar 
+        collapseOnSelect 
+        expanded={isNavExpanded} 
+        expand="lg" 
+        bg="light" 
+        variant="light" 
+        className="navbar-fixed-top"
+      >
+        <Navbar.Brand as={Link} to="/">
+          Liquors Unlimited
+        </Navbar.Brand>
+        <Navbar.Toggle onClick={handleToggle} aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto" onClick={() => setIsNavExpanded(false)}>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/wine">Wine & Liquor</Nav.Link>
+            <Nav.Link as={Link} to="/planning">Party Planning</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <div className="jumbotron">
+        <div className="inner">
+          <img 
+            src={require("../img/LUTitleFirstCopy2.png")} 
+            alt="Liquors Unlimited Calligraphy by Lillian Castigliola"
+          />
+          <h2>Fine Wine and Spirits</h2>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Header;
