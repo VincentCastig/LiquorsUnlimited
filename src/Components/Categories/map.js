@@ -1,56 +1,62 @@
-import React, { Component } from "react";
-import { compose, withProps } from "recompose";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import React, { useState, useEffect, useCallback } from "react";
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 
-const MyMapComponent = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCsOYvglu2KQN0XGTFPwG79v8BSdJ_eCFA&v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-  }),
-  withScriptjs,
-  withGoogleMap
-)((props) =>
-  <GoogleMap
-    defaultZoom={17}
-    defaultCenter={{ lat: 30.364101, lng: -88.548219 }}
-  >
-    <Marker 
-      position={{ lat: 30.364141, lng: -88.548214 }} 
-      onClick={props.onMarkerClick} 
-      
-    />
-  </GoogleMap>
-)
+const mapContainerStyle = {
+  height: "400px",
+  width: "100%",
+};
 
-class Map extends Component {
-  state = {
-    isMarkerShown: true,
-  }
+const center = {
+  lat: 30.364101,
+  lng: -88.548219,
+};
 
-  componentDidMount() {
-    this.delayedShowMarker()
-  }
-
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
-  }
-
-  render() {
-    return (
-      <MyMapComponent
-        
+const MyMapComponent = ({ onMarkerClick }) => {
+  return (
+    <GoogleMap
+      mapContainerStyle={mapContainerStyle}
+      zoom={17}
+      center={center}
+    >
+      <Marker 
+        position={{ lat: 30.364141, lng: -88.548214 }} 
+        onClick={onMarkerClick} 
       />
-    )
-  }
-}
+    </GoogleMap>
+  );
+};
+
+const Map = () => {
+  const [isMarkerShown, setIsMarkerShown] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsMarkerShown(true);
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup timeout on unmount
+  }, []);
+
+  const handleMarkerClick = useCallback(() => {
+    setIsMarkerShown(false);
+    setTimeout(() => {
+      setIsMarkerShown(true);
+    }, 3000);
+  }, []);
+
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyCsOYvglu2KQN0XGTFPwG79v8BSdJ_eCFA",
+    libraries: ["geometry", "drawing", "places"],
+  });
+
+  if (loadError) return <div>Error loading maps</div>;
+  if (!isLoaded) return <div>Loading Maps...</div>;
+
+  return (
+    <MyMapComponent
+      onMarkerClick={handleMarkerClick}
+    />
+  );
+};
 
 export default Map;

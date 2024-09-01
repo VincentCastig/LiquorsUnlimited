@@ -1,19 +1,24 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from '../Components/Categories/home';
 import Wine from '../Components/Categories/wine';
 import Planning from '../Components/Categories/planning';
 import Contact from '../Components/Categories/contact';
 
-const Routes = () => <h1>404</h1>
+// A simple 404 Not Found component
+const NotFound = () => <h1>404 - Not Found</h1>;
 
-export default (
-    <Switch>
-        <Route path="/planning" component={Planning}></Route>
-        <Route path="/contact" component={Contact}></Route>
-        <Route path="/wine" component={Wine}></Route>
-        <Route path="/" component={Home}></Route>
-        <Route component={Routes}></Route>
-    </Switch>
+const AppRoutes = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/wine" element={<Wine />} />
+      <Route path="/planning" element={<Planning />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 page */}
+    </Routes>
+  </Router>
 );
+
+export default AppRoutes;
