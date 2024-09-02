@@ -1,0 +1,93 @@
+@import 'variables';
+
+.container-home{
+
+}
+
+.home-wine-container {
+    padding: 20px;
+    background-color: white;
+  }
+
+.home-content{
+    max-width: 1080px;
+    width: 95%;
+    margin: 0 auto;
+    // position: relative;
+}
+
+.home-content img{
+    display: inline;
+    float: right;
+    margin: 5px 0 20px 20px;
+    width: 50%;
+}
+
+.content-wrapper {
+    // min-height: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #dbc69bf9;
+    background-image: url(../../src/img/backdropCopy.png);
+    width: 100%;
+  }
+  .content-wrapper h1, h2 {
+    // background: $primary_green;
+    color: $wine_color;
+    margin-top: 1px;
+    padding: 5px 20px 5px 0;
+  }
+
+  // src/components/InfoSection.scss
+
+.info-section {
+    text-align: center; /* Centers the h3 in the middle of the screen */
+    padding: 40px; /* Adds padding around the entire section */
+    max-width: 1080px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .info-title {
+    padding: 20px; /* Adds padding around the h3 element */
+    position: relative; /* Positions the border line below */
+    color: hsl(35 100% 91% / 9);
+    font-size: calc((var(--heading-1-size-value) - 1)* 1.2vw + 1rem);
+    font-family: 'Arial Black', Gadget, sans-serif;
+  }
+  
+  .info-divider {
+    width: 50%; /* Adjusts the width of the border line */
+    margin: 0 auto; /* Centers the border line */
+    border: none;
+    border-bottom: 2px solid white; /* Creates a white border line below the h3 */
+  }
+  
+  .info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adds space between the border and the content */
+  }
+  
+  .info-paragraph {
+    flex: 1; /* Allows the paragraph to take up available space */
+    padding: 20px; /* Adds padding around the paragraph */
+    color: #fff; /* Adjust text color as needed */
+    text-align: left; /* Aligns paragraph text to the left */
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.45s;
+    transition-delay: 0.335593s;
+    word-wrap: break-word;
+    font-size: calc((var(--large-text-size-value) - 1)* 1.2vw + 1rem);
+  }
+  
+  .info-image {
+    width: 260px; /* Sets a fixed width for the image */
+    height: 260px; /* Sets a fixed height for the image */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid white; /* Adds a white border around the image */
+    margin-left: 20px; /* Adds space between the paragraph and the image */
+  }
+  

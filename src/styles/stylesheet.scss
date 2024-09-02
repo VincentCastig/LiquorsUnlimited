@@ -1,5 +1,4 @@
-$primary_green: radial-gradient(#376b5e, #386b57, #1d554c);
-$secondary_color: beige;
+@import 'variables';
 
 .App {
     text-align: center;
@@ -18,6 +17,9 @@ $secondary_color: beige;
     position: relative;
     z-index: -22;
     width: 100%;
+  }
+  h1, h2 {
+    font-family:'Abril Fatface', cursive;
   }
   col img {
     margin: 5px;
@@ -45,21 +47,7 @@ $secondary_color: beige;
   .content-row h3 {
     text-align: center;
   }
-  .container-home {
-    // min-height: 750px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #dbc69bf9;
-    background-image: url(../../src/img/backdropCopy.png);
-    width: 100%;
-  }
-  .container-home h2 {
-    background: $primary_green;
-    color: $secondary_color;
-    margin-top: 1px;
-    padding: 5px 20px;
-    font-family: serif;
-  }
+  
   .webNavRight {
     display: none;
   }
@@ -174,9 +162,6 @@ $secondary_color: beige;
   .red-header {
     color: rgb(99, 49, 49);
   }
-  .home-wine-container {
-    padding: 20px;
-  }
   .jumbotron .h1,.jumbotron h1{color:inherit}
   .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
   .jumbotron>hr{border-top-color:#d5d5d5}
@@ -208,17 +193,15 @@ $secondary_color: beige;
     border-bottom-width: 5px;
   }
   .jumbotron .inner{
-    background:url(../img/backdropBench.png) center bottom no-repeat; 
+    background:url(../img/backdropBenchCopy.png) bottom no-repeat; 
+    background-size: cover;
     display:flex; 
     align-items:center; 
     flex-direction: column; 
+    background-position: right 25% top;
+    height: inherit;
   }
-  .jumbotron .inner img{
-    position: absolute;
-    width: 95%;
-    margin-top: 35px; 
-    margin-left: 2px;
-  }
+  
   .jumbotron .inner  h2{
     font-family: cursive;
     font-size: 22px;
@@ -312,11 +295,11 @@ $secondary_color: beige;
       line-height: 0.8;
       text-decoration-line: none;
     }
-    .jumbotron .inner img{
-      margin-top: 35px;
+    .jumbotron .inner .lu-logo{
+      margin-top: 0;
       position: absolute;
       padding-bottom: 20px;
-      width: 700px;
+      width: 500px;
       }
       .jumbotron .inner  h2{
         font-size: 24px;
@@ -335,10 +318,10 @@ $secondary_color: beige;
       border-style: solid;
       border-radius: 50%;
     }
-    .jumbotron .inner img{
+    .jumbotron .inner .lu-logo{
       position: absolute;
-      width: 860px;
-      margin-top: 30px; 
+      width: 600px;
+      margin-top: 10px; 
       }
     }
     @media screen and (max-width: 1200px){ 
@@ -361,13 +344,13 @@ $secondary_color: beige;
         height: 180px ;
         justify-content: space-around;
       }
-      .jumbotron .inner img{ 
+      .jumbotron .inner .lu-logo{ 
         margin-top: 25px;
         width: 100%;
       }
     }
     @media screen and (max-width: 400px) { 
-      .jumbotron .inner img{ 
+      .jumbotron .inner .lu-logo{ 
         margin-top: 30px;
       }
     }

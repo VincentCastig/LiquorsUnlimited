@@ -25,8 +25,14 @@ const Header = () => {
           <img 
             src={require("../img/LUTitleFirstCopy2.png")} 
             alt="Liquors Unlimited Calligraphy by Lillian Castigliola"
+            className='lu-logo'
           />
-          <h2>Fine Wine and Spirits</h2>
+           <img 
+            src={require("../img/bench.png")} 
+            alt="Bench"
+            className='bench'
+          />
+          {/* <h2>.</h2> */}
         </div>
       </div>
 
@@ -39,14 +45,14 @@ const Header = () => {
         className={`navbar lu-navbar ${isSticky ? 'navbar-fixed' : ''}`} // Apply the CSS class conditionally
 
       >
-        <Navbar.Brand as={Link} to="/">
+        {/* <Navbar.Brand as={Link} to="/">
           Liquors Unlimited
-        </Navbar.Brand>
+        </Navbar.Brand> */}
         <Navbar.Toggle onClick={handleToggle} aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto" onClick={() => setIsNavExpanded(false)}>
+          <Nav className="navbar-custom-nav" onClick={() => setIsNavExpanded(false)}>
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/wine">Wine & Liquor</Nav.Link>
+            <Nav.Link as={Link} to="/wine">Wine, Liquor, Spirits, & More</Nav.Link>
             <Nav.Link as={Link} to="/planning">Party Planning</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>

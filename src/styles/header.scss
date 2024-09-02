@@ -6,8 +6,26 @@
     margin-bottom: 0; 
     margin-top: 0;
     border-bottom: 0;
-    height: 180px;
+    height: 175px;
 }
+
+.jumbotron .inner .lu-logo{
+    position: absolute;
+    // width: 100%;
+    margin-top: 35px; 
+    margin-left: 2px;
+  }
+
+.jumbotron .inner .lu-logo {
+    left: 0;
+  }
+
+  .bench{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+  }
 
 .navbar-fixed {
     position: fixed;
@@ -18,6 +36,7 @@
 
   .lu-navbar{
     background: #376b5e !important;
+    z-index: 9999;
   }
 
 .nav-link{
@@ -38,8 +57,33 @@
     font-size: 1em;
     padding: 8px 26px;
     transition: .4s;
+    font-family: 'Merriweather', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .nav-link:hover{
+    border-bottom: 1px #fff solid;
   }
 
   .navbar-brand{
-color: #fff !important;
+    color: #fff !important;
+    font-family: 'Merriweather', serif;
   }
+
+  .navbar-custom-nav {
+    display: flex;
+    justify-content: center; /* Distribute space between items */
+    width: 100%; /* Ensure the nav takes full width of its container */
+  }
+  
+//   .navbar-custom-nav .nav-link {
+//     flex: 1; /* Allow links to grow and fill the space evenly */
+//     text-align: center; /* Center text within each link */
+//   }
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
