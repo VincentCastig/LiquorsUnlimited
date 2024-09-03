@@ -5,9 +5,6 @@ import Map from './Categories/map';
 import GoogleIcon from '../img/download.png'; // Adjust the path according to your folder structure
 
 
-
-
-
 const Footer = () => {
     return (
         <footer id="footer" className="footer" role="contentinfo">
@@ -84,7 +81,7 @@ const Footer = () => {
                   
                 </div>
                 <div className="one-fourth">
-                    <div class="business-hours">
+                    <div className="business-hours">
                         <h2>Business Hours</h2>
                         <ul>
                             <li>Monday: 10:00 AM - 10:00 PM</li>

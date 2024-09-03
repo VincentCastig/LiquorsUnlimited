@@ -1,6 +1,21 @@
 @import 'variables';
 
 /* General Footer Styles */
+#footer{
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: $primary_green;
+  color: $secondary_color;
+  bottom: 0;
+}
+#footer p {
+  margin: 10px;
+}
+
 #footer {
     background-color: #f8f9fa;
     padding: 2rem 0;

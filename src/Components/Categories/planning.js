@@ -7,7 +7,7 @@ const Planning = () => {
     value: '',
     people: '',
     drinks: '',
-    percentage: ''
+    percentage: '100'
   });
 
   const handleChangeValue = (prop, val) => {
@@ -17,7 +17,7 @@ const Planning = () => {
     }));
   };
 
-  const drinksTotal = values.drinks * values.people;
+  const drinksTotal = Number(values.drinks) * Number(values.people);
 
   return (
     <div id="planning" className="container-home">

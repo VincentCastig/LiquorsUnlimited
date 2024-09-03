@@ -18,6 +18,12 @@
 
 .home-content img{
     display: inline;
+    margin: 5px 0 20px 20px;
+    width: 50%;
+}
+
+.home-content p img{
+    display: inline;
     float: right;
     margin: 5px 0 20px 20px;
     width: 50%;
@@ -39,7 +45,10 @@
   }
 
   // src/components/InfoSection.scss
-
+  .info-section-wrapper{
+    background: url(../../src/img/Barrels.JPG)  no-repeat;
+    background-size: cover;
+  }
 .info-section {
     text-align: center; /* Centers the h3 in the middle of the screen */
     padding: 40px; /* Adds padding around the entire section */

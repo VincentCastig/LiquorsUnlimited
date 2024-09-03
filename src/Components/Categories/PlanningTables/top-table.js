@@ -1,90 +1,88 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Table, FormGroup, FormControl } from 'react-bootstrap';
 
-class TopTable extends Component {
-    constructor(props) {
-        super(props); 
+const TopTable = ({ handleChangeValue }) => {
+    const [people, setPeople] = useState('');
+    const [drinks, setDrinks] = useState('');
+    const [peopleError, setPeopleError] = useState('');
+    const [drinksError, setDrinksError] = useState('');
 
-        this.state = {
-            people: '',
-            drinks: ''
-        }
-    }
-    getValidateState() {
-        const drinks = this.state.drinks
-        if (drinks > 10) return 'warning';
-        return null;
-    }
-    updatePeople(val) {
-        if (val <= 10000 & val % 1 === 0) {
-            this.props.handleChangeValue('people', val)
-            this.setState({ people: val })
-        }
-    }
-    updateDrinks(val) {
-        if (val.length <= 3 && val < 25 ) {
-            this.props.handleChangeValue('drinks', val)
-            this.setState({ drinks: val })
-        }
-        else {
-            console.log(`Do you really expect to have ${val} drinks per person?`)
-        }
-    }
+    const drinksTotal = Math.round(100 * people * drinks) / 100;
 
-    render() {
-        const drinksTotal = Math.round(100 * this.state.people * this.state.drinks) / 100;
-        
-        return (
-            <Table>
-                <thead>
-                    <tr>
-                        <th>Number of People</th>
-                        <th>Drinks Per Person</th>
-                        <th>Drinks Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                    
-                            <form>
-                                <FormGroup
-                                >
-                                    <FormControl
-                                    //Formcontrol for amount of people who will be drinking
-                                        type="number"
-                                        value={this.state.people}
-                                        min='1'
-                                        max='10000'
-                                        placeholder="Enter Amount of People"
-                                        onChange={ event => this.updatePeople(event.target.value) }
-                                    />
-                                </FormGroup>
-                            </form>
-                        </td>
-                        <td>
-                            <form>
-                                <FormGroup
-                                    validationState={this.getValidateState()}
-                                >
-                                    <FormControl
-                                    //Formcontrol for amount of drinks expected per person
-                                        type="number"
-                                        value={this.state.drinks}
-                                        min='1'
-                                        max='25'
-                                        placeholder="Enter Amount of Drinks Per Person"
-                                        onChange={event => this.updateDrinks(event.target.value)}
-                                    />
-                                </FormGroup>
-                            </form>
-                        </td>
-                        <td>{drinksTotal}</td>
-                    </tr>
-                </tbody>
-            </Table>
-        )
-    }
-}
+    const updatePeople = (val) => {
+        const value = parseInt(val, 10);
+        if (isNaN(value) || value <= 0) {
+            setPeopleError('Number of people must be greater than 0');
+        } else if (value > 10000) {
+            setPeopleError('Number of people must not exceed 10,000');
+        } else {
+            setPeopleError('');
+            handleChangeValue('people', value);
+            setPeople(value);
+        }
+    };
+
+    const updateDrinks = (val) => {
+        const value = parseInt(val, 10);
+        if (isNaN(value) || value <= 0) {
+            setDrinksError('Drinks per person must be greater than 0');
+        } else if (value > 25) {
+            setDrinksError('Drinks per person must not exceed 25');
+        } else {
+            setDrinksError('');
+            handleChangeValue('drinks', value);
+            setDrinks(value);
+        }
+    };
+
+    return (
+        <Table>
+            <thead>
+                <tr>
+                    <th>Number of People</th>
+                    <th>Drinks Per Person</th>
+                    <th>Drinks Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <FormGroup>
+                            <FormControl
+                                type="number"
+                                value={people}
+                                min="1"
+                                max="10000"
+                                placeholder="Enter Number of People"
+                                onChange={(event) => updatePeople(event.target.value)}
+                                isInvalid={!!peopleError}
+                            />
+                            {peopleError && (
+                                <div style={{ color: 'red' }}>{peopleError}</div>
+                            )}
+                        </FormGroup>
+                    </td>
+                    <td>
+                        <FormGroup>
+                            <FormControl
+                                type="number"
+                                value={drinks}
+                                min="1"
+                                max="25"
+                                placeholder="Enter Drinks Per Person"
+                                onChange={(event) => updateDrinks(event.target.value)}
+                                isInvalid={!!drinksError}
+                            />
+                            {drinksError && (
+                                <div style={{ color: 'red' }}>{drinksError}</div>
+                            )}
+                        </FormGroup>
+                    </td>
+                    <td>{drinksTotal}</td>
+                </tr>
+            </tbody>
+        </Table>
+    );
+};
 
 export default TopTable;

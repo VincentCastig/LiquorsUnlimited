@@ -11,7 +11,7 @@
     overflow-y: scroll;
 }
   body {
-    background: url(../../src/img/Barrels.JPG)  no-repeat;
+    // background: url(../../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -116,21 +116,7 @@
     height: 1250px;
   }
   }
-  #footer{
-    min-height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    background: $primary_green;
-    color: $secondary_color;
-    bottom: 0;
-  }
-  #footer p {
-    margin: 10px;
-  }
+ 
   .image-container {
     width: 100%;
     display: flex;
@@ -214,6 +200,8 @@
   }
   #planning {
     min-height: 200px;
+    width: 75%;
+    margin: auto;
   }
   .navbar-toggle {
     display: none;
@@ -476,3 +464,53 @@
     }
   }
   
+
+
+
+
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background-color: $primary_green;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr.even-row {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.styled-table tbody tr.odd-row {
+    background-color: #ffffff;
+}
+
+.total-percentage {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.liters-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
