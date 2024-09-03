@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../styles/home.scss'; // Import the SCSS file
 import luPainting from '../../img/liquors-unlimited-painting.jpg';
 
 
-class Home extends Component {
-    render() {
+const Home = () => { 
         return (
             <div className="container-home">
                 <div className='content-wrapper'>
@@ -61,7 +60,6 @@ class Home extends Component {
                 </div>
             </div>
         )
-    }
 }
 
 export default Home;

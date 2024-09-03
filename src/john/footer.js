@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import Map from './categories/map';
+import Map from './joe/map';
 import GoogleIcon from '../img/download.png'; // Adjust the path according to your folder structure
 
 
