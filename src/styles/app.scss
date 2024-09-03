@@ -1,8 +1,8 @@
 :root {
     --large-text-size-value: 2; /* Set this to your desired base value */
     --heading-1-size-value: 3; /* Set this to your desired base value for H1 */
-
   }
 
 @import './header';
+@import './footer';
 @import './stylesheet';
