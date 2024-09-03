@@ -11,7 +11,7 @@
     overflow-y: scroll;
 }
   body {
-    // background: url(../../src/img/Barrels.JPG)  no-repeat;
+    background: url(../../src/img/Barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -272,28 +272,7 @@
       height: 855px;
     }
   }
-  @media (min-width: 800px) {
-    .jumbotron h1{
-      font-size:60px; 
-      line-height: 0.8;
-      text-decoration-line: none;
-    }
-    .unlimited{
-      font-size:60px; 
-      line-height: 0.8;
-      text-decoration-line: none;
-    }
-    .jumbotron .inner .lu-logo{
-      margin-top: 0;
-      position: absolute;
-      padding-bottom: 20px;
-      width: 500px;
-      }
-      .jumbotron .inner  h2{
-        font-size: 24px;
-        margin-top: 148px;
-      }
-  }
+ 
   @media (min-width:1200px) {
     .jumbotron h1{
       font-size:78px; 
@@ -330,7 +309,7 @@
     }
   nav {
     background: $primary_green;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.75);
     position: fixed;
   }
   .navbar-right {

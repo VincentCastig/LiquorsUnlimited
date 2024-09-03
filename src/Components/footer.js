@@ -112,7 +112,7 @@ const Footer = () => {
             </div>
 
             <div className="copy">
-                © {new Date(Date.now()).getFullYear()} Liquors Unlimited
+                © {new Date(Date.now()).getFullYear()} Liquors Unlimited 
             </div>
         </footer>
     )

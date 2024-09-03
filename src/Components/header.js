@@ -19,15 +19,20 @@ const Header = () => {
     <div>
       <div className="jumbotron header">
         <div className="inner">
+        <img 
+            src={require("../img/left-bench.png")} 
+            alt="Bench"
+            className='left-bench'
+          />
           <img 
             src={require("../img/LUTitleFirstCopy2.png")} 
             alt="Liquors Unlimited Calligraphy by Lillian Castigliola"
             className='lu-logo'
           />
           <img 
-            src={require("../img/bench.png")} 
+            src={require("../img/right-bench.png")} 
             alt="Bench"
-            className='bench'
+            className='right-bench'
           />
         </div>
       </div>

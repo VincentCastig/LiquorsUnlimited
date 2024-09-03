@@ -45,10 +45,10 @@
   }
 
   // src/components/InfoSection.scss
-  .info-section-wrapper{
-    background: url(../../src/img/Barrels.JPG)  no-repeat;
-    background-size: cover;
-  }
+  // .info-section-wrapper{
+  //   background: url(../../src/img/Barrels.JPG)  no-repeat;
+  //   background-size: cover;
+  // }
 .info-section {
     text-align: center; /* Centers the h3 in the middle of the screen */
     padding: 40px; /* Adds padding around the entire section */
@@ -93,7 +93,7 @@
   }
   
   .info-image {
-    width: 260px; /* Sets a fixed width for the image */
+    width: 35%; /* Sets a fixed width for the image */
     height: 260px; /* Sets a fixed height for the image */
     border-radius: 50%; /* Makes the image circular */
     border: 2px solid white; /* Adds a white border around the image */
