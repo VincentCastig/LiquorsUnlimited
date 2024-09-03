@@ -1,43 +1,39 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 
 const Wine = () => {
     return (
         <div className="container-home">
             <div className='content-wrapper'>
                 <div className="image-container">
-                    <img className="home-main-image" src={(require('../../img/wineRoom.jpeg'))} alt="wine room" />
+                    <img className="home-main-image" src={(require('../../img/wine-room.jpeg'))} alt="wine room" />
                 </div>
 
-                <div className="home-paragraph">
-                    {/* <h3>Visit for the customer service, return for the savings</h3> */}
-                    {/* <p>
-                Our liquor store proudly stocks over 4,000 different items and we can special order many more.</p> */}
-                </div>
                 <div className="home-wine-container">
-                    <div className='home-content'>
+                    <div className='home-content clear-fix'>
                         <h1>Wine and Liquor</h1>
                         <p>
-
-                            <img className="home-main-image" src={(require('../../img/wineBackRoom.JPG'))} alt="back wine room" />
+                            <img className="home-main-image" src={require('../../img/wine-back-room.JPG')} alt="Back wine room at Liquors Unlimited" />
                         </p>
-                        <p>At the Liquors Unlimited store, you’ll find the finest types and best brands of wine in Pascagoula, MS. Whether you’re looking to make a memorable meal with an extra special cabernet or just want a smooth merlot while relaxing with a good book, we have the selections you need.  </p>
-                        
-                        <p>At the Liquors Unlimited store, you’ll find the finest types and best brands of wine in Pascagoula, MS. Whether you’re looking to make a memorable meal with an extra special cabernet or just want a smooth merlot while relaxing with a good book, we have the selections you need.  </p>
-                        <h2 className="red-header">Browse our Liquor</h2>
-                        <p>Enjoy all the well-known, and the not so well-known, brands and types of spirits at Liquors Unlimited.</p>
-                        <p>Make the Liquors Unlimited Store your first stop when planning your next party.  We have all the best brands along with those hard to find liquors.  Our friendly crew is waiting to serve you.</p>
+
                         <p>
+                            Discover the finest selection of wines and liquors at Liquors Unlimited in Pascagoula, MS. Whether you’re planning an unforgettable dinner with a rich cabernet or simply want to unwind with a smooth merlot and a good book, we have the perfect bottle waiting for you.
                         </p>
-                        <img className="" src={(require('../../img/IMG_3883.jpg'))} alt="front wine room" />
 
+                        <p>
+                            Our store offers a curated collection of the best brands and varieties, ensuring that you find the ideal wine or spirit to complement any occasion. From the everyday favorites to the rare and exceptional, Liquors Unlimited is your go-to destination for all your wine and liquor needs.
+                        </p>
 
-                        {/* <div id="content-row2" className="content-row">
+                        <h2 >Explore Our Wide Selection of Spirits</h2>
+                        <p>
+                            <img className="" src={(require('../../img/IMG_3883.jpg'))} alt="Front Wine Room at Liquors Unlimited" />
 
+                        </p>
+                        <p>At Liquors Unlimited, we pride ourselves on offering an extensive range of both popular and unique spirits. Whether you’re in search of your favorite well-known brands or eager to discover something new, we have you covered.</p>
 
-                            <Col xs={6} md={6}>
-                            </Col>
-                        </div> */}
+                        <p>Planning a special occasion? Make Liquors Unlimited your go-to destination. Our store is stocked with the finest liquors, including rare and hard-to-find bottles that will impress your guests. Our knowledgeable and friendly team is always ready to assist you in finding the perfect spirits for any event.</p>
+
+                        <p>Whether you’re hosting a party, celebrating a milestone, or simply restocking your home bar, we’re here to ensure you have the best selection at your fingertips. Visit us today and let us help you elevate your next gathering.</p>
+
                     </div>
                 </div>
             </div>

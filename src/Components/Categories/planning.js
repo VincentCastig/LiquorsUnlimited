@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TopTable from './PlanningTables/top-table';
-import BottomTable from './PlanningTables/bottom-table';
-import backdropCopy from '../../img/backdropCopy.png'
+import TopTable from './planningTables/top-table';
+import BottomTable from './planningTables/bottom-table';
+import backdropCopy from '../../img/backdrop-copy.png'
 
 const Planning = () => {
   const [values, setValues] = useState({

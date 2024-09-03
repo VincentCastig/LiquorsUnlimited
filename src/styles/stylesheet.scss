@@ -11,7 +11,7 @@
     overflow-y: scroll;
 }
   body {
-    background: url(../../src/img/Barrels.JPG)  no-repeat;
+    background: url(../../src/img/barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -179,7 +179,7 @@
     border-bottom-width: 5px;
   }
   .jumbotron .inner{
-    background:url(../img/backdropBenchCopy.png) bottom no-repeat; 
+    background:url(../img/backdrop-bench-copy.png) bottom no-repeat; 
     background-size: cover;
     display:flex; 
     align-items:center; 

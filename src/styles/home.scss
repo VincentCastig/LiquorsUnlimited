@@ -1,7 +1,9 @@
 @import 'variables';
 
-.container-home{
-
+.clear-fix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .home-wine-container {
@@ -34,7 +36,7 @@
     margin-right: auto;
     margin-left: auto;
     background-color: #dbc69bf9;
-    background-image: url(../../src/img/backdropCopy.png);
+    background-image: url(../../src/img/backdrop-copy.png);
     width: 100%;
   }
   .content-wrapper h1, h2 {
@@ -44,11 +46,6 @@
     padding: 5px 20px 5px 0;
   }
 
-  // src/components/InfoSection.scss
-  // .info-section-wrapper{
-  //   background: url(../../src/img/Barrels.JPG)  no-repeat;
-  //   background-size: cover;
-  // }
 .info-section {
     text-align: center; /* Centers the h3 in the middle of the screen */
     padding: 40px; /* Adds padding around the entire section */
@@ -93,8 +90,7 @@
   }
   
   .info-image {
-    width: 35%; /* Sets a fixed width for the image */
-    height: 260px; /* Sets a fixed height for the image */
+    width: 42%; /* Sets a fixed width for the image */
     border-radius: 50%; /* Makes the image circular */
     border: 2px solid white; /* Adds a white border around the image */
     margin-left: 20px; /* Adds space between the paragraph and the image */

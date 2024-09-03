@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import ContactForm from '../contact-form';
+import ContactForm from '../contactForm';
 
 const Contact = () => {
     return (
@@ -9,7 +9,7 @@ const Contact = () => {
                 <div className="home-wine-container">
                 
                     <div className="home-content">
-                    <h2>Contact Liquors Unlimited</h2>
+                    <h2>Get in Touch with Liquors Unlimited</h2>
                         <p>
                             At Liquors Unlimited, we pride ourselves on offering an extensive selection of wines, spirits, and beers, along with exceptional customer service. Whether you're planning a special event, need advice on the perfect bottle, or just have a question, we're here to help. Feel free to reach out to us with any inquiries or feedback—your satisfaction is our top priority. Our knowledgeable team is ready to assist you with personalized recommendations and ensure you have a great shopping experience.
                         </p>

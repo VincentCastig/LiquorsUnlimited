@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes as RouterRoutes, Route } from 'react-router-dom';
 import './styles/app.scss';
-import Header from './Components/header';
-import Footer from './Components/footer';
-import Home from './Components/Categories/home';
-import Wine from './Components/Categories/wine';
-import Planning from './Components/Categories/planning';
-import Contact from './Components/Categories/contact';
+import Header from './components/header';
+import Footer from './components/footer';
+import Home from './components/categories/home';
+import Wine from './components/categories/wine';
+import Planning from './components/categories/planning';
+import Contact from './components/categories/contact';
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/wine" element={<Wine />} />
           <Route path="/planning" element={<Planning />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact-us" element={<Contact />} />
         </RouterRoutes>
         <Footer />
       </div>

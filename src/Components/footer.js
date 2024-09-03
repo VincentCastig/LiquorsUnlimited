@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import Map from './Categories/map';
+import Map from './categories/map';
 import GoogleIcon from '../img/download.png'; // Adjust the path according to your folder structure
 
 
@@ -78,7 +78,7 @@ const Footer = () => {
 
                         </div>
                     </div>
-                  
+
                 </div>
                 <div className="one-fourth">
                     <div className="business-hours">
@@ -100,19 +100,17 @@ const Footer = () => {
                     <div id="text-16">
                         <h2 className="widgettitle">Contact Us Today!</h2>
                         <div className="textwidget">
-                            Looking for something in particular? Come see if we have it in stock or if we can order
-                            it special for you. Stop into our fully-stocked liquor store and choose between a
-                            tremendous selection of wines and name-brand liquors.
+                        Searching for something specific? Visit our store to explore our extensive collection, or let us know if you need something special ordered. Stop by our well-stocked liquor store and discover a wide array of premium wines and top-brand spirits.
                         </div>
                         <a className="btn" href="/contact-us/">
-                                Learn More
-                            </a>
+                            Learn More
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div className="copy">
-                © {new Date(Date.now()).getFullYear()} Liquors Unlimited 
+                © {new Date(Date.now()).getFullYear()} Liquors Unlimited
             </div>
         </footer>
     )

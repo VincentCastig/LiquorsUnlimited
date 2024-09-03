@@ -130,8 +130,7 @@ const containerStyle = {
 
 const headerStyle = {
     textAlign: 'center',
-    marginBottom: '20px',
-    color: '#333',
+    marginBottom: '20px'
 };
 
 const formStyle = {
