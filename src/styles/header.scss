@@ -65,6 +65,10 @@
     border-bottom: 1px #fff solid;
   }
 
+  .nav-link.active {
+    background: rgba(255,255,255,0.1);
+  }
+
   .navbar-brand{
     color: #fff !important;
     font-family: 'Merriweather', serif;
@@ -81,9 +85,70 @@
 //     text-align: center; /* Center text within each link */
 //   }
 
+.collapse.show {
+  display: block;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 2rem;
         padding-left: 2rem;
     }
+}
+
+@media screen and (max-width: 1200px){ 
+  .jumbotron .inner{ 
+    // background-size: 1180px 169px !important; 
+    // height: 200px;
+  }
+}
+// @media screen and (max-width: 980px) { 
+//   .inner { background-size: 1100px 157px;
+//   }
+// }
+@media screen and (max-width: 800px) { 
+  .jumbotron .inner{ 
+    height: 200px ;
+  }
+}
+@media screen and (max-width: 768px) { 
+  .jumbotron .inner{ 
+    height: 180px ;
+    justify-content: space-around;
+  }
+  .jumbotron .inner .lu-logo{ 
+    margin-top: 25px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) { 
+  .header{
+    height: 100px ;
+  }
+  .jumbotron .inner{ 
+    height: 100px ;
+    justify-content: space-around;
+  }
+  .jumbotron .inner .lu-logo{ 
+    margin-top: 25px;
+    width: 50%;
+  }
+  .jumbotron .inner .bench{ 
+   display: none;
+  }
+}
+
+@media screen and (max-width: 400px) { 
+  .jumbotron .inner .lu-logo{ 
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 450px) { 
+  .jumbotron .inner{ 
+    height: 160px ;
+  }
+  .table td, .table th{
+    padding: 5px;
+  }
 }

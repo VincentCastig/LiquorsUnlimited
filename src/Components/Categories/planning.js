@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TopTable from './PlanningTables/top-table';
 import BottomTable from './PlanningTables/bottom-table';
+import backdropCopy from '../../img/backdropCopy.png'
 
 const Planning = () => {
   const [values, setValues] = useState({
@@ -20,13 +21,14 @@ const Planning = () => {
   const drinksTotal = Number(values.drinks) * Number(values.people);
 
   return (
-    <div id="planning" className="container-home">
-      <h2>Party Planning</h2>
-      <div className="home-wine-container">
-        <TopTable 
+    <div id="planning" className="container-home" style={planningWrapper}>
+
+      <div className="home-wine-container" style={planning}>
+        <h2>Party Planning</h2>
+        <TopTable
           handleChangeValue={handleChangeValue}
         />
-        <BottomTable 
+        <BottomTable
           handleChangeValue={handleChangeValue}
           drinksTotal={drinksTotal}
           totalPercentage={values.percentage}
@@ -34,6 +36,18 @@ const Planning = () => {
       </div>
     </div>
   );
+};
+
+const planningWrapper = {
+  marginTop: 25,
+  marginBottom: 25
+}
+
+const planning = {
+  backgroundImage: `url(${backdropCopy})`,
+  backgroundSize: 'cover', // Optional: Cover the entire container
+  backgroundPosition: 'center', // Optional: Center the background image
+  backgroundRepeat: 'no-repeat',
 };
 
 export default Planning;

@@ -1,10 +1,15 @@
 .contact-form-wrapper{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     .contact-main-image{
         display: inline;
-        margin: 5px 0 20px 20px;
+        margin: 0;
+        margin-top: 20px;
         width: 100%
     }
 }
+
+
+

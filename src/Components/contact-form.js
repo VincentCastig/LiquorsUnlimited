@@ -20,7 +20,7 @@ const ContactForm = () => {
 
     const validateForm = () => {
         const newErrors = {};
-        if (!formData.user_name) newErrors.user_name = 'user_name is required';
+        if (!formData.user_name) newErrors.user_name = 'Name is required';
         if (!formData.user_email) newErrors.user_email = 'Email is required';
         else if (!/\S+@\S+\.\S+/.test(formData.user_email)) newErrors.user_email = 'Email address is invalid';
         if (!formData.message) newErrors.message = 'Message is required';

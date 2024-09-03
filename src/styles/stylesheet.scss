@@ -312,40 +312,9 @@
       margin-top: 10px; 
       }
     }
-    @media screen and (max-width: 1200px){ 
-      .jumbotron .inner{ 
-        // background-size: 1180px 169px !important; 
-        // height: 200px;
-      }
-    }
-    // @media screen and (max-width: 980px) { 
-    //   .inner { background-size: 1100px 157px;
-    //   }
-    // }
-    @media screen and (max-width: 800px) { 
-      .jumbotron .inner{ 
-        height: 200px ;
-      }
-    }
-    @media screen and (max-width: 768px) { 
-      .jumbotron .inner{ 
-        height: 180px ;
-        justify-content: space-around;
-      }
-      .jumbotron .inner .lu-logo{ 
-        margin-top: 25px;
-        width: 100%;
-      }
-    }
-    @media screen and (max-width: 400px) { 
-      .jumbotron .inner .lu-logo{ 
-        margin-top: 30px;
-      }
-    }
+   
     @media screen and (max-width: 450px) { 
-      .jumbotron .inner{ 
-        height: 160px ;
-      }
+     
       .table td, .table th{
         padding: 5px;
       }

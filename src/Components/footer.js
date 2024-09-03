@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="one-fourth">
                     <div id="googlemapswidget-2">
                         <h2 className="widgettitle">Map of Pascagoula</h2>
-                        <p>
+                        <div>
                             <a
                                 data-gmw-id="googlemapswidget-2"
                                 className="gmw-thumbnail-map gmw-lightbox-enabled"
@@ -21,19 +21,19 @@ const Footer = () => {
                             >
                                 <Map />
                             </a>
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div className="one-fourth">
                     <div id="text-2">
                         <h2 className="widgettitle">Location</h2>
                         <div className="textwidget">
-                            <div itemscope itemtype="http://schema.org/LocalBusiness">
-                                <span itemprop="name">Liquors Unlimited</span>
+                            <div itemScope itemType="http://schema.org/LocalBusiness">
+                                <span itemProp="name">Liquors Unlimited</span>
                                 <br />
-                                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                <span itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                                     <a
-                                        itemprop="streetAddress"
+                                        itemProp="streetAddress"
                                         href="https://www.google.com/maps/place/3002+Market+St,+Pascagoula,+MS+39567/"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Footer = () => {
                                 <br />
                                 <span>
                                     <i className="fa fa-phone-square" aria-hidden="true"></i>{' '}
-                                    <a itemprop="telephone" href="tel:6622343331">
+                                    <a itemProp="telephone" href="tel:6622343331">
                                         (228) 762-3874
                                     </a>
                                 </span>

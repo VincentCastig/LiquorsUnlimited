@@ -65,6 +65,9 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
                     {sizes.size === '1' && fifthSize &&
                         <td>{liter}</td>
                     }
+                    {!fifthSize &&
+                        <td></td>
+                    }
                 </tr>
             );
         });
