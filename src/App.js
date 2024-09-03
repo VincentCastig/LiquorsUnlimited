@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes as RouterRoutes, Route } from 'react-router-dom';
 import './styles/app.scss';
-import Header from './john/header.js';
-import Footer from './john/footer.js';
-import Home from './john/joe/home.js';
-import Wine from './john/joe/wine.js';
-import Planning from './john/joe/planning.js';
-import Contact from './john/joe/contact.js';
+import Header from './hooks/header.js';
+import Footer from './hooks/footer.js';
+import Home from './hooks/components/home.js';
+import Wine from './hooks/components/wine.js';
+import Planning from './hooks/components/planning.js';
+import Contact from './hooks/components/contact.js';
 
 const App = () => {
   return (
