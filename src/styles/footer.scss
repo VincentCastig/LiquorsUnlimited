@@ -53,7 +53,6 @@
     text-align: center;
     flex: auto;
     width: 355px;
-    //max-width: 440px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -216,7 +215,10 @@
   
     .footer .one-fourth {
       flex: 1 1 100%;
-        width: 75%;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 355px;
     }
   }
 
@@ -225,9 +227,9 @@
       padding: 15px;
     }
   
-    .business-hours h2 {
-      font-size: 1.25rem;
-    }
+    // .business-hours h2 {
+    //   font-size: 1.25rem;
+    // }
   
     .business-hours li {
       font-size: 0.9rem;

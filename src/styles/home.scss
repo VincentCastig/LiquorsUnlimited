@@ -101,3 +101,31 @@
     margin-left: 20px; /* Adds space between the paragraph and the image */
   }
   
+  @media screen and (max-width: 850px) { 
+    .footer .wrapper{
+      justify-content: center;
+    }
+
+    .info-section{
+      width: 100%;
+    }
+
+    .info-content{
+      flex-direction: column;
+    }
+
+    .info-image{
+      width: 60%;
+      margin-left: 0;
+    }
+
+  }
+
+  @media screen and (max-width: 650px) { 
+    .info-title{
+      font-size: 2rem;
+    }
+  }
+
+
+ 
