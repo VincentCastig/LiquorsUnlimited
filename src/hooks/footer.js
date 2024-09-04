@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="wrapper">
                 <div className="one-fourth">
                     <div id="googlemapswidget-2">
-                        <h2 className="widgettitle">Map of Pascagoula</h2>
+                        <h2 className="widgettitle">Find Us Here</h2>
                         <div>
                             <a
                                 data-gmw-id="googlemapswidget-2"

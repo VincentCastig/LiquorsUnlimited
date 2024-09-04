@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+
+
+import React, { useState, useCallback } from "react";
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 
 const mapContainerStyle = {
   height: "300px",
@@ -11,17 +13,21 @@ const center = {
   lng: -88.548219,
 };
 
-const MyMapComponent = ({ onMarkerClick }) => {
+const MyMapComponent = ({ onMarkerClick, isMarkerShown }) => {
   return (
     <GoogleMap
       mapContainerStyle={mapContainerStyle}
-      zoom={17}
+      zoom={16}
       center={center}
     >
-      <Marker 
-        position={{ lat: 30.364141, lng: -88.548214 }} 
-        onClick={onMarkerClick} 
-      />
+      {isMarkerShown && (
+        <div id="map">
+          <script
+            type="text/javascript"
+            src={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
+          ></script>
+        </div>
+      )}
     </GoogleMap>
   );
 };
@@ -29,13 +35,7 @@ const MyMapComponent = ({ onMarkerClick }) => {
 const Map = () => {
   const [isMarkerShown, setIsMarkerShown] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsMarkerShown(true);
-    }, 3000);
-
-    return () => clearTimeout(timer); // Cleanup timeout on unmount
-  }, []);
+  console.log('process.env.GOOGLE_MAPS_KEY', process.env.REACT_APP_GOOGLE_MAPS_KEY);
 
   const handleMarkerClick = useCallback(() => {
     setIsMarkerShown(false);
@@ -45,7 +45,7 @@ const Map = () => {
   }, []);
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCsOYvglu2KQN0XGTFPwG79v8BSdJ_eCFA",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
     libraries: ["geometry", "drawing", "places"],
   });
 
@@ -55,6 +55,7 @@ const Map = () => {
   return (
     <MyMapComponent
       onMarkerClick={handleMarkerClick}
+      isMarkerShown={isMarkerShown}
     />
   );
 };
