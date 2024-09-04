@@ -14,30 +14,31 @@ const Home = () => {
                 <article className="home-wine-container">
                     <div className='home-content'>
                         <h1>Welcome to Liquors Unlimited – Your Local Destination for Fine Wines & Spirits!</h1>
-                        <p>At Liquors Unlimited, we believe that every bottle tells a story, and we’re here to help you find the perfect one for every occasion. Located in the heart of Pascagoula, Mississippi, our store offers a curated selection of the finest wines, and spirits. Whether you're celebrating a special moment or just winding down after a long day, we have something to make it memorable.</p>
+                        {/* <p>At Liquors Unlimited, we believe that every bottle tells a story, and we’re here to help you find the perfect one for every occasion. Located in the heart of Pascagoula, Mississippi, our store offers a curated selection of the finest wines, and spirits. Whether you're celebrating a special moment or just winding down after a long day, we have something to make it memorable.</p>
+                        <p> */}
                         <p>
+                            At Liquors Unlimited, every bottle tells a unique story, and we’re here to help you find the perfect one for any occasion. Located in the heart of Pascagoula, Mississippi, our store offers a carefully curated selection of the finest wines and spirits. Whether you’re celebrating life’s special moments or unwinding after a long day, we have something to make every experience memorable.
+                        </p>
 
+                        <p>
                             <img className="home-main-image" src={(require('../../img/store-entrance.JPG'))} alt="Front view of liquor store" />
                         </p>
                         <h2>
                             Discover Our Selection and Experience Unmatched Service
                         </h2>
                         <p>
-                            At Liquors Unlimited, we pride ourselves on offering a diverse range of products to meet all your needs. Our shelves are stocked with everything from premium international wines and top-shelf spirits. We also carry a variety of mixers, and accessories to complement your drink of choice. Our knowledgeable staff is always here to help you find exactly what you’re looking for, whether you’re an aficionado or just exploring new tastes.
+                            We pride ourselves on offering a diverse range of products to meet all your needs. From premium international wines to top-shelf spirits, our shelves are stocked with the best the world has to offer. We also carry a wide array of mixers and accessories to complement your favorite drinks. Whether you’re a connoisseur or just starting your journey into the world of fine beverages, our knowledgeable staff is here to guide you.
                         </p>
                         <p>
-                            We’re more than just a liquor store; we’re a part of the Pascagoula community. Our goal is to create a welcoming environment where you can discover your next favorite drink and enjoy the experience of finding it. Stop by today and see why Liquors Unlimited is Pascagoula’s favorite place for spirits, wines, and more!
+                            Liquors Unlimited is more than a store; we’re a proud part of the Pascagoula community. We’ve been serving residents and visitors for over 43 years, building lasting relationships along the way. Our welcoming environment invites you to discover new flavors and enjoy the process of finding your next favorite drink.
                         </p>
 
                         <h2>{(new Date(Date.now()).getFullYear()) - (new Date(1981, 5, 22).getFullYear())}  Years of Dedicated Service</h2>
 
-                        <p>Since 1981, Liquors Unlimited has been a cornerstone of the Pascagoula, MS community, proudly serving residents and visitors alike for over four decades. Our commitment to providing exceptional service and an unparalleled selection has made us a trusted destination for all things wine, liquor, and spirits in the region.</p>
+                        <p>We take pride in offering a diverse inventory with over 2,100 different items in stock. Whether you're searching for a classic bottle of your favorite wine, a rare spirit, or something new to explore, our shelves are filled with options to suit every palate and occasion. And if you can't find exactly what you're looking for, our team is happy to assist with special orders, ensuring you get the perfect bottle for any event.</p>
 
-                        <p>At Liquors Unlimited, we take pride in offering a diverse inventory with over 2,100 different items in stock. Whether you're searching for a classic bottle of your favorite wine, a rare spirit, or something new to explore, our shelves are filled with options to suit every palate and occasion. And if you can't find exactly what you're looking for, our team is happy to assist with special orders, ensuring you get the perfect bottle for any event.</p>
+                        <p>Conveniently located at the corner of Market Street and Covenant Street, our store is easy to find and a pleasure to shop. Whether you’re planning a celebration, stocking your home bar, or exploring new tastes, Liquors Unlimited is your go-to destination. Come in today to experience the warm, expert service that has made us Pascagoula’s favorite since 1981</p>
 
-                        <p>Conveniently located at the corner of Market Street and Covenant Street, our store is easy to find and even easier to shop. Stop by today to browse our extensive collection of fine wines, premium liquors, and unique liqueurs. Whether you're planning a special celebration, stocking your home bar, or simply exploring new flavors, Liquors Unlimited is here to help you find just what you need.</p>
-
-                        <p>Visit us and experience the warm, knowledgeable service that has made Liquors Unlimited a beloved part of the Pascagoula community for over 43 years.</p>
 
                     </div>
                 </article>
