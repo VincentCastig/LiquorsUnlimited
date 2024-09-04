@@ -1,5 +1,6 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+
 
 const containerStyle = {
   height: "300px",
@@ -11,33 +12,33 @@ const center = {
   lng: -88.548219,
 };
 
+
 const MyMapComponent = () => {
-  const { isLoaded } = useJsApiLoader({
+  const [isBigIntSupported, setIsBigIntSupported] = useState(typeof BigInt !== 'undefined');
+
+  if (!isBigIntSupported) {
+    return <div>Loading...</div>;  // Display a loading message
+  }
+
+  const {isLoaded} = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
   });
 
-  const [map, setMap] = React.useState(null);
-
-  const onLoad = React.useCallback(function callback(map) {
-    setMap(map);
-  }, []);
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null);
-  }, []);
 
   return isLoaded ? (
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={15}  // You can adjust this zoom level as needed
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        <Marker position={center} />
-      </GoogleMap>
-  ) : <></>;
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={15}
+    >
+      { /* Child components, such as markers, info windows, etc. */ }
+      <Marker 
+        position={center} 
+      />
+    </GoogleMap> )
+    : <></>;
+
 }
 
 export default MyMapComponent;
