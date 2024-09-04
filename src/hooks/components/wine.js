@@ -2,13 +2,13 @@ import React from 'react';
 
 const Wine = () => {
     return (
-        <div className="container-home">
-            <div className='content-wrapper'>
+        <main className="container-home">
+            <section className='content-wrapper'>
                 <div className="image-container">
                     <img className="home-main-image" src={(require('../../img/wine-room.jpeg'))} alt="wine room" />
                 </div>
 
-                <div className="home-wine-container">
+                <article className="home-wine-container">
                     <div className='home-content clear-fix'>
                         <h1>Wine and Liquor</h1>
                         <p>
@@ -35,9 +35,9 @@ const Wine = () => {
                         <p>Whether you are hosting a party, celebrating a milestone, or simply restocking your home bar, we’re here to ensure you have the best selection at your fingertips. Visit us today and let us help you elevate your next gathering.</p>
 
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     )
 }
 

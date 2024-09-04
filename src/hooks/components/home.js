@@ -5,13 +5,13 @@ import luPainting from '../../img/liquors-unlimited-painting.jpg';
 
 const Home = () => {
     return (
-        <div className="container-home">
-            <div className='content-wrapper'>
+        <main className="container-home">
+            <section className='content-wrapper'>
                 <div className="image-container">
-                    <img className="home-main-image" src={(require('../../img/holding-wine-glasses.jpeg'))} alt="Couple drinking red wine" />
+                    <img className="home-main-image" src={(require('../../img/holding-wine-glasses.jpeg'))} alt="A couple drinking red wine" />
                 </div>
 
-                <div className="home-wine-container">
+                <article className="home-wine-container">
                     <div className='home-content'>
                         <h1>Welcome to Liquors Unlimited – Your Local Destination for Fine Wines & Spirits!</h1>
                         <p>At Liquors Unlimited, we believe that every bottle tells a story, and we’re here to help you find the perfect one for every occasion. Located in the heart of Pascagoula, Mississippi, our store offers a curated selection of the finest wines, and spirits. Whether you're celebrating a special moment or just winding down after a long day, we have something to make it memorable.</p>
@@ -40,10 +40,10 @@ const Home = () => {
                         <p>Visit us and experience the warm, knowledgeable service that has made Liquors Unlimited a beloved part of the Pascagoula community for over 43 years.</p>
 
                     </div>
-                </div>
-            </div>
-            <div className='info-section-wrapper'>
-                <div className="info-section">
+                </article>
+            </section>
+            <section className='info-section-wrapper'>
+                <article className="info-section">
                     <h3 className="info-title">What are you drinking?</h3>
                     <hr className="info-divider" />
                     <div className="info-content">
@@ -56,9 +56,9 @@ const Home = () => {
                             className="info-image"
                         />
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     )
 }
 
