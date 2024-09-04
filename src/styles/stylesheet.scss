@@ -11,9 +11,7 @@
     overflow-y: scroll;
 }
   body {
-    background: url(../../src/img/the-barrels.JPG)  no-repeat;
-    //background: url(../../src/img/holding-wine-glasses.jpeg)  no-repeat;
-
+    background: url(../../src/img/wine-barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -21,7 +19,6 @@
     width: 100%;
   }
 
-  
   body::before {
     content: '';
     position: absolute;
