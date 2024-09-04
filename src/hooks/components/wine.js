@@ -32,7 +32,7 @@ const Wine = () => {
 
                         <p>Planning a special occasion? Make Liquors Unlimited your go-to destination. Our store is stocked with the finest liquors, including rare and hard-to-find bottles that will impress your guests. Our knowledgeable and friendly team is always ready to assist you in finding the perfect spirits for any event.</p>
 
-                        <p>Whether you’re hosting a party, celebrating a milestone, or simply restocking your home bar, we’re here to ensure you have the best selection at your fingertips. Visit us today and let us help you elevate your next gathering.</p>
+                        <p>Whether you are hosting a party, celebrating a milestone, or simply restocking your home bar, we’re here to ensure you have the best selection at your fingertips. Visit us today and let us help you elevate your next gathering.</p>
 
                     </div>
                 </div>
