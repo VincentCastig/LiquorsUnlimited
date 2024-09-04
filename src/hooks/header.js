@@ -29,6 +29,7 @@ const Header = () => {
             alt="Liquors Unlimited Calligraphy by Lillian Castigliola"
             className='lu-logo'
           />
+          <h3>Fine Wine and Spirits</h3>
           <img 
             src={require("../img/right-bench.png")} 
             alt="Right Bench"

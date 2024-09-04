@@ -1,3 +1,5 @@
+@import 'variables';
+
 .header{
     position: relative;
     right: 0;
@@ -7,6 +9,19 @@
     margin-top: 0;
     border-bottom: 0;
     height: 195px;
+
+    h3{
+      // font-family: cursive;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      text-rendering: geometricPrecision;
+      text-decoration: overline;
+      //bottom: 32px;
+      bottom: 8%;
+      color: $merlot_wine_color;
+    }
 }
 
 .jumbotron .inner .lu-logo{
@@ -113,19 +128,31 @@
     line-height: 0.8;
     text-decoration-line: none;
   }
-  .jumbotron .inner .lu-logo{
-    margin-top: 0;
-    position: absolute;
-    }
+  
     .jumbotron .inner  h2{
       font-size: 24px;
       margin-top: 148px;
     }
 }
 
+@media screen and (max-width: 1200px) { 
+  .header h3{
+    bottom: 6%;
+  }
+}
+
+@media screen and (max-width: 1150px) { 
+  .header h3{
+    bottom: 5%;
+  }
+}
+
 @media screen and (max-width: 1100px) { 
   .jumbotron .inner .lu-logo{
     bottom: 60px;
+  }
+  .header h3{
+    bottom: 15%;
   }
 }
 
@@ -134,11 +161,18 @@
     bottom: 70px;
     width: 60%;
   }
+  .header h3{
+    bottom: 22%;
+  }
 }
 
 @media screen and (max-width: 900px) { 
   .header{
     height: 155px;
+
+    h3{
+      display: none;
+    }
   }
   
   .jumbotron .inner .lu-logo{
