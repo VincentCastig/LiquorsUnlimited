@@ -25,7 +25,7 @@ const Wine = () => {
 
                         <h2 >Explore Our Wide Selection of Spirits</h2>
                         <p>
-                            <img className="" src={(require('../../img/IMG_3883.jpg'))} alt="Front Wine Room at Liquors Unlimited" />
+                            <img className="" src={(require('../../img/liquor-room.jpg'))} alt="Front Liquor Room at Liquors Unlimited" />
 
                         </p>
                         <p>At Liquors Unlimited, we pride ourselves on offering an extensive range of both popular and unique spirits. Whether you’re in search of your favorite well-known brands or eager to discover something new, we have you covered.</p>
