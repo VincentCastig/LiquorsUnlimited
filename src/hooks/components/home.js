@@ -17,7 +17,7 @@ const Home = () => {
                         <p>At Liquors Unlimited, we believe that every bottle tells a story, and we’re here to help you find the perfect one for every occasion. Located in the heart of Pascagoula, Mississippi, our store offers a curated selection of the finest wines, and spirits. Whether you're celebrating a special moment or just winding down after a long day, we have something to make it memorable.</p>
                         <p>
 
-                            <img className="home-main-image" src={(require('../../img/store-entrance.JPG'))} alt="front view of liquor store" />
+                            <img className="home-main-image" src={(require('../../img/store-entrance.JPG'))} alt="Front view of liquor store" />
                         </p>
                         <h2>
                             Discover Our Selection and Experience Unmatched Service

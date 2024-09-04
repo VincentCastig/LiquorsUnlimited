@@ -21,17 +21,17 @@ const Header = () => {
         <div className="inner">
         <img 
             src={require("../img/left-bench.png")} 
-            alt="Bench"
+            alt="Left Bench"
             className='left-bench'
           />
           <img 
-            src={require("../img/LUTitleFirstCopy2.png")} 
+            src={require("../img/lu-header.png")} 
             alt="Liquors Unlimited Calligraphy by Lillian Castigliola"
             className='lu-logo'
           />
           <img 
             src={require("../img/right-bench.png")} 
-            alt="Bench"
+            alt="Right Bench"
             className='right-bench'
           />
         </div>
