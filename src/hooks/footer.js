@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="one-fourth">
                     <div id="text-2">
                         <h2 className="widgettitle">Location</h2>
-                        <div className="textwidget">
+                        <div className="textwidget" style={locationText}>
                             <div itemScope itemType="http://schema.org/LocalBusiness">
                                 <span itemProp="name">Liquors Unlimited</span>
                                 <br />
@@ -114,6 +114,11 @@ const Footer = () => {
             </div>
         </footer>
     )
+}
+
+const locationText = {
+    fontSize: '1.3rem',
+    marginTop: '10%'
 }
 
 

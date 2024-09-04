@@ -1,9 +1,7 @@
+import React from 'react';
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-
-import React, { useState, useCallback } from "react";
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
-
-const mapContainerStyle = {
+const containerStyle = {
   height: "300px",
   width: "100%",
 };
@@ -13,51 +11,33 @@ const center = {
   lng: -88.548219,
 };
 
-const MyMapComponent = ({ onMarkerClick, isMarkerShown }) => {
-  return (
-    <GoogleMap
-      mapContainerStyle={mapContainerStyle}
-      zoom={16}
-      center={center}
-    >
-      {isMarkerShown && (
-        <div id="map">
-          <script
-            type="text/javascript"
-            src={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
-          ></script>
-        </div>
-      )}
-    </GoogleMap>
-  );
-};
-
-const Map = () => {
-  const [isMarkerShown, setIsMarkerShown] = useState(true);
-
-  console.log('process.env.GOOGLE_MAPS_KEY', process.env.REACT_APP_GOOGLE_MAPS_KEY);
-
-  const handleMarkerClick = useCallback(() => {
-    setIsMarkerShown(false);
-    setTimeout(() => {
-      setIsMarkerShown(true);
-    }, 3000);
-  }, []);
-
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
-    libraries: ["geometry", "drawing", "places"],
+const MyMapComponent = () => {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY
   });
 
-  if (loadError) return <div>Error loading maps</div>;
-  if (!isLoaded) return <div>Loading Maps...</div>;
+  const [map, setMap] = React.useState(null);
 
-  return (
-    <MyMapComponent
-      onMarkerClick={handleMarkerClick}
-      isMarkerShown={isMarkerShown}
-    />
-  );
-};
+  const onLoad = React.useCallback(function callback(map) {
+    setMap(map);
+  }, []);
 
-export default Map;
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
+  return isLoaded ? (
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={15}  // You can adjust this zoom level as needed
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+        <Marker position={center} />
+      </GoogleMap>
+  ) : <></>;
+}
+
+export default MyMapComponent;

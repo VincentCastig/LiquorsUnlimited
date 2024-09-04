@@ -48,6 +48,7 @@ const planning = {
   backgroundSize: 'cover', // Optional: Cover the entire container
   backgroundPosition: 'center', // Optional: Center the background image
   backgroundRepeat: 'no-repeat',
+  borderRadius: '5px'
 };
 
 export default Planning;

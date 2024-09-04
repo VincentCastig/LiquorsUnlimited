@@ -12,12 +12,28 @@
 }
   body {
     background: url(../../src/img/the-barrels.JPG)  no-repeat;
+    //background: url(../../src/img/holding-wine-glasses.jpeg)  no-repeat;
+
     background-size: cover;
     background-attachment: fixed;
     position: relative;
     z-index: -22;
     width: 100%;
   }
+
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Adjust the darkness level with opacity (0.5 = 50% darkness) */
+    z-index: -1;
+    background-color: hsl(17deg 73.18% 7.91% / 55%);
+  }
+
   h1, h2 {
     font-family:'Abril Fatface', cursive;
   }
@@ -125,11 +141,11 @@
     align-items: center;
     padding-left: 0px;
     padding-right: 0px;
-    // margin-top: -30px;
     overflow: hidden;
     height: auto;
     max-height: 400px;
   }
+
   .image-container-contact {
     width: 100%;
     justify-content: center;
