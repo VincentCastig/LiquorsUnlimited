@@ -23,7 +23,7 @@ const Home = () => {
                             Discover Our Selection and Experience Unmatched Service
                         </h2>
                         <p>
-                            At Liquors Unlimited, we pride ourselves on offering a diverse range of products to meet all your needs. Our shelves are stocked with everything from premium international wines and top-shelf spirits. We also carry a variety of mixers, and accessories complement your drink of choice. Our knowledgeable staff is always here to help you find exactly what you’re looking for, whether you’re an aficionado or just exploring new tastes.
+                            At Liquors Unlimited, we pride ourselves on offering a diverse range of products to meet all your needs. Our shelves are stocked with everything from premium international wines and top-shelf spirits. We also carry a variety of mixers, and accessories to complement your drink of choice. Our knowledgeable staff is always here to help you find exactly what you’re looking for, whether you’re an aficionado or just exploring new tastes.
                         </p>
                         <p>
                             We’re more than just a liquor store; we’re a part of the Pascagoula community. Our goal is to create a welcoming environment where you can discover your next favorite drink and enjoy the experience of finding it. Stop by today and see why Liquors Unlimited is Pascagoula’s favorite place for spirits, wines, and more!
