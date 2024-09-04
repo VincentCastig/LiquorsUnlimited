@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import '../styles/header.scss'; // Import the SCSS file
-import useScrollPosition from './useScrollPosition'; // Import the custom hook
+import useScrollPosition from './utilities/useScrollPosition'; // Import the custom hook
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
