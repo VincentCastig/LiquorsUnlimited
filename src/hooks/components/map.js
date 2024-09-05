@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useCallback } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 
@@ -17,8 +17,9 @@ const MyMapComponent = () => {
   const [isBigIntSupported, setIsBigIntSupported] = useState(typeof BigInt !== 'undefined');
 
   if (!isBigIntSupported) {
-    return <div>Loading...</div>;  // Display a loading message
+    return <div>Error Loading Map</div>;  // Display a loading message
   }
+
 
   const {isLoaded} = useJsApiLoader({
     id: 'google-map-script',
@@ -32,7 +33,6 @@ const MyMapComponent = () => {
       center={center}
       zoom={15}
     >
-      { /* Child components, such as markers, info windows, etc. */ }
       <Marker 
         position={center} 
       />
