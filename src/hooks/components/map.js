@@ -1,4 +1,4 @@
-import { React, useState, useCallback } from 'react';
+import { React, useState } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 
@@ -14,7 +14,7 @@ const center = {
 
 
 const MyMapComponent = () => {
-  const [isBigIntSupported, setIsBigIntSupported] = useState(typeof BigInt !== 'undefined');
+  const [isBigIntSupported] = useState(typeof BigInt !== 'undefined');
 
   if (!isBigIntSupported) {
     return <div>Error Loading Map</div>;  // Display a loading message
