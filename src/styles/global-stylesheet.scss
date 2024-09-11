@@ -17,7 +17,22 @@
     position: relative;
     z-index: -22;
     width: 100%;
+    //font-family: 'Merriweather', serif;
+    //font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-family: Georgia, serif;
+
+
   }
+
+  h1,h2,h3{
+    font-family: "Abril Fatface", cursive;
+  }
+
+  // p{
+  //   font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  // }
+
+
 
   body::before {
     content: '';
@@ -202,7 +217,7 @@
   }
   
   .jumbotron .inner  h2{
-    font-family: cursive;
+    //font-family: cursive;
     font-size: 22px;
     font-weight: 100;
     text-rendering: geometricPrecision;

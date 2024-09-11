@@ -60,10 +60,6 @@
     padding: 20px;
   }
   
-  .footer .one-fourth:last-child {
-    margin-bottom: 0;
-  }
-  
   .footer a {
     color: #000000;
     text-decoration: none;
@@ -76,11 +72,19 @@
   .footer svg{
     color: #007bff;
   }
+
+  .contact-text-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70%;
+  }
   
   .footer .textwidget {
     font-size: 1.25rem;
     color: #000000;
-    font-family: 'Merriweather', serif;
+    //font-family: 'Merriweather', serif;
   }
   
   .footer .socialicons {
@@ -105,13 +109,6 @@
   .business-hours {
     max-width: 300px; /* Limit width for better readability */
     margin: 0 auto; /* Centering */
-  }
-  
-  .business-hours h2 {
-    // font-size: 1.5rem;
-    // color: #333; /* Dark text color for readability */
-    // margin-bottom: 10px;
-    // text-align: center; /* Center align header */
   }
   
   .business-hours ul {
@@ -193,7 +190,7 @@
   .footer .btn {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: 1rem;
     font-size: 1rem;
     color: #fff;
     background-color: $primary_green; 

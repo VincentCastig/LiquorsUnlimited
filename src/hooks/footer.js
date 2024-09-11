@@ -97,10 +97,10 @@ const Footer = () => {
 
                 </div>
                 <div className="one-fourth">
-                    <div id="text-16">
-                        <h2 className="widgettitle">Contact Us Today!</h2>
+                    <h2 className="widgettitle">Contact Us Today!</h2>
+                    <div className="contact-text-wrapper">
                         <div className="textwidget">
-                        Searching for something specific? Visit our store to explore our extensive collection, or let us know if you need something special ordered. Stop by our well-stocked liquor store and discover a wide array of premium wines and top-brand spirits.
+                            Searching for something specific? Visit our store to explore our extensive collection, or let us know if you need something special ordered. Stop by our well-stocked liquor store and discover a wide array of premium wines and top-brand spirits.
                         </div>
                         <a className="btn" href="/contact/">
                             Learn More
