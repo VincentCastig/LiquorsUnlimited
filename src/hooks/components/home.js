@@ -14,15 +14,14 @@ const Home = () => {
                 <article className="home-wine-container">
                     <div className='home-content'>
                         <h1>Welcome to Liquors Unlimited – Your Local Destination for Fine Wines & Spirits!</h1>
-                        {/* <p>At Liquors Unlimited, we believe that every bottle tells a story, and we’re here to help you find the perfect one for every occasion. Located in the heart of Pascagoula, Mississippi, our store offers a curated selection of the finest wines, and spirits. Whether you're celebrating a special moment or just winding down after a long day, we have something to make it memorable.</p>
-                        <p> */}
+                      
                         <p>
                             At Liquors Unlimited, every bottle tells a unique story, and we’re here to help you find the perfect one for any occasion. Located in the heart of Pascagoula, Mississippi, our store offers a carefully curated selection of the finest wines and spirits. Whether you’re celebrating life’s special moments or unwinding after a long day, we have something to make every experience memorable.
                         </p>
 
-                        <p>
-                            <img className="home-main-image" src={(require('../../img/store-entrance.JPG'))} alt="Front view of liquor store" />
-                        </p>
+                        <div className='article-image-wrapper'>
+                            <img className="article-image" src={(require('../../img/store-entrance.JPG'))} alt="Front view of liquor store" />
+                        </div>
                         <h2>
                             Discover Our Selection and Experience Unmatched Service
                         </h2>

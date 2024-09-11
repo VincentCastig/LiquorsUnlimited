@@ -15,7 +15,6 @@
     max-width: 1080px;
     width: 95%;
     margin: 0 auto;
-    // position: relative;
 }
 
 .home-content img{
@@ -24,7 +23,7 @@
     width: 50%;
 }
 
-.home-content p img{
+.article-image-wrapper .article-image{
     display: inline;
     float: right;
     margin: 5px 0 20px 20px;
@@ -124,6 +123,26 @@
   @media screen and (max-width: 650px) { 
     .info-title{
       font-size: 2rem;
+    }
+
+    .article-image-wrapper{
+      display: flex;
+      justify-content: center;
+    }
+
+    .article-image-wrapper .article-image{
+      display: inline;
+      float: right;
+      margin: 5px 0 20px 0px;
+      width: 85%;
+    }
+  }
+
+
+  @media screen and (max-width: 450px) { 
+
+    .article-image-wrapper .article-image{
+      width: 90%;
     }
   }
 
