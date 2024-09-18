@@ -12,25 +12,10 @@ const center = {
   lng: -88.548219,
 };
 
-const isSafariOniPhone = () => {
-  const userAgent = navigator.userAgent;
-  const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
-  const isIphone = /iPhone/.test(userAgent);
-  return isSafari && isIphone;
-};
-
-
 const MyMapComponent = () => {
   const [isBigIntSupported] = useState(typeof BigInt !== 'undefined');
-  const [isSafariIphone, setIsSafariIphone] = useState(isSafariOniPhone);
 
-
-  useEffect(() => {
-    setIsSafariIphone(isSafariOniPhone());
-  }, []);
-
-
-  if (!isBigIntSupported || isSafariIphone) {
+  if (!isBigIntSupported) {
     return <div>Error Loading Map</div>;  // Display a loading message
   }
 
