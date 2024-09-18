@@ -234,6 +234,9 @@
   .navbar-toggle {
     display: none;
   }
+  .navbar-light .navbar-toggler {
+    border-color: rgb(0 0 0 / 20%);
+}
   .navbar>.container{
     min-width: 95%;
   }
