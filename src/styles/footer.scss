@@ -12,6 +12,15 @@
   color: $secondary_color;
   bottom: 0;
 }
+
+#footer {
+  span, p, a, div {
+    color: #555;
+  }
+  .btn{
+    color: #ffffff;
+  }
+}
 #footer p {
   margin: 10px;
 }
