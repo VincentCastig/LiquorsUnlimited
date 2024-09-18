@@ -60,6 +60,7 @@ const Footer = () => {
                                     href="https://www.facebook.com/p/Liquors-Unlimited-100066869287350/"
                                     target="_blank"
                                     rel="noopener noreferrer nofollow"
+                                    aria-label="Visit Liquors Unlimited on Facebook"
                                 >
                                     <FontAwesomeIcon icon={faFacebook} size="2x" />
                                 </a>
