@@ -29,7 +29,7 @@ const Home = () => {
                             We pride ourselves on offering a diverse range of products to meet all your needs. From premium international wines to top-shelf spirits, our shelves are stocked with the best the world has to offer. We also carry a wide array of mixers and accessories to complement your favorite drinks. Whether you’re a connoisseur or just starting your journey into the world of fine beverages, our knowledgeable staff is here to guide you.
                         </p>
                         <p>
-                            Liquors Unlimited is more than a store; we’re a proud part of the Pascagoula community. We’ve been serving residents and visitors for over 43 years, building lasting relationships along the way. Our welcoming environment invites you to discover new flavors and enjoy the process of finding your next favorite drink.
+                            Liquors Unlimited is more than a store; we’re a proud part of the Pascagoula community. We’ve been serving residents and visitors for {(new Date(Date.now()).getFullYear()) - (new Date(1981, 5, 22).getFullYear())} years, building lasting relationships along the way. Our welcoming environment invites you to discover new flavors and enjoy the process of finding your next favorite drink.
                         </p>
 
                         <h2>{(new Date(Date.now()).getFullYear()) - (new Date(1981, 5, 22).getFullYear())}  Years of Dedicated Service</h2>
