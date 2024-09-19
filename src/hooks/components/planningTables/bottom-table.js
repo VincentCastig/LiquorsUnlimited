@@ -16,11 +16,9 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
     });
 
     const handleSizeChange = (drink, newSize) => {
-      
         const newDrinksData = { ...sizes.drinksData };
         newDrinksData[drink][2] = parseFloat(newSize);  // Update the size for each drink
 
-       
         setSizes({ ...sizes, drinksData: newDrinksData });
     };
 
@@ -41,18 +39,11 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
             const [label, percentage] = sizes.drinksData[val];
             const bottleSize = sizes.drinksData[val][2];
 
-            
             const totalDrinksForType = (percentage * drinksTotal) / 100;  // Total drinks for this type
-            const drinksPerBottle = val === 'White' || val === 'Red' ? 5 : 17;  // Assume 5 drinks for wine, 17 drinks for spirits
-            
+            const drinksPerBottle = val === 'White' || val === 'Red' ? 6.7 : 22;  // Assume 5 drinks for wine, 17 drinks for spirits
 
-            const totalBottles = (totalDrinksForType / drinksPerBottle).toFixed(1);  // Total bottles required
+            const totalBottles = (totalDrinksForType / (drinksPerBottle * bottleSize)).toFixed(1);  // Total bottles required
 
-            console.log('totalDrinksForType ', totalDrinksForType);
-            console.log('drinksPerBottle ', drinksPerBottle);
-            console.log('bottleSize ', bottleSize);
-
-            console.log('totalBottles ', totalBottles);
             const rowStyle = i % 2 === 0 ? 'even-row' : 'odd-row';
 
             return (
@@ -79,7 +70,7 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
                             </select>
                         }
                     </td>
-                   
+
                     {val !== 'Beer' &&
                         <td>{totalBottles}</td>
                     }
