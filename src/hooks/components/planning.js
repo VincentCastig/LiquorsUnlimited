@@ -8,7 +8,7 @@ const Planning = () => {
     value: '',
     people: '',
     drinks: '',
-    percentage: '100'
+    percentage: 100
   });
 
   const handleChangeValue = (prop, val) => {

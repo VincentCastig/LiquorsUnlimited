@@ -10,28 +10,42 @@ const TopTable = ({ handleChangeValue }) => {
     const drinksTotal = Math.round(100 * people * drinks) / 100;
 
     const updatePeople = (val) => {
-        const value = parseInt(val, 10);
-        if (isNaN(value) || value <= 0) {
-            setPeopleError('Number of people must be greater than 0');
-        } else if (value > 10000) {
-            setPeopleError('Number of people must not exceed 10,000');
-        } else {
+        if (val === '') {
+            setPeople('');
+            handleChangeValue('people', '');
             setPeopleError('');
-            handleChangeValue('people', value);
-            setPeople(value);
+        } else {
+            const value = parseInt(val, 10);
+            if (isNaN(value) || value <= 0) {
+                setPeopleError('Number of people must be greater than 0');
+            } else if (value > 10000) {
+                setPeopleError('Number of people must not exceed 10,000');
+            } else {
+                setPeopleError('');
+                handleChangeValue('people', value);
+                setPeople(value);
+            }
         }
     };
 
     const updateDrinks = (val) => {
-        const value = parseInt(val, 10);
-        if (isNaN(value) || value <= 0) {
-            setDrinksError('Drinks per person must be greater than 0');
-        } else if (value > 25) {
-            setDrinksError('Drinks per person must not exceed 25');
-        } else {
+        if (val === '') {
             setDrinksError('');
-            handleChangeValue('drinks', value);
-            setDrinks(value);
+            handleChangeValue('drinks', '');
+            setDrinks('');
+        }
+        else {
+
+            const value = parseInt(val, 10);
+            if (value <= 0) {
+                setDrinksError('Drinks per person must be greater than 0');
+            } else if (value > 25) {
+                setDrinksError('Drinks per person must not exceed 25');
+            } else {
+                setDrinksError('');
+                handleChangeValue('drinks', value);
+                setDrinks(value);
+            }
         }
     };
 
