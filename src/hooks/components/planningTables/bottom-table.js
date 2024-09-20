@@ -82,12 +82,14 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
         });
     };
 
+    const percentageColor = totalPercentage === 100 ? 'white' : '#ff6161';
+
     return (
         <Table className="styled-table">
             <thead>
                 <tr>
                     <th>Type of Drink</th>
-                    <th>Percentage Consumed <span className="total-percentage">({totalPercentage}%)</span></th>
+                    <th>Percentage Consumed <span className="total-percentage" style={{ color: percentageColor }}>({totalPercentage}%)</span></th>
                     <th>Bottle Size</th>
                     <th>Total in Bottles</th>
                 </tr>
