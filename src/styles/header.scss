@@ -1,0 +1,245 @@
+@import 'variables';
+
+.header{
+    position: relative;
+    right: 0;
+    width: 100%;
+    z-index: 5000;
+    margin-bottom: 0; 
+    margin-top: 0;
+    border-bottom: 0;
+    height: 195px;
+
+    h3{
+      // font-family: cursive;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      text-rendering: geometricPrecision;
+      text-decoration: overline;
+      //bottom: 32px;
+      bottom: 8%;
+      color: $merlot_wine_color;
+    }
+}
+
+.jumbotron .inner .lu-logo{
+    position: absolute;
+    bottom: 32px;
+    // width: 625px;
+    width: 50%;
+    left: 50%; /* Position the left edge at the center */
+    transform: translateX(-50%); /* Move the element left by 50% of its width */
+  }
+
+  .right-bench{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+  }
+
+  .left-bench{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+  }
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; // Ensure the navbar is above other content
+  }
+
+  .lu-navbar{
+    background: #376b5e !important;
+    z-index: 9999;
+    // height: 55px;
+  }
+
+.nav-link{
+    text-transform: uppercase;
+    color: #fff !important;
+    letter-spacing: 2px;
+    font-size: 1em;
+    padding: 8px 26px;
+    transition: .4s;
+    color: inherit;
+    border: 1px solid transparent;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    padding: 8px 26px;
+    transition: .4s;
+    font-family: 'Merriweather', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .nav-link:hover{
+    border-bottom: 1px #fff solid;
+  }
+
+  .nav-link.active {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .navbar-brand{
+    color: #fff !important;
+    font-family: 'Merriweather', serif;
+  }
+
+  .navbar-custom-nav {
+    display: flex;
+    justify-content: center; /* Distribute space between items */
+    width: 100%; /* Ensure the nav takes full width of its container */
+  }
+  
+//   .navbar-custom-nav .nav-link {
+//     flex: 1; /* Allow links to grow and fill the space evenly */
+//     text-align: center; /* Center text within each link */
+//   }
+
+.collapse.show {
+  display: block;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+@media (min-width: 800px) {
+  .jumbotron h1{
+    font-size:60px; 
+    line-height: 0.8;
+    text-decoration-line: none;
+  }
+  .unlimited{
+    font-size:60px; 
+    line-height: 0.8;
+    text-decoration-line: none;
+  }
+  
+    .jumbotron .inner  h2{
+      font-size: 24px;
+      margin-top: 148px;
+    }
+}
+
+@media screen and (max-width: 1200px) { 
+  .header h3{
+    bottom: 6%;
+  }
+}
+
+@media screen and (max-width: 1150px) { 
+  .header h3{
+    bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 1100px) { 
+  .jumbotron .inner .lu-logo{
+    bottom: 60px;
+  }
+  .header h3{
+    bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 950px) { 
+  .jumbotron .inner .lu-logo{
+    bottom: 70px;
+    width: 60%;
+  }
+  .header h3{
+    bottom: 22%;
+  }
+}
+
+@media screen and (max-width: 900px) { 
+  .header{
+    height: 155px;
+
+    h3{
+      display: none;
+    }
+  }
+  
+  .jumbotron .inner .lu-logo{
+    bottom: 5px;
+    width: 60%;
+    left: 0;
+    transform: none;
+  }
+
+  .left-bench{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 799px) { 
+  .header{
+    height: 120px;
+  }
+  .jumbotron .inner .lu-logo{ 
+    width: 450px;
+  }
+  .jumbotron .inner .right-bench{ 
+    width: 250px;
+  }
+  .jumbotron .inner .left-bench{ 
+    width: 250px;
+  }
+}
+
+// @media screen and (max-width: 767px) { 
+//   .jumbotron .inner{ 
+//     height: 200px ;
+//   }
+// }
+@media screen and (max-width: 768px) { 
+  .jumbotron .inner .lu-logo{ 
+    margin-top: 25px;
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 650px) { 
+  .header{
+    height: 100px ;
+  }
+  .jumbotron .inner .lu-logo{ 
+    width: 80%;
+  }
+  .jumbotron .inner .left-bench, .jumbotron .inner .right-bench{ 
+   display: none;
+  }
+}
+
+@media screen and (max-width: 450px) { 
+  .jumbotron .inner .lu-logo{ 
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) { 
+  .header{
+    height: 90px;
+  }
+}
+@media screen and (max-width: 450px) { 
+  
+  .table td, .table th{
+    padding: 5px;
+  }
+}

@@ -1,29 +1,28 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-// import logo from './logo.svg';
-import './App.css';
-import Header from './Components/header';
-import Footer from './Components/footer';
-import Routes from './Routes/routes';
-// import Home from './Components/Categories/home';
+import React from 'react';
+import { BrowserRouter as Router, Routes as RouterRoutes, Route } from 'react-router-dom';
+import './styles/app.scss';
+import Header from './hooks/header.js';
+import Footer from './hooks/footer.js';
+import Home from './hooks/components/home.js';
+import Wine from './hooks/components/wine.js';
+import Planning from './hooks/components/planning.js';
+import Contact from './hooks/components/contact.js';
 
-
-class App extends Component {
-  render() {
-    return (
-      // <div className="app">
-      <BrowserRouter>
+const App = () => {
+  return (
+    <Router>
       <div className="app">
-      
         <Header />
-        {/* <div className="ok"></div> */}
-        { Routes }
+        <RouterRoutes>
+          <Route path="/" element={<Home />} />
+          <Route path="/wine" element={<Wine />} />
+          <Route path="/planning" element={<Planning />} />
+          <Route path="/contact" element={<Contact />} />
+        </RouterRoutes>
         <Footer />
       </div>
-      </BrowserRouter>
-      // </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

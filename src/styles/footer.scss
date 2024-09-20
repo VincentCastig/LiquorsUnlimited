@@ -1,0 +1,251 @@
+@import 'variables';
+
+/* General Footer Styles */
+#footer{
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: $primary_green;
+  color: $secondary_color;
+  bottom: 0;
+}
+
+#footer {
+  span, p, a, div {
+    color: #555;
+  }
+  .btn{
+    color: #ffffff;
+  }
+}
+#footer p {
+  margin: 10px;
+}
+
+#footer {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+    background-image: url('../img/backdrop-bench.png') !important;
+  }
+  
+  .footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 95%;
+    position: relative;
+  }
+  
+  .footer h1, .footer h2{
+    padding: 5px 0 5px 0
+  }
+
+  .footer h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer .one-fourth {
+    flex: 1 1 23%;
+    margin-bottom: 2rem;
+    padding: 0 10px;
+    margin: 5px;
+    background: rgba(225, 222, 201, .6);
+    text-align: center;
+    flex: auto;
+    width: 355px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer svg{
+    color: #007bff;
+  }
+
+  .contact-text-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70%;
+  }
+  
+  .footer .textwidget {
+    font-size: 1.25rem;
+    color: #000000;
+    //font-family: 'Merriweather', serif;
+  }
+  
+  .footer .socialicons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .footer .socialicons img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Business Hours Styles */
+  .footer .business-hours p {
+    margin: 0.5rem 0;
+    color: black;
+    font-size: 1.25rem;
+  }
+
+  .business-hours {
+    max-width: 300px; /* Limit width for better readability */
+    margin: 0 auto; /* Centering */
+  }
+  
+  .business-hours ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .business-hours li {
+    padding: 8px 0; /* Space between items */
+    border-bottom: 1px solid #eee; /* Subtle separator line */
+    font-size: 1rem; /* Adjust font size */
+    color: #555; /* Slightly lighter text color */
+  }
+  
+  .business-hours li:last-child {
+    border-bottom: none; /* Remove border from last item */
+  }
+  
+  .business-hours li.closed {
+    font-style: italic; /* Italicize "Closed" for emphasis */
+    color: #999; /* Gray color for closed status */
+  }
+  
+  /* Map Widget Styles */
+  .footer .gmw-thumbnail-map {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  /* Review Styles */
+  .footer .biziq-review {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .footer .review-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer .review-info span {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .footer .review-rating {
+    color: #ffc107;
+  }
+  
+  .footer .review-body {
+    font-size: 0.9rem;
+    color: #343a40;
+    margin-top: 0.5rem;
+  }
+  
+  /* Copy and Terms Styles */
+  .footer .copy {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 1rem;
+  }
+  
+  .footer .copy a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer .copy a:hover {
+    text-decoration: underline;
+  }
+
+  .footer .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: $primary_green; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .btn:hover {
+    background-color: #20503c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer .wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer .one-fourth {
+      flex: 1 1 100%;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 355px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .business-hours {
+      padding: 15px;
+    }
+  
+    // .business-hours h2 {
+    //   font-size: 1.25rem;
+    // }
+  
+    .business-hours li {
+      font-size: 0.9rem;
+    }
+  }
+
+  
+
+
+
+
+
+  
