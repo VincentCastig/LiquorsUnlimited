@@ -4,14 +4,14 @@ import { Table, FormGroup, FormControl } from 'react-bootstrap';
 const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
     const [sizes, setSizes] = useState({
         drinksData: {
-            Beer: ['Beer', 20, '', 0],
-            Red: ['Red Wine', 12, 0.75, 5],
-            White: ['White Wine', 28, 0.75, 5],
-            Bourbon: ['Bourbon', 11, 0.75, 17],
-            Scotch: ['Scotch', 7, 0.75, 17],
-            Gin: ['Gin', 4, 0.75, 17],
-            Vodka: ['Vodka', 16, 0.75, 17],
-            Rum: ['Rum', 2, 0.75, 17]
+            Beer: ['Beer', 20, ''],
+            Red: ['Red Wine', 12, 0.75],
+            White: ['White Wine', 28, 0.75],
+            Bourbon: ['Bourbon', 11, 0.75],
+            Scotch: ['Scotch', 7, 0.75],
+            Gin: ['Gin', 4, 0.75],
+            Vodka: ['Vodka', 16, 0.75],
+            Rum: ['Rum', 2, 0.75]
         }
     });
 
@@ -24,7 +24,7 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
 
     const updatePercentage = (drink, value) => {
         const newDrinksData = { ...sizes.drinksData };
-        newDrinksData[drink] = [newDrinksData[drink][0], parseInt(value, 10) || 0, newDrinksData[drink][3]];
+        newDrinksData[drink] = [newDrinksData[drink][0], parseInt(value, 10) || 0, newDrinksData[drink][2]];
         setSizes({ ...sizes, drinksData: newDrinksData });
 
         // Calculate total percentage and update it
@@ -42,7 +42,7 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
             const totalDrinksForType = (percentage * drinksTotal) / 100;  // Total drinks for this type
             const drinksPerBottle = val === 'White' || val === 'Red' ? 6.7 : 22;  // Assume 5 drinks for wine, 17 drinks for spirits
 
-            const totalBottles = (totalDrinksForType / (drinksPerBottle * bottleSize)).toFixed(1);  // Total bottles required
+            const totalBottles = Math.ceil(totalDrinksForType / (drinksPerBottle * bottleSize));  // Total bottles required
 
             const rowStyle = i % 2 === 0 ? 'even-row' : 'odd-row';
 
@@ -71,8 +71,8 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
                         }
                     </td>
 
-                    {val !== 'Beer' &&
-                        <td>{totalBottles}</td>
+                    {val !== 'Beer' && totalBottles &&
+                        <td>{totalBottles} bottles</td>
                     }
                     {val === 'Beer' &&
                         <td></td>
