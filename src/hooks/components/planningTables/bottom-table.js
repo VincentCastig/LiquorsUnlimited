@@ -50,7 +50,7 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
                 <tr key={i} className={rowStyle}>
                     <td>{label}</td>
                     <td>
-                        <FormGroup>
+                        <FormGroup className='input-percent'>
                             <FormControl
                                 type="number"
                                 id="percent"
@@ -63,11 +63,19 @@ const BottomTable = ({ handleChangeValue, drinksTotal, totalPercentage }) => {
                         </FormGroup>
                     </td>
                     <td>
-                        {bottleSize &&
-                            <select value={bottleSize} onChange={(event) => handleSizeChange(val, event.target.value)} className="bottle-size-select">
-                                <option value="0.75">0.75 Liter</option>
-                                <option value="1">1 Liter</option>
-                            </select>
+                        {bottleSize && (
+                            <>
+                                <select value={bottleSize} onChange={(event) => handleSizeChange(val, event.target.value)} className="bottle-size-select desktop">
+                                    <option value="0.75">0.75 Liter</option>
+                                    <option value="1">1 Liter</option>
+
+                                </select>
+                                <select value={bottleSize} onChange={(event) => handleSizeChange(val, event.target.value)} className="bottle-size-select mobile">
+                                    <option value="0.75">0.75 L</option>
+                                    <option value="1">1 L</option>
+                                </select>
+                            </>
+                        )
                         }
                     </td>
 
