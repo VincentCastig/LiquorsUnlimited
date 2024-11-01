@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Beer from '../../../img/beer-bottle2.webp';
-// import WhiteWine from '../../../img/white-wine.png';
-// import RedWine from '../../../img/red-wine.png';
-// // import RoseWine from '../../../img/rose-1.png';
-// import RoseWine from '../../../img/rose.png';
-
-// import Bourbon from '../../../img/bourbon.png';
-// import Scotch from '../../../img/scotch.png';
-// import Tequila from '../../../img/tequila.png';
 
 import WhiteWine from '../../../img/white-wine-bottle.png';
 import RedWine from '../../../img/red-wine-bottle.png';
@@ -26,37 +18,78 @@ import Champagne from '../../../img/champagne-bottle.png';
 const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values }) => {
     const { drinkInventory } = values;
 
-    // Initialize percentages based on drinkInventory defaults
+    // Set initial percentages from the drinkInventory
     const initialPercentages = drinkInventory.reduce((acc, drink) => {
-
         acc[drink.label] = drink.defaultPercentage; // Set default percentage
         return acc;
     }, {});
 
     const [percentages, setPercentages] = useState(initialPercentages); // Track percentages for drinks
+    const [errorMessage, setErrorMessage] = useState('');
+    const [modifiedDrinks, setModifiedDrinks] = useState(new Set()); // Track modified drinks
+    const [modifiedStyles, setModifiedStyles] = useState({}); // Track styles of modified drinks
+
 
     const updatePercentage = (drink, value) => {
-       
         const parsedValue = parseInt(value, 10) || 0;
 
-        if (parsedValue > 100) {
-            alert('Percentage cannot exceed 100.');
+        if (parsedValue < 0 || parsedValue > 100) {
+            setErrorMessage('Percentage must be between 0 and 100.');
             return;
+        } else {
+            setErrorMessage('');
         }
 
-        if (value.trim() === '' || !isNaN(parsedValue)) {
-            setPercentages(prevState => ({
-                ...prevState,
-                [drink.label]: parsedValue // Update percentage
-            }));
-        }
-        else{
-            return;
+        setPercentages(prevState => ({
+            ...prevState,
+            [drink.label]: parsedValue // Update percentage
+        }));
+
+        setModifiedDrinks(prevSet => new Set(prevSet).add(drink.label));
+        setModifiedStyles(prevStyles => ({
+            ...prevStyles,
+            [drink.label]: true // Set to true for modified styles
+        }));
+
+    };
+
+    const recalculatePercentages = () => {
+        const total = Object.values(percentages).reduce((acc, val) => acc + val, 0);
+        const remainingPercentages = 100 - total; // Remaining percentage to distribute
+        const newPercentages = { ...percentages }; // Start with current percentages
+
+        // Get the drinks that have been modified by the user
+        const drinksToAdjust = drinkInventory.filter(drink => !modifiedDrinks.has(drink.label)); // Adjust only those not modified by user
+        console.log('modifiedDrinks ', modifiedDrinks);
+
+        // Only proceed if there's remaining percentage to distribute
+        if (remainingPercentages > 0 && drinksToAdjust.length > 0) {
+            const adjustment = Math.floor(remainingPercentages / drinksToAdjust.length); // Calculate adjustment
+
+            drinksToAdjust.forEach(drink => {
+                newPercentages[drink.label] = Math.max(0, (newPercentages[drink.label] || 0) + adjustment); // Update percentages
+            });
         }
 
-        // Calculate total percentage and update in parent state
-        const totalPercentage = Object.values({ ...percentages, [drink.label]: parsedValue }).reduce((acc, val) => acc + val, 0);
-        handleChangeValue('percentage', totalPercentage); // Update total percentage
+        // Final total check
+        const adjustedTotal = Object.values(newPercentages).reduce((acc, val) => acc + val, 0);
+        const difference = 100 - adjustedTotal;
+
+        // If there's a difference, distribute it evenly among all drinks
+        if (difference !== 0) {
+            const adjustmentPerDrink = Math.floor(difference / drinksToAdjust.length);
+            drinksToAdjust.forEach(drink => {
+                newPercentages[drink.label] = Math.max(0, (newPercentages[drink.label] || 0) + adjustmentPerDrink); // Adjust remaining drinks
+            });
+        }
+
+        // Update the state with the new percentages
+        setPercentages(newPercentages);
+        handleChangeValue('percentage', newPercentages); // Update parent state
+
+        // Clear the modified drinks set after recalculation
+        setModifiedDrinks(new Set());
+        setModifiedStyles({});
     };
 
     const imageMap = {
@@ -76,6 +109,8 @@ const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values })
     return (
         <div className="card-content">
             <h1>Stock Your Bar</h1>
+            {errorMessage && <div className="error-text">{errorMessage}</div>}
+
             <div className="drink-selection-help">
                 Set the percentage consumed for each type of alcohol you'll be serving at your party.
             </div>
@@ -97,7 +132,7 @@ const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values })
                                         </div>
                                         <div className='drink-type-box'>
                                             <div className="drink-type-name full-width">{label}</div>
-                                            <div className="percentage-box">
+                                            <div className="percentage-box" >
                                                 <input
                                                     type="text"
                                                     min="0"
@@ -106,6 +141,7 @@ const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values })
                                                     placeholder="0%"
                                                     onChange={(event) => updatePercentage(drink, event.target.value)}
                                                     className="percentage-input"
+                                                    style={{ backgroundColor: modifiedStyles[label] ? '#c6dfca' : '#ffffff' }}
                                                 />
                                             </div>
                                         </div>
@@ -116,6 +152,8 @@ const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values })
                     );
                 })}
             </div>
+            <button onClick={recalculatePercentages} className='btn'>Recalculate</button>
+
             <div className="centered button-row">
                 <button type="button" className="planning-btn btn-secondary btn" onClick={prevStep}>Back</button>
                 <button className='planning-btn btn' onClick={nextStep}>Next</button>
@@ -125,3 +163,4 @@ const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values })
 };
 
 export default StepTwo;
+

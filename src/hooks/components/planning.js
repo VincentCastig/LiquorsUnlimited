@@ -10,21 +10,20 @@ const Planning = () => {
     value: '',
     people: '',
     drinks: '',
-    percentage: '100',
+    totalPercentage: '100',
     totalBottles: {},
     drinkInventory: [
-      { label: 'Red Wine', defaultPercentage: 10, bottleSize: 0.75, drinksPerBottle: 5 },
-      { label: 'White Wine', defaultPercentage: 18, bottleSize: 0.75, drinksPerBottle: 5 },
-      { label: 'Rose Wine', defaultPercentage: 6, bottleSize: 0.75, drinksPerBottle: 5 },
+      { label: 'Red Wine', defaultPercentage: 15, bottleSize: 0.75, drinksPerBottle: 5 },
+      { label: 'White Wine', defaultPercentage: 15, bottleSize: 0.75, drinksPerBottle: 5 },
+      { label: 'Rose Wine', defaultPercentage: 5, bottleSize: 0.75, drinksPerBottle: 5 },
       { label: 'Champagne', defaultPercentage: 10, bottleSize: 0.75, drinksPerBottle: 6 },
       { label: 'Whiskey', defaultPercentage: 6, bottleSize: 0.75, drinksPerBottle: 17 },
       { label: 'Scotch', defaultPercentage: 4, bottleSize: 0.75, drinksPerBottle: 17 },
-      { label: 'Tequila', defaultPercentage: 2, bottleSize: 0.75, drinksPerBottle: 17 },
-      { label: 'Gin', defaultPercentage: 2, bottleSize: 0.75, drinksPerBottle: 17 },
-      { label: 'Vodka', defaultPercentage: 14, bottleSize: 0.75, drinksPerBottle: 17 },
-      { label: 'Rum', defaultPercentage: 2, bottleSize: 0.75, drinksPerBottle: 17 },
-      { label: 'Beer', defaultPercentage: 18, bottleSize: 0.75, drinksPerBottle: 1 }
-
+      { label: 'Tequila', defaultPercentage: 6, bottleSize: 0.75, drinksPerBottle: 17 },
+      { label: 'Gin', defaultPercentage: 5, bottleSize: 0.75, drinksPerBottle: 17 },
+      { label: 'Vodka', defaultPercentage: 10, bottleSize: 0.75, drinksPerBottle: 17 },
+      { label: 'Rum', defaultPercentage: 4, bottleSize: 0.75, drinksPerBottle: 17 },
+      { label: 'Beer', defaultPercentage: 20, bottleSize: 0.75, drinksPerBottle: 1 }
     ]
   });
   const [currentStep, setCurrentStep] = useState(1);
