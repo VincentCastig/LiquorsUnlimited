@@ -33,16 +33,12 @@ const ContactForm = () => {
     };
 
     const handleSubmit = (e) => {
-        console.log('handling');
-
+      
         e.preventDefault();
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
         } else {
-            // Submit form logic here
-            console.log('Form bbb submitted:', formData);
-
 
             // EmailJS send function
             emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formData)

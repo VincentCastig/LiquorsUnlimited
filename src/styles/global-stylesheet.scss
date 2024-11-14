@@ -25,7 +25,7 @@
   }
 
   h1,h2,h3{
-    font-family: "Abril Fatface", cursive;
+    font-family: 'Charm', cursive;
   }
 
   // p{
@@ -47,7 +47,7 @@
   }
 
   h1, h2, h3 {
-    font-family:'Abril Fatface', cursive;
+    font-family:'Charm', cursive;
   }
   col img {
     margin: 5px;
@@ -285,6 +285,29 @@
   .style1{
     background-color: rgba(61, 8, 10, 0.043);
   }
+  .bottle-size-select.mobile{
+      display: none;
+  }
+  .input-percent {
+    position: relative;
+    display: inline-block;
+}
+
+.input-percent input[type="number"] {
+    padding-right: 20px; /* Adjust to leave space for % sign */
+}
+
+.input-percent::after {
+    content: '%';
+    font-size: 14px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    //color: black;
+    color: #495057;
+    pointer-events: none; /* Make sure this doesn't block interaction with the input */
+}
   @media (min-width: 200px) {
     .jumbotron h1{
       font-size:38px; 
@@ -322,12 +345,35 @@
       margin-top: 10px; 
       }
     }
+
+    @media (max-width:700px){
+
+      #planning {
+        width: 90%;
+      }
+    }
+   
+    @media (max-width:510px){
+
+      #planning {
+        width: 100%;
+      }
+      .bottle-size-select.desktop{
+          display: none;
+      }
+      .bottle-size-select.mobile{
+        display: block;
+      }
+    }
    
     @media screen and (max-width: 450px) { 
      
       .table td, .table th{
         padding: 5px;
       }
+      #percent {
+        max-width: 80px;
+    }
     }
     .navbar-default {
       position: fixed;
