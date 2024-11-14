@@ -5,7 +5,6 @@ import Beer from '../../../img/beer-bottle2.webp';
 // import RedWine from '../../../img/red-wine.png';
 // // import RoseWine from '../../../img/rose-1.png';
 // import RoseWine from '../../../img/rose.png';
-
 // import Bourbon from '../../../img/bourbon.png';
 // import Scotch from '../../../img/scotch.png';
 // import Tequila from '../../../img/tequila.png';
