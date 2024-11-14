@@ -55,6 +55,9 @@ const StepOne = ({ handleChangeValue, nextStep, values }) => {
     const incrementDrinks = () => updateDrinks(drinkAmount + 1);
     const decrementDrinks = () => updateDrinks(drinkAmount - 1);
 
+    // Check if the values are valid for enabling Next Step button
+    const isNextStepDisabled = guests <= 0 || drinkAmount <= 0 || peopleError || drinksError;
+
     return (
         <div className="main-card">
             <div className="event-setup card-content">
@@ -68,8 +71,7 @@ const StepOne = ({ handleChangeValue, nextStep, values }) => {
                     We’ll take care of the calculations and help you plan your perfect bar setup.
 
                     <br />
-                    Don’t worry about the math—enjoy the party! Cheers!
-
+                    Don’t worry about the math—enjoy the party!
                 </div>
 
                 <div className="details-form">
@@ -116,7 +118,13 @@ const StepOne = ({ handleChangeValue, nextStep, values }) => {
                     </div>
                 </div>
 
-                <button className='btn planning-btn-step-1' onClick={nextStep}>Next Step</button>
+                <button
+                    className='btn planning-btn-step-1'
+                    onClick={nextStep}
+                    disabled={isNextStepDisabled} // Disable if guests or drinks per guest is not valid
+                >
+                    Next Step
+                </button>
                 <div className="tagline">Powered by Liquors Unlimited.</div>
             </div>
         </div>

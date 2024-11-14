@@ -26,7 +26,13 @@ const Planning = () => {
       { label: 'Beer', defaultPercentage: 20, bottleSize: 0.75, drinksPerBottle: 1 }
     ]
   });
+  const initialPercentages = values.drinkInventory.reduce((acc, drink) => {
+    acc[drink.label] = drink.defaultPercentage; // Set default percentage
+    return acc;
+}, {});
   const [currentStep, setCurrentStep] = useState(1);
+  const [userDefinedPercentages, setUserDefinedPercentages] = useState(initialPercentages); // Track percentages for drinks
+
 
   const handleChangeValue = (prop, val) => {
     setValues(prevValues => ({
@@ -70,6 +76,8 @@ const Planning = () => {
             handleChangeValue={handleChangeValue}
             drinksTotal={drinksTotal}
             totalPercentage={values.percentage}
+            setUserDefinedPercentages={setUserDefinedPercentages}
+            userDefinedPercentages={userDefinedPercentages}
           />
         )}
         {currentStep === 3 && (
@@ -77,6 +85,8 @@ const Planning = () => {
             values={values}
             nextStep={nextStep}
             prevStep={prevStep}
+            drinksTotal={drinksTotal}
+            userDefinedPercentages={userDefinedPercentages}
           />
         )}
       </div>

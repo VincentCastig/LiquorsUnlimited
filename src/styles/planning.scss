@@ -8,6 +8,13 @@ ul{
     list-style: none;
 }
 
+.main-card{
+    h1, h2 {
+        color: $malbec_wine_color;
+        font-size: 2.5rem;
+    }
+}
+
 .planning-container{
     width: 100%;
     background-color: #fff;
@@ -124,6 +131,10 @@ ul{
     border: none;
 }
 
+.recalculate{
+    min-width: 12.5rem;
+}
+
 .input-label{
     user-select: none;
     -o-user-select: none;
@@ -187,15 +198,19 @@ ul{
 }
 
 .bottle-list-item {
-    flex: 0 1 30%;           /* Make each item take up about 30% of the width */
+    flex: 0 1 100%;         
     margin-bottom: 20px;     /* Space between rows */
 }
 
 .bottle-list-box {
     display: flex;           /* Use Flexbox for the item container */
-    flex-direction: column;
-    align-items: center;     /* Center align items vertically */
-    justify-content: flex-start; /* Align items to the start */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottle-list-box > div{
+    width: 33%;
 }
 
 .bottle-image-box.step3{
@@ -205,6 +220,12 @@ ul{
 
 .bottle-image{
     width: 100%;
+}
+
+.step3-total-box{
+    font-size: 1.25rem;
+    width: 50%;
+    display: flex;
 }
 
 .percentage-box{
@@ -311,11 +332,28 @@ ul{
         border-radius: 5%;
         min-width: 134px;
     }
+    .recalculate{
+        min-width: 168px;
+    }
 }
 
 
 @media (min-width: 600px) {
     .main-description {
         line-height: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .bottle-list-box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .bottle-list-box > div{
+        width: 100%;
+    }
+    .step3-total-box{
+        display: block;
     }
 }

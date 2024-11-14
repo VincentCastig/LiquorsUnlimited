@@ -24,8 +24,8 @@ import Rum from '../../../img/rum-bottle.png';
 import Champagne from '../../../img/champagne-bottle.png';
 
 
-const StepThree = ({ values, nextStep, prevStep }) => {
-    const { drinks, drinkInventory, percentage } = values;
+const StepThree = ({ values, drinksTotal, userDefinedPercentages, nextStep, prevStep }) => {
+    const { drinks, drinkInventory, people } = values;
 
     const imageMap = {
         Beer,
@@ -41,29 +41,24 @@ const StepThree = ({ values, nextStep, prevStep }) => {
         Champagne
     };
 
-    //on the step two Component. we have a list of the 12 different types of alcohol listed in 3 columns and 4 rows. the alcohol types are beer, white wine, red wine, rose wine, bourbon, scotch, tequila, gin, vodka, rum, champagne, and whiskey. for each item there is an image of the bottle in the middle. create a picture of this.
-
-    //on the step two Component. we have a list of three different types of alcohol listed in 3 columns. the alcohol types are beer, white wine, and red wine. for each item there is the name at the top, a picture of the bottle in the middle and the percentage at the bottom. create a picture of this.
-
-    console.log('drinks ', drinks);
     // Calculate the total number of bottles for each selected alcohol type
     const calculateBottles = () => {
         const bottlesNeeded = {};
-
-
 
         // Loop through the drink inventory
         drinkInventory.forEach(drink => {
             const { label, defaultPercentage, bottleSize, drinksPerBottle } = drink;
 
             // Calculate the drink percentage based on the user input or default value
-            const drinkPercentage = (defaultPercentage) * drinks; // Total drinks based on the user-defined percentage
+            const drinkPercentage = (userDefinedPercentages[label]) * drinksTotal / 100; // Total drinks based on the user-defined percentage
             const totalBottles = Math.ceil(drinkPercentage / drinksPerBottle); // Calculate total bottles needed
-            console.log('drinkPercentage ', drinkPercentage);
-            console.log('label ', label);
-            console.log('totalBottles ', totalBottles);
 
-            bottlesNeeded[label] = totalBottles; // Store result
+            // Calculate for 0.75-liter and 1-liter bottles
+            const totalBottles1L = Math.ceil(totalBottles * 0.75);
+            const totalBottles075L = Math.ceil(totalBottles); // Adjust for 1-liter
+            if (totalBottles075L > 0) {
+                bottlesNeeded[label] = { totalBottles075L, totalBottles1L }; // Store results
+            }
         });
 
         return bottlesNeeded;
@@ -73,9 +68,9 @@ const StepThree = ({ values, nextStep, prevStep }) => {
 
     return (
         <div className="main-card">
-            <h1>Results</h1>
+            <h2>Bottle Count Results</h2>
             <div className="results-content">
-                <h2>Bottle Requirements</h2>
+                {/* <h2>Bottle Requirements</h2> */}
                 <ul className="bottle-list">
                     {Object.keys(bottlesNeeded).map(drink => (
                         <li key={drink} className="bottle-list-item">
@@ -83,11 +78,21 @@ const StepThree = ({ values, nextStep, prevStep }) => {
                                 <div className='bottle-image-box step3'>
                                     <img src={imageMap[drink]} alt={`${drink} bottle`} className="bottle-image" />
                                 </div>
-                                <div>
-                                    {drink}:
+                                <div className='step3-total-type'>{drink}:</div>
+                                <div className='step3-total-box'>
+                                    {/* {drink}: */}
                                     <div>
-                                        {bottlesNeeded[drink]} bottles (0.75L) |
-                                        {bottlesNeeded[drink]} bottles (1L)
+                                        {drink === 'Beer' ? (
+                                            // Only show 0.75L for beer
+                                            `${bottlesNeeded[drink].totalBottles075L} bottles`
+                                        )
+                                            : drink === 'White Wine' || drink === 'Red Wine' || drink === 'Rose Wine' || drink === 'Champagne' ? (
+                                                // Only show 0.75L for beer
+                                                `${bottlesNeeded[drink].totalBottles075L} bottles (0.75L)`
+                                            ) : (
+                                                // Show both 0.75L and 1L for other drinks
+                                                `${bottlesNeeded[drink].totalBottles075L} bottles (0.75L) or ${bottlesNeeded[drink].totalBottles1L} bottles (1L)`
+                                            )}
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +102,7 @@ const StepThree = ({ values, nextStep, prevStep }) => {
             </div>
             <div className="centered button-row">
                 <button type="button" className="planning-btn btn-secondary btn" onClick={prevStep}>Back</button>
-                <button type="button" className="planning-btn btn-primary btn" onClick={nextStep}>Finish</button>
+                {/* <button type="button" className="planning-btn btn-primary btn" onClick={nextStep}>Finish</button> */}
             </div>
         </div>
     );
