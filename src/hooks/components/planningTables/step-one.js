@@ -30,7 +30,7 @@ const StepOne = ({ handleChangeValue, nextStep, values }) => {
 
     const updateDrinks = (newDrinks) => {
         if (newDrinks < 0) {
-            setDrinksError('Drinks must be at least 0.');
+            setDrinksError('Number of drinks cannot be negative.');
             return;
         } else if (newDrinks > 25) {
             setDrinksError('Drinks per person must not exceed 25.');

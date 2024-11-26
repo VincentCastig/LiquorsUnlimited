@@ -53,6 +53,7 @@ const Header = () => {
               as={NavLink} 
               to="/" 
               className={({ isActive }) => (isActive ? 'active-link' : '')}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Home
             </Nav.Link>
@@ -60,6 +61,7 @@ const Header = () => {
               as={NavLink} 
               to="/wine" 
               className={({ isActive }) => (isActive ? 'active-link' : '')}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Wine, Liquor, Spirits, & More
             </Nav.Link>
@@ -67,6 +69,7 @@ const Header = () => {
               as={NavLink} 
               to="/planning" 
               className={({ isActive }) => (isActive ? 'active-link' : '')}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Party Planning
             </Nav.Link>
@@ -75,6 +78,7 @@ const Header = () => {
               to="/contact" 
               className={({ isActive }) => (isActive ? 'active-link' : '')}
               title="Contact Us"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Contact
             </Nav.Link>
