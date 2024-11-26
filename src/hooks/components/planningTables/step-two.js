@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Beer from '../../../img/beer-bottle2.webp';
+import Beer from '../../../img/party-images/beer-bottle2.webp';
 
-import WhiteWine from '../../../img/white-wine-bottle.png';
-import RedWine from '../../../img/red-wine-bottle.png';
-import RoseWine from '../../../img/rose.png';
+import WhiteWine from '../../../img/party-images/white-wine-bottle.png';
+import RedWine from '../../../img/party-images/red-wine-bottle.png';
+import RoseWine from '../../../img/party-images/rose.png';
 
-import Whiskey from '../../../img/whiskey-bottle-2.png';
-import Scotch from '../../../img/scotch-bottle.png';
-import Tequila from '../../../img/tequila-bottle.png';
+import Whiskey from '../../../img/party-images/whiskey-bottle-2.png';
+import Scotch from '../../../img/party-images/scotch-bottle.png';
+import Tequila from '../../../img/party-images/tequila-bottle.png';
 
-import Gin from '../../../img/gin-bottle.png';
-import Vodka from '../../../img/vodka-bottle.png';
-import Rum from '../../../img/rum-bottle.png';
-import Champagne from '../../../img/champagne-bottle.png';
+import Gin from '../../../img/party-images/gin-bottle.png';
+import Vodka from '../../../img/party-images/vodka-bottle.png';
+import Rum from '../../../img/party-images/rum-bottle.png';
+import Champagne from '../../../img/party-images/champagne-bottle.png';
 
 
 const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values, setUserDefinedPercentages, userDefinedPercentages }) => {
@@ -148,7 +148,7 @@ const StepTwo = ({ handleChangeValue, drinksTotal, nextStep, prevStep, values, s
                     );
                 })}
             </div>
-            <button onClick={recalculatePercentages} className='planning-btn btn recalculate'>Recalculate</button>
+            <button onClick={recalculatePercentages} disabled={totalPercentage === 100} className='planning-btn btn recalculate'>Recalculate</button>
 
             <div className="centered button-row">
                 <button type="button" className="planning-btn btn-secondary btn" onClick={prevStep}>Back</button>
