@@ -13,7 +13,7 @@ import Rum from '../../../img/party-images/rum-bottle.png';
 import Champagne from '../../../img/party-images/champagne-bottle.png';
 
 const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) => {
-    const { drinkInventory } = values;
+    const { drinkInventory, people, drinks } = values;
 
     const imageMap = {
         Beer,
@@ -88,6 +88,9 @@ const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) =>
         <div className="main-card">
             <h2>Bottle Count Results</h2>
             <div className="results-content">
+                <div className="drink-selection-help">
+                With {people} guests expected at {drinks} drinks per guest, the estimate bottle count is:
+                </div>
                 {/* <h2>Include count of spirit bottles here</h2> */}
                 <ul className="bottle-list">
                     {Object.keys(bottlesNeeded).map(drink => (
@@ -120,9 +123,9 @@ const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) =>
             <div className="centered button-row">
                 <button type="button" className="planning-btn btn-secondary btn" onClick={prevStep}>Back</button>
                 {/* <button type="button" className="planning-btn btn-primary btn" onClick={nextStep}>Finish</button> */}
-                
-                    <button onClick={downloadCSV} className="planning-btn btn-secondary btn">Download</button>
-                
+
+                <button onClick={downloadCSV} className="planning-btn btn-secondary btn">Download</button>
+
             </div>
         </div>
     );
