@@ -85,7 +85,7 @@ const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) =>
     const bottlesNeeded = calculateBottles();
 
     return (
-        <div className="main-card">
+        <div className="main-card card-content">
             <h2>Bottle Count Results</h2>
             <div className="results-content">
                 <div className="drink-selection-help">
@@ -115,6 +115,9 @@ const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) =>
                                             )}
                                     </div>
                                 </div>
+                                {/* <div className='bottle-image-box step3'>
+                                    <img src={imageMap[drink]} alt={`${drink} bottle`} className="bottle-image" />
+                                </div> */}
                             </div>
                         </li>
                     ))}

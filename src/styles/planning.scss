@@ -199,7 +199,9 @@ ul{
 
 .bottle-list-item {
     flex: 0 1 100%;         
-    margin-bottom: 20px;     /* Space between rows */
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #0000006e;
 }
 
 .bottle-list-box {
@@ -207,6 +209,10 @@ ul{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.step3-total-type{
+    width: 20% !important;
 }
 
 .bottle-list-box > div{
@@ -226,6 +232,7 @@ ul{
     font-size: 1.25rem;
     width: 50%;
     display: flex;
+    text-align: start;
 }
 
 .percentage-box{
@@ -353,7 +360,19 @@ ul{
     .bottle-list-box > div{
         width: 100%;
     }
+    .bottle-list-item{
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
     .step3-total-box{
         display: block;
+    }
+    .step3-total-type{
+        width: 30% !important;
+        font-size: 1.25rem;
+    }
+    .step3-total-box{
+        text-align: center;
+        font-size: 1.1rem;
     }
 }
