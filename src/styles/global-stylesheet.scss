@@ -14,14 +14,13 @@
     background: url(../../src/img/wine-barrels.JPG)  no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
-    z-index: -22;
+    background-position: left;
+    // position: relative;
+    // z-index: -22;
     width: 100%;
     //font-family: 'Merriweather', serif;
     //font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-family: Georgia, serif;
-
-
   }
 
   h1,h2,h3{
