@@ -134,6 +134,17 @@ ul{
 .recalculate{
     min-width: 12.5rem;
 }
+.shop{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+.shop:active, .shop:focus {
+    background-color: #376b5e !important;     
+    box-shadow: none;         
+  }
 
 .input-label{
     user-select: none;

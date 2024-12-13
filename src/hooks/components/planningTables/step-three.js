@@ -89,7 +89,7 @@ const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) =>
             <h2>Bottle Count Results</h2>
             <div className="results-content">
                 <div className="drink-selection-help">
-                With {people} guests expected at {drinks} drinks per guest, the estimate bottle count is:
+                    With {people} guests expected at {drinks} drinks per guest, the estimate bottle count is:
                 </div>
                 {/* <h2>Include count of spirit bottles here</h2> */}
                 <ul className="bottle-list">
@@ -123,11 +123,14 @@ const StepThree = ({ values, drinksTotal, userDefinedPercentages, prevStep }) =>
                     ))}
                 </ul>
             </div>
+            <a href="https://bottlezoo.com/store/bz_liquorsunlimitedmis" target="_blank"
+                    rel="noopener noreferrer" className="planning-btn btn-secondary btn recalculate shop">Order Now</a>
+
             <div className="centered button-row">
                 <button type="button" className="planning-btn btn-secondary btn" onClick={prevStep}>Back</button>
                 {/* <button type="button" className="planning-btn btn-primary btn" onClick={nextStep}>Finish</button> */}
 
-                <button onClick={downloadCSV} className="planning-btn btn-secondary btn">Download</button>
+            <button onClick={downloadCSV} className="planning-btn btn-secondary btn">Download</button>
 
             </div>
         </div>
