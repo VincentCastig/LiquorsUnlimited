@@ -211,6 +211,58 @@
   .btn:hover {
     background-color: #20503c;
   }
+
+
+/* Auction Info Section */
+.footer{
+  .auction-header{
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+  }
+}
+
+.auction-info {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.auction-info p {
+  margin-bottom: 15px;
+  text-align: left;
+  color: #303030 !important;
+}
+
+.auction-info strong {
+  font-weight: bold;
+}
+
+/* Image Section */
+.auction-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event-image-container {
+  width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.event-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-image-container p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -233,19 +285,30 @@
       padding: 15px;
     }
   
-    // .business-hours h2 {
-    //   font-size: 1.25rem;
-    // }
-  
     .business-hours li {
       font-size: 0.9rem;
     }
   }
 
-  
-
-
-
+  @media (max-width: 500px) {
+    .footer{
+      .auction-header{
+        font-size: 2.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    .auction-images{
+      flex-direction: column;
+      align-items: center;
+    }
+    .event-image-container{
+      width: 80%;
+    }
+    .auction-info{
+      font-size: 1em;
+    }
+    }
 
 
   
