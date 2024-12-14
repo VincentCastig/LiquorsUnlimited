@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import Map from './components/map';
 import GoogleIcon from '../img/google-icon.png'; // Adjust the path according to your folder structure
-import RipVan from '../img/event-images/rip-van-winkle.jpeg';
 import RipVanReserve from '../img/event-images/van-winkle-special-reserve.jpg';
 import OldForester from '../img/event-images/old-forester.jpg';
 
@@ -17,10 +16,6 @@ const Footer = () => {
 
             <section class="auction-images">
                 <div class="event-image-container">
-                    <img src={RipVan} alt="10-year-old Rip Van Winkle" />
-                    <p>10-Year-Old Rip Van Winkle</p>
-                </div>
-                <div class="event-image-container">
                     <img src={RipVanReserve} alt="12-year-old Van Winkle Special Reserve" />
                     <p>12-Year-Old Van Winkle Special Reserve</p>
                 </div>
@@ -30,11 +25,16 @@ const Footer = () => {
                 </div>
             </section>
             <section class="auction-info">
-                <p>Liquors Unlimited is blessed with more good customers who like rare bourbons than available rare bourbons. This Christmas, we have for sale only 2 bottles of 10-year-old Rip Van Winkle and 1 bottle of 12-year-old Van Winkle Special Reserve. We’d rather not pick one of you over the other, so we’ll let the market decide by having a Reverse Auction.</p>
-                <p>The Auction will start at 3:00 pm December 19 and we will lower the price on each bottle every hour, while the store is open, until each bottle sells. When they are gone, that’s all till next year.</p>
-                <p>Internet liquor stores offer the 12-year-old for $1,799 per bottle & 10-year-old for $1,299. We aren’t an internet store. We’re Liquors Unlimited Discount Package Store.</p>
-                <p>We will discount the internet prices by 50% as our starting prices. The 12-year-old will start at $899.55 (dropping $40 per hour) and the 10-year-old will start at $644.55 and drop $30 per hour until each is sold.</p>
-                <p>Come to the Store or Call <strong>762-3874</strong> to bid/purchase.</p>
+                <p>Liquors Unlimited is blessed with more good customers who value rare bourbons than we get. This Christmas we have 3 bottles of 10-year Old Rip Van Winkle and 1 bottle of Old Forester Birthday Cake. Again, this year we will use a Reverse Auction to let the market decide who gets these rare Bourbons.</p>
+
+                <p>In a Reverse Auction the price goes down not up. You can wait for a lower price, but someone may bid take it before you. When they are gone, that’s it until next year.</p>
+
+                <p>Internet liquor stores offer the 10-year-old for $1,299 and Birthday Bourbon for $999. We’re a discount store and will start the Birthday Bourbon for $900 and Van Winkle 10 at $1000.</p>
+
+                <p>The auction starts Wednesday December 18 at noon. During store hours, the price will drop $50 every 2 hours till they are sold.</p>
+
+                <p>Come by the Store or Call <strong>762-3874</strong> to bid/purchase at the price you chose.</p>
+
             </section>
             <div className="wrapper">
                 <div className="one-fourth">
