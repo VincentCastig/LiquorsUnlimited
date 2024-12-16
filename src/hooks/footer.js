@@ -16,8 +16,8 @@ const Footer = () => {
 
             <section class="auction-images">
                 <div class="event-image-container">
-                    <img src={RipVanReserve} alt="10-year-old Van Winkle Special Reserve" />
-                    <p>10-Year-Old Van Winkle Special Reserve</p>
+                    <img src={RipVanReserve} alt="10-year-old Van Winkle" />
+                    <p>10-Year-Old Van Winkle</p>
                 </div>
                 <div class="event-image-container">
                     <img src={OldForester} alt="Old Forester Birthday Bourbon" />
