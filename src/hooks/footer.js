@@ -3,11 +3,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import Map from './components/map';
 import GoogleIcon from '../img/google-icon.png'; // Adjust the path according to your folder structure
+import RipVanReserve from '../img/event-images/van-winkle-special-reserve.jpg';
+import OldForester from '../img/event-images/old-forester.jpg';
+
 
 
 const Footer = () => {
     return (
         <footer id="footer" className="footer" role="contentinfo">
+
+            <h2 className='auction-header'>Liquors Unlimited Reverse Auction</h2>
+
+            <section class="auction-images">
+                <div class="event-image-container">
+                    <img src={RipVanReserve} alt="10-year-old Van Winkle" />
+                    <p>10-Year-Old Van Winkle</p>
+                </div>
+                <div class="event-image-container">
+                    <img src={OldForester} alt="Old Forester Birthday Bourbon" />
+                    <p>Old Forester Birthday Bourbon</p>
+                </div>
+            </section>
+            <section class="auction-info">
+                <p>Liquors Unlimited is blessed with more good customers who value rare bourbons than we get. This Christmas we have 3 bottles of 10-year Old Rip Van Winkle and 1 bottle of Old Forester Birthday Cake. Again, this year we will use a Reverse Auction to let the market decide who gets these rare Bourbons.</p>
+
+                <p>In a Reverse Auction the price goes down not up. You can wait for a lower price, but someone may bid take it before you. When they are gone, that’s it until next year.</p>
+
+                <p>Internet liquor stores offer the 10-year-old for $1,299 and Birthday Bourbon for $999. We’re a discount store and will start the Birthday Bourbon for $900 and Van Winkle 10 at $1000.</p>
+
+                <p>The auction starts Wednesday December 18 at noon. During store hours, the price will drop $50 every 2 hours till they are sold.</p>
+
+                <p>Come by the Store or Call <strong>762-3874</strong> to bid/purchase at the price you chose.</p>
+
+            </section>
             <div className="wrapper">
                 <div className="one-fourth">
                     <div id="googlemapswidget-2">
