@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
             </section>
             <section class="auction-info">
-                <p>Liquors Unlimited is blessed with more good customers who value rare bourbons than we get. This Christmas we have 3 bottles of 10-year Old Rip Van Winkle and 1 bottle of Old Forester Birthday Cake. Again, this year we will use a Reverse Auction to let the market decide who gets these rare Bourbons.</p>
+                <p>Liquors Unlimited is blessed with more good customers who value rare bourbons than we get. This Christmas we have 3 bottles of 10-year Old Rip Van Winkle and 1 bottle of Old Forester Birthday Bourbon. Again, this year we will use a Reverse Auction to let the market decide who gets these rare Bourbons.</p>
 
                 <p>In a Reverse Auction the price goes down not up. You can wait for a lower price, but someone may bid take it before you. When they are gone, that’s it until next year.</p>
 
