@@ -213,6 +213,13 @@
   }
   
   /* Responsive Design */
+  @media (max-width: 1200px) {
+    #footer {
+      .btn{
+       width: fit-content;
+      }
+    }
+  }
   @media (max-width: 768px) {
     .footer .wrapper {
       flex-direction: column;
