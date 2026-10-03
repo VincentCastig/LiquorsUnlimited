@@ -8,6 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-google-maps/api": "^2.19.3",
+    "express": "^5.2.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
@@ -17,8 +18,8 @@
     "serve": "^14.2.6"
   },
   "scripts": {
-    "start": "serve -s build",
     "build": "react-scripts build",
+    "start": "node server.js",
     "heroku-postbuild": "npm run build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

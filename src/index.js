@@ -18,4 +18,3 @@ root.render(
 
 // Register the service worker
 serviceWorkerRegistration.default();
-
