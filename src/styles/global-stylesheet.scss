@@ -12,16 +12,22 @@
 }
   body {
     background: url(../../src/img/wine-barrels.JPG)  no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: inherit;
+    background-repeat: repeat-y;
     position: relative;
     z-index: -22;
     width: 100%;
     //font-family: 'Merriweather', serif;
     //font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-family: Georgia, serif;
+  }
 
-
+  @media (min-width: 768px) {
+    body {
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
   }
 
   h1,h2,h3{
