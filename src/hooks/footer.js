@@ -45,7 +45,7 @@ const Footer = () => {
                                 <br />
                                 <span>
                                     <i className="fa fa-phone-square" aria-hidden="true"></i>{' '}
-                                    <a itemProp="telephone" href="tel:6622343331">
+                                    <a itemProp="telephone" href="tel:+12287623874">
                                         (228) 762-3874
                                     </a>
                                 </span>
