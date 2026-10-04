@@ -23,7 +23,7 @@ const Contact = () => {
                             </Col>
                             <Col xs={12} md={12} lg={6} className="images-wrapper">
                                 <img className="contact-main-image" src={require('../../img/painting.JPG')} alt="Side view of Liquors Unlimited Store" />
-                                <img className="contact-main-image liquor-room" src={require('../../img/liquor-room.jpg')} alt="Front view of liquor room" />
+                                <img className="contact-main-image liquor-room" src={require('../../img/liquor-room.jpg')} loading="lazy" alt="Front view of liquor room" />
                             </Col>
                         </div>
                     </div>
