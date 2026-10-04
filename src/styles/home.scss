@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as *;
 
 .clear-fix::after {
   content: "";
@@ -17,28 +17,26 @@
     margin: 0 auto;
 }
 
-.home-content img{
-    display: inline;
-    margin: 5px 0 20px 20px;
-    width: 50%;
+// Hero photo: the file is 1110 x 508, which is 555:254 (about 2.19:1).
+// Scoped to .content-wrapper so other pages that reuse the class are unaffected.
+.content-wrapper .home-main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 555 / 254;
+    object-fit: cover;
 }
 
 .article-image-wrapper .article-image{
-    display: inline;
     float: right;
     margin: 5px 0 20px 20px;
     width: 50%;
+    height: auto;
 }
 
-.content-wrapper {
-    // min-height: 750px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #dbc69bf9;
-    background-image: url(../../src/img/backdrop-copy.png);
-    width: 100%;
-  }
-  .content-wrapper h1, h2 {
+
+  .content-wrapper h1,
+  .content-wrapper h2 {
     // background: $primary_green;
     color: $merlot_wine_color;
     margin-top: 1px;
@@ -56,7 +54,7 @@
   .info-title {
     padding: 20px; /* Adds padding around the h3 element */
     position: relative; /* Positions the border line below */
-    color: hsl(35 100% 91% / 9);
+    color: hsl(35 100% 91%);
     font-size: calc((var(--heading-1-size-value) - 1)* 1.2vw + 1rem);
     // font-family: 'Arial Black', Gadget, sans-serif;
     font-weight: 900;
@@ -94,6 +92,9 @@
   
   .info-image {
     width: 40%; /* Sets a fixed width for the image */
+    height: auto;
+    aspect-ratio: 1; /* Keeps the circle round even if the file isn't square */
+    object-fit: cover;
     border-radius: 50%; /* Makes the image circular */
     border: 2px solid white; /* Adds a white border around the image */
     margin-left: 20px; /* Adds space between the paragraph and the image */
@@ -130,8 +131,6 @@
     }
 
     .article-image-wrapper .article-image{
-      display: inline;
-      float: right;
       margin: 5px 0 20px 0px;
       width: 85%;
     }
@@ -149,6 +148,3 @@
       padding-right: 0;
     }
   }
-
-
- 
